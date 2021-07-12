@@ -25,7 +25,13 @@
     <script src="//codemirror.net/addon/runmode/runmode-standalone.js"></script>
     <script src="//codemirror.net/mode/python/python.js"></script>
 		<link rel="stylesheet" href="../Dependencies/css/print/pdf.scss">
-
+           
+		<script>
+			function new_note(element){
+		        element.parentNode.innerHTML+="<p>ayup</p>";
+			 };
+			 
+			</script>
 
 
 		
@@ -75,7 +81,7 @@
 					</div>
 					<!-- Slide 2 Notes-->
 					<aside class='notes'>
-						<button onclick='new_note();'>add a new note</button>
+						<button onclick='new_note(this);'>add a new note</button>
 						<button onclick='this.parentNode.innerHTML+="<p>ello</p>"'>add a new note</button>
 						Welcome apprentices to the session and select a warmup from <a href='https://docs.google.com/presentation/d/1jrSQya9EVyTf0t5e1FTP0g-jJOz6Lzw0g7xjJoixojk/edit?usp=sharing'> here</a>.
 					</aside>
@@ -1559,15 +1565,7 @@
 		</div>
  
     <!-- Scripts -->
-                 <script>
-			function new_note(){
-			this.parentNode.innerHTML+="<p>ayup</p>";
-			 };
-			 
-			</script>
-			
-			
-		<script src="../Dependencies/dist/reveal.js"></script>
+                <script src="../Dependencies/dist/reveal.js"></script>
 		<script src="../Dependencies/plugin/notes/notes.js"></script>
 		<script src="../Dependencies/plugin/markdown/markdown.js"></script>
 		<script src="../Dependencies/plugin/highlight/highlight.js"></script>
