@@ -44,10 +44,6 @@
 	</head>
   <body class='reveal-viewport' style="-webkit-print-color-adjust: exact !important;">
 	  
-	   <script> function new_note (element){ 
-		        element.parentNode.innerHTML+="<p>ayup</p>";
-			 };
-			</script>
 	  
 		<!-- Page Header -->
 		<header role="banner" style='background-image:url(../assets/generic/header.jpg);background-size: contain;'>
@@ -83,7 +79,7 @@
 					<aside class='notes'>
 						<button onclick='new_note(this);'>new note function</button>
 						<button onclick='this.parentNode.innerHTML+="<p>ello</p>"'>add a new note</button>
-						<button onclick='this.parentNode.innerHTML+="<script> function new_note (element){element.parentNode.innerHTML+='+"'<p>ayup</p>'"+';}</script>"'>add js </button>
+						<button onclick="document.write('<script type="+ '"'+ 'text/javascript"' + ' src="https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js.js'+ '"' + "></script>');" 
 						Welcome apprentices to the session and select a warmup from <a href='https://docs.google.com/presentation/d/1jrSQya9EVyTf0t5e1FTP0g-jJOz6Lzw0g7xjJoixojk/edit?usp=sharing'> here</a>.
 					</aside>
 				</section>
