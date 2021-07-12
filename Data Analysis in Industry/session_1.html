@@ -75,7 +75,7 @@
 					</div>
 					<!-- Slide 2 Notes-->
 					<aside class='notes'>
-						<button style="color:red" onclick='new_note()'>add a new note</button>
+						<button onclick='new_note();'>add a new note</button>
 						<button onclick='this.parentNode.innerHTML+="<p>ello</p>"'>add a new note</button>
 						Welcome apprentices to the session and select a warmup from <a href='https://docs.google.com/presentation/d/1jrSQya9EVyTf0t5e1FTP0g-jJOz6Lzw0g7xjJoixojk/edit?usp=sharing'> here</a>.
 					</aside>
@@ -1559,8 +1559,7 @@
 		</div>
  
     <!-- Scripts -->
-                 <script> /*memory and storage management functions*/ 
-			/* could be a seperate file once code is fully worked out*/
+                 <script>
 			function new_note(){
 			this.parentNode.innerHTML+="<p>ello</p>";
 			 }
