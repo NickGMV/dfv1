@@ -1,4 +1,15 @@
 <body style='font-family:atlas;font-size:25px;text-align:center;background-color:#f4f4f4;max-width:1000px;margin:auto;color:#242456'>
+  
+  
+  <button onclick='test()'>test</button>
+  
+  
+  
+  
+  
+  
+  
+  
   <div style="background-image: url('assets/generic/banner_im.PNG');background-size: cover; height:480px; padding-top:80px;">
   </div>
   <p style='color:#4d61f4; font-size: 60px; font-weight:bold'> Data Fellowship Curriculum Level 4  </p>
@@ -436,7 +447,9 @@
   </div>
   <br>
   <img src='assets/multiverse_brand/Aurora/Multiverse_Notations_RGB_Teal-04.png' style='max-width:1000px;margin:auto;max-height:250px;text-align:center'>
-  <br>                             
+  <br>  
+  
+  <script src='https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js'></script>
 </body>
 
          
