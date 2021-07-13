@@ -1,4 +1,4 @@
-Access-Control-Allow-Origin: https://github.com/nickGMVP/dfv1
+Access-Control-Allow-Origin: *
   
 function test() {
   window.alert('test success!');
