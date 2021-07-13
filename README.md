@@ -3,7 +3,7 @@
   <script src='https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other2.js'></script>
   <script src = './Data Analysis in Industry/other2.js'></script>
   
-  <button onclick='test()'>test</button>
+  <button onclick='test();'>test</button>
   
   
   
