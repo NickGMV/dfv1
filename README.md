@@ -1,5 +1,6 @@
 <body style='font-family:atlas;font-size:25px;text-align:center;background-color:#f4f4f4;max-width:1000px;margin:auto;color:#242456'>
-  
+  <script src='https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js'></script>
+  <script src='https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other2.js'></script>
   
   <button onclick='test()'>test</button>
   
@@ -449,7 +450,6 @@
   <img src='assets/multiverse_brand/Aurora/Multiverse_Notations_RGB_Teal-04.png' style='max-width:1000px;margin:auto;max-height:250px;text-align:center'>
   <br>  
   
-  <script src='https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js'></script>
 </body>
 
          
