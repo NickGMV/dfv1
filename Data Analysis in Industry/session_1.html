@@ -84,6 +84,11 @@
 						<button onclick="test()">div script test</button>
 						<div><script src='../other.js'></script></div>
 						
+						
+						Now trying using jquery - bloody hope it's already loaded as part of the js in notes
+						
+						<button onclick='$.getScript("../other.js", function(data, textStatus, jqxhr) {console.log(data); //data returnedconsole.log(textStatus); //successconsole.log(jqxhr.status); //200console.log('Load was performed.');});'>attempt with jquery</button>
+						
 						Welcome apprentices to the session and select a warmup from <a href='https://docs.google.com/presentation/d/1jrSQya9EVyTf0t5e1FTP0g-jJOz6Lzw0g7xjJoixojk/edit?usp=sharing'> here</a>.
 					</aside>
 				</section>
