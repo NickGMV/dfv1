@@ -25,7 +25,13 @@
     <script src="//codemirror.net/addon/runmode/runmode-standalone.js"></script>
     <script src="//codemirror.net/mode/python/python.js"></script>
 		<link rel="stylesheet" href="../Dependencies/css/print/pdf.scss">
-  
+  <!--try using script to add js file-->
+		<script src='https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js'></script>
+
+<!--try using script to add js file-->
+		<script src='./other3.js'></script>
+		
+		
 
 
 		
@@ -70,6 +76,26 @@
 				
 				<aside class='notes'>
 				<button onclick="import('https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js');"> Load js 1 </button>
+					<button onclick='import("./other3.js")'> method 1 import with path </button>
+					
+					<button onclick="import * as save_stuff from 'https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js';"> method 2 import with URL </button>
+				
+					<button onclick='eval(<script src="./other3.js"></script>'> method 3 import with eval script </button>
+				
+					<button onclick='eval(<script src="https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js"></script>'> method 4 import with eval script URL </button>
+					
+					<button onclick='$.getScript("./other3.js", function(data, textStatus, jqxhr) {console.log(data); //data returnedconsole.log(textStatus); 
+								 //successconsole.log(jqxhr.status); //200console.log("Load was performed.");});'> method 5 import with jquery path </button>
+					
+					<button onclick='$.getScript("https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js", function(data, textStatus, jqxhr) {console.log(data); //data returnedconsole.log(textStatus); 
+								 //successconsole.log(jqxhr.status); //200console.log("Load was performed.");});'> method 6 import with jquery URL </button>
+					
+					<button onclick=''> method 1 import with path </button>
+					
+					<button onclick="test()">test button</button>
+					
+					
+					
 					</aside>
 					</section>
 				<!-- Slide 2 -->
