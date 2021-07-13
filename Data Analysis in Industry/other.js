@@ -1,5 +1,5 @@
 Access-Control-Allow-Origin: *
   
-function test() {
+export function test() {
   window.alert('test success!');
 }
