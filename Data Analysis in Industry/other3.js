@@ -17,7 +17,7 @@ function change_content(element,content) {
   document.getElementById(element.parentNode.id).innerHTML+=content;}
 
 /* see if innerHTML will play ball */
-function generate_text_area(){
+function generate_text_area(element){
   parent = element.parentNode;
   parent.innerHTML += "<textarea>add custom notes here</textarea>";
 }
