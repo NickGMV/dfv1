@@ -75,21 +75,7 @@
 				<section  data-background-image="../assets/generic/main_title.PNG" >
 				
 				<aside class='notes'>
-				<button onclick="import('https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other4.js');"> Load js 1 </button>
-					<button onclick='import("./other4.js")'> method 1 import with path </button>
-					
-					<button onclick="import * as save_stuff from 'https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js';"> method 2 import with URL </button>
-				
-					<button onclick='eval(<script src="./other4.js"></script>'> method 3 import with eval script </button>
-				
-					<button onclick='eval(<script type="text/javascript" src="https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js"></script>') method 4 import with eval script URL </button>
-					
-					<button onclick='$.getScript("./other3.js", function(data, textStatus, jqxhr) {console.log(data); //data returnedconsole.log(textStatus); 
-								 //successconsole.log(jqxhr.status); //200console.log("Load was performed.");});'> method 5 import with jquery path </button>
-					
-					<button onclick='$.getScript("https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js", function(data, textStatus, jqxhr) {console.log(data); //data returnedconsole.log(textStatus); 
-								 //successconsole.log(jqxhr.status); //200console.log("Load was performed.");});'> method 6 import with jquery URL </button>
-					
+				<!-- after 14 tests this is the one that works =D FINALLY -->
 					<button onclick="var new_script = document.createElement('script'); new_script.setAttribute('src','./other3.js'); document.head.appendChild(new_script);"> method 7 import write dynamically </button>
 					
 					<button onclick="test()">test button</button>
@@ -107,20 +93,8 @@
 					</div>
 					<!-- Slide 2 Notes-->
 					<aside class='notes'>
-						<button onclick='this.parentNode.innerHTML+="<p>ello</p>"'>add a new note</button>
-						attempt 11
-						<button onclick="import('https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js');"> Load js 1 </button>
-						potential need to fix promise
-						<button onclick="import * as save_stuff from 'https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js';"> load junk 2</button>
-						<button onclick="test()">div script test</button>
-						<script> function test(){window.alert('hi');</script>
-						
-						Attempt 10
-						Now trying using jquery - bloody hope it's already loaded as part of the js in notes
-						
-						<button onclick='$.getScript("../other.js", function(data, textStatus, jqxhr) {console.log(data); //data returnedconsole.log(textStatus); 
-								 //successconsole.log(jqxhr.status); //200console.log("Load was performed.");});'>attempt with jquery</button>
-						
+						<!-- test buttons to see if adding js to 1 notes makes it available across the deck -->
+						<button onclick="test()">test button</button>
 						Welcome apprentices to the session and select a warmup from <a href='https://docs.google.com/presentation/d/1jrSQya9EVyTf0t5e1FTP0g-jJOz6Lzw0g7xjJoixojk/edit?usp=sharing'> here</a>.
 					</aside>
 				</section>
@@ -142,6 +116,8 @@
 					</div>
 					<!-- Slide 3 Notes -->
 					<aside class='notes'>
+						<!-- test buttons to see if adding js to 1 notes makes it available across the deck -->
+						<button onclick="test()">test button</button>
 						Run through the plan of the day, plan to have a break about half way through
 					</aside>
 				</section>
@@ -160,6 +136,8 @@
 					</div>
 					<!-- Slide 4 Notes -->
 					<aside class='notes'>
+						<!-- test buttons to see if adding js to 1 notes makes it available across the deck -->
+						<button onclick="test()">test button</button>
 						Run through learning objectives, this session is about getting apprentices to 'think data'. How can they approach projects in a way that will allow them to work with stakeholders to deliver data driven insights? 
 					</aside>
 				</section>
@@ -170,6 +148,8 @@
 					</div>
 					<!-- Slide 5 Notes -->
 					<aside class='notes'>
+						<!-- test buttons to see if adding js to 1 notes makes it available across the deck -->
+						<button onclick="test()">test button</button>
 						Before the session begins, ask apprentices to annotate the screen with their ideas of what an analyst does. Pick out a few ideas and discuss them with the group. Use this opportunity to assess what level of understanding your apprentices are at.
 					</aside>
 				</section>
