@@ -15,3 +15,9 @@ function find_parent (element) {
 /* potential start on editting content of speaker notes*/
 function change_content(element,content) {
   document.getElementById(element.parentNode.id).innerHTML+=content;}
+
+/* see if innerHTML will play ball */
+function generate_text_area(){
+  parent = element.parentNode;
+  parent.innerHTML += "<textarea>add custom notes here</textarea>";
+}
