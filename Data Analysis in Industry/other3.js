@@ -7,7 +7,10 @@ function test() {
 
 /*use this function to scout how to edit asides once speaker notes are up*/
 function find_parent (element) {
-  window.alert(element.parentNode.id, element.parentNode.className);}
+  window.alert(element.parentNode.id);
+  window.alert(element.parentNode.className);
+  window.alert(element.parentNode.tagName);
+  window.alert(element.parentNode.nodeName);}
 
 /* potential start on editting content of speaker notes*/
 function change_content(element,content) {
