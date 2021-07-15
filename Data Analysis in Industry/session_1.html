@@ -1623,12 +1623,13 @@
 				controlsTutorial: true,
 				loop:true,
 				embedded: false,
-			/*pass reveal object to speaker notes through session storage?*/
-				sessionStorage.setItem("reveal_session", Reveal);
-
+			
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+			
+			/*pass reveal object to speaker notes through session storage?*/
+				sessionStorage.setItem("reveal_session", Reveal);
 		</script>
 		<script src="../Dependencies/node_modules/socket.io/lib/socket.js"></script>
 		<script src="../Dependencies/node_modules/reveal-notes-server/client.js"></script>
