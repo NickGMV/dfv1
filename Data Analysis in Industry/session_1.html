@@ -79,7 +79,7 @@
 					
 					
 					<!--get reveal object-->
-					<button onclick = "var reveal_session = sessionStorage.getItem('reveal_session');">transfer reveal object?</button>
+					<button onclick = "var reveal_session = JSON.parse(sessionStorage.getItem('reveal_session'));">transfer reveal object?</button>
 					<!-- test for js load-->
 					<button onclick="test()">test button</button>
 					
@@ -1628,7 +1628,7 @@
 			});
 			
 			/*pass reveal object to speaker notes through session storage?*/
-				sessionStorage.setItem("reveal_session", Reveal);
+				sessionStorage.setItem("reveal_session", JSON.stringify(Reveal));
 		</script>
 		<script src="../Dependencies/node_modules/socket.io/lib/socket.js"></script>
 		<script src="../Dependencies/node_modules/reveal-notes-server/client.js"></script>
