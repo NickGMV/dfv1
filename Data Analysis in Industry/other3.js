@@ -19,5 +19,5 @@ function change_content(element,content) {
 /* see if innerHTML will play ball */
 function generate_text_area(element){
   parent = element.parentNode.id;
-  document.getElementById(parent).innerHTML += "<textarea onfocus='Reveal.togglePause()'>add custom notes here</textarea>";
+  document.getElementById(parent).innerHTML += "<textarea onfocus='Reveal.configure(controls:false);'>add custom notes here</textarea>";
 }
