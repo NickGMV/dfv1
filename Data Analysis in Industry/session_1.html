@@ -74,14 +74,15 @@
 				<!-- after 14 tests this is the one that works =D FINALLY -->
 					<button onclick="var new_script = document.createElement('script'); new_script.setAttribute('src','./other3.js'); document.head.appendChild(new_script);"> method 7 import write dynamically </button>
 					
-					<!-- check what reveal looks like is it storing correctly?-->
-					<button onclick = "sessionStorage.command='Reveal.configure({});">check reveal object?</button>
-					<button onclick = "window.alert(JSON.parse(sessionStorage.reveal_session));">check reveal object 2?</button>
 					
 					
 					
-					<!--get reveal object from session storage?-->
-					<button onclick = "var reveal_session = JSON.parse(sessionStorage.reveal_session);">transfer reveal object?</button>
+					<!-- send js command between the pages-->
+					<button onclick = "sessionStorage.command='Reveal.configure({keyboard: false});">send reveal command?</button>
+				
+					
+					
+					
 				
 					
 					
@@ -1602,7 +1603,7 @@
     <!-- Scripts -->
 	  <!-- last attempt to get auto change on reveal hot keys before I have to throw in the towel and change the settings!-->
 	  window.addEventListener('storage', () => {
-  // When local storage changes, dump the list to
+  // When session storage changes, dump the list to
   // the console.
   console.log(JSON.parse(window.sessionStorage.getItem('command')));
 	  eval(sessionStorage.command));
