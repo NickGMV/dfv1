@@ -78,7 +78,7 @@
 					
 					
 					<!-- send js command between the pages-->
-					<button onclick = "localStorage.command='Reveal.configure({keyboard: false});'; window.alert('worked');">send reveal command?</button>
+					<button onclick = "localStorage.command='Reveal.configure({keyboard: false});';">send reveal command?</button>
 				
 					
 					<!trying to use API methode in notes?-->
@@ -100,15 +100,9 @@
 					<aside class='notes'>
 						<!-- button testing reveal button freeze-->
 						<button onclick='Reveal.configure({keyboard:false})'>freeze hotkeys</button>
-						<!-- test buttons to see if adding js to 1 notes makes it available across the deck -->
-						<button onclick="test()">test button</button>
-						<!-- use these to see where asides are stored in speaker notes -->
-						<button onclick="find_parent(this)">find where button lives</button>
-						<!-- test whuch elements survive transform-->
 						
 						<div id='textzone'>
-							<button onclick="test()">test button</button>
-							<button onclick="find_parent(this)">find where button lives</button>
+							
 							<button onclick="generate_text_area(this)">make text box</button>
 						</div>
 
@@ -1713,7 +1707,7 @@
   //console.log(window.localStorage.getItem('command'));
 //	  eval(localStorage.command);
   //        Reveal.getSlideNotes();
-});
+//});
 	  </script>
   </body>
   
