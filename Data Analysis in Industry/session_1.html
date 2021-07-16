@@ -82,7 +82,7 @@
 				
 					
 					<!trying to use API methode in notes?-->
-					<button onclick='callRevealApi( "configure", ["keyboard", "false"], "pause" )'> try API </button>
+					<button onclick='callRevealApi( "configure", ["keyboard", "false"], "pause" );'> try API </button>
 					
 				
 					
@@ -1621,13 +1621,13 @@
 				loop:true,
 				embedded: false,
 				postMessage:true,
-				postMessageEvents:false,
+				postMessageEvents:true,
 			
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
-			Reveal.getSlideNotes();
-			Reveal.configure({keyboard:false});
+			//Reveal.getSlideNotes();
+			//Reveal.configure({keyboard:false});
 		</script>
 		<script src="../Dependencies/node_modules/socket.io/lib/socket.js"></script>
 		<script src="../Dependencies/node_modules/reveal-notes-server/client.js"></script>
