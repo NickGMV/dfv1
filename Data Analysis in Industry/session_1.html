@@ -1620,8 +1620,8 @@
 				controlsTutorial: true,
 				loop:true,
 				embedded: false,
-				postMessage:true,
-				postMessageEvents:false,
+				//postMessage:true,
+				//postMessageEvents:false,
 			
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
@@ -1700,15 +1700,15 @@
 	
 	  <!-- Scripts -->
 	  <!-- last attempt to get auto change on reveal hot keys before I have to throw in the towel and change the settings!-->
-	<script>
+	<!--<script>
 	
-	  //window.addEventListener('storage', () => {
-	  //window.alert('received command');
-  //console.log(window.localStorage.getItem('command'));
-//	  eval(localStorage.command);
-  //        Reveal.getSlideNotes();
-//});
-	  </script>
+	  window.addEventListener('storage', () => {
+	  window.alert('received command');
+  console.log(window.localStorage.getItem('command'));
+	  eval(localStorage.command);
+          Reveal.getSlideNotes();
+});
+	  </script>-->
   </body>
   
 </html>
