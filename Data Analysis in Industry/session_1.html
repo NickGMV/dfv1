@@ -1600,16 +1600,7 @@
       </div>
 		</div>
  
-    <!-- Scripts -->
-	  <!-- last attempt to get auto change on reveal hot keys before I have to throw in the towel and change the settings!-->
-	  window.addEventListener('storage', () => {
-	  window.alert('received command');
-  // When session storage changes, dump the list to
-  // the console.
-  console.log(JSON.parse(window.localStorage.getItem('command')));
-	  eval(localStorage.command));
-});
-	  <script>
+  
 	  
 	  
 	  </script>
@@ -1709,6 +1700,17 @@
 
 			}
 		</script>
+	
+	  <!-- Scripts -->
+	  <!-- last attempt to get auto change on reveal hot keys before I have to throw in the towel and change the settings!-->
+	  window.addEventListener('storage', () => {
+	  window.alert('received command');
+  // When session storage changes, dump the list to
+  // the console.
+  console.log(window.localStorage.getItem('command'));
+	  eval(localStorage.command));
+});
+	  <script>
   </body>
   
 </html>
