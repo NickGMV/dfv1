@@ -75,7 +75,7 @@
 					<button onclick="var new_script = document.createElement('script'); new_script.setAttribute('src','./other3.js'); document.head.appendChild(new_script);"> method 7 import write dynamically </button>
 					
 					<!-- check what reveal looks like is it storing correctly?-->
-					<button onclick = "window.alert(sessionStorage.reveal_session);">check reveal object?</button>
+					<button onclick = "sessionStorage.command='Reveal.configure({});">check reveal object?</button>
 					<button onclick = "window.alert(JSON.parse(sessionStorage.reveal_session));">check reveal object 2?</button>
 					
 					
@@ -97,7 +97,7 @@
 					<!-- Slide 2 Notes-->
 					<aside class='notes'>
 						<!-- button testing reveal button freeze-->
-						<button onclick='reveal_session.configure({controls:false})'>freeze hotkeys</button>
+						<button onclick='sessionStorage.command = "Reveal.configure({keyboard:false})"'>freeze hotkeys</button>
 						<!-- test buttons to see if adding js to 1 notes makes it available across the deck -->
 						<button onclick="test()">test button</button>
 						<!-- use these to see where asides are stored in speaker notes -->
@@ -1600,6 +1600,18 @@
 		</div>
  
     <!-- Scripts -->
+	  <!-- last attempt to get auto change on reveal hot keys before I have to throw in the towel and change the settings!-->
+	  window.addEventListener('storage', () => {
+  // When local storage changes, dump the list to
+  // the console.
+  console.log(JSON.parse(window.sessionStorage.getItem('command')));
+	  eval(sessionStorage.command));
+});
+	  <script>
+	  
+	  
+	  </script>
+	  
                 <script src="../Dependencies/dist/reveal.js"></script>
 		<script src="../Dependencies/plugin/notes/notes.js"></script>
 		<script src="../Dependencies/plugin/markdown/markdown.js"></script>
@@ -1625,8 +1637,6 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 			
-			/*pass reveal object to speaker notes through session storage?*/
-				sessionStorage.reveal_session = JSON.stringify(Reveal);
 		</script>
 		<script src="../Dependencies/node_modules/socket.io/lib/socket.js"></script>
 		<script src="../Dependencies/node_modules/reveal-notes-server/client.js"></script>
