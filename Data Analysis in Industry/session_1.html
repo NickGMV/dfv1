@@ -78,7 +78,7 @@
 					
 					
 					<!-- send js command between the pages-->
-					<button onclick = "sessionStorage.command='Reveal.configure({keyboard: false});'; window.alert('worked');">send reveal command?</button>
+					<button onclick = "localStorage.command='Reveal.configure({keyboard: false});'; window.alert('worked');">send reveal command?</button>
 				
 					
 					
@@ -1606,8 +1606,8 @@
 	  window.alert('received command');
   // When session storage changes, dump the list to
   // the console.
-  console.log(JSON.parse(window.sessionStorage.getItem('command')));
-	  eval(sessionStorage.command));
+  console.log(JSON.parse(window.localStorage.getItem('command')));
+	  eval(localStorage.command));
 });
 	  <script>
 	  
