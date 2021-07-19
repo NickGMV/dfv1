@@ -22,8 +22,8 @@ function generate_text_area(element){
   document.getElementById(parent).innerHTML += "<textarea onfocus='Reveal.configure(controls:false);'>add custom notes here</textarea>";
 }
 
-  window.addEventListener('storage', () => {
-	  window.alert('received command');
-  console.log(window.localStorage.getItem('command'));
-	  eval(localStorage.command);
-  };);
+
+window.addEventListener('storage', () => {
+window.alert('received command');
+console.log(window.localStorage.getItem('command'));
+eval(localStorage.command)});
