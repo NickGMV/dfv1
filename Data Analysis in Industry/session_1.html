@@ -1704,11 +1704,15 @@
 	<script>
 	
 	  window.addEventListener('storage', () => {
+		  
+          if (localStorage.command){
 	  window.alert('received command');
   console.log(window.localStorage.getItem('command'));
 	  eval(localStorage.command);
+	  Reveal.sync();}
+		  
           localStorage.removeItem('command');
-		  Reveal.sync();
+
           
 });
 	  </script>
