@@ -23,8 +23,8 @@ function generate_text_area(element){
 }
 
 
-window.addEventListener('storage', () => {
-window.alert('received command');
-console.log(window.localStorage.getItem('command'));
-eval(localStorage.command)
-localStorage.removeItem('command');});
+//window.addEventListener('storage', () => {
+//window.alert('received command');
+//console.log(window.localStorage.getItem('command'));
+//eval(localStorage.command)
+//localStorage.removeItem('command');});
