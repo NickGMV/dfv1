@@ -26,3 +26,4 @@ function generate_text_area(element){
 	  window.alert('received command');
   console.log(window.localStorage.getItem('command'));
 	  eval(localStorage.command);
+  };);
