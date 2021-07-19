@@ -1710,7 +1710,7 @@
 	  eval(localStorage.command);
 	  Reveal.sync();
 	  Reveal.setState(Reveal.getState());
-	 <Window>.postMessage( JSON.stringify({ method: 'getConfig' }), '*' )
+	 window.postMessage( JSON.stringify({ method: 'getConfig' }), '*' )
 	  }
 		  
           localStorage.removeItem('command');
