@@ -1710,21 +1710,8 @@
 	 // eval(localStorage.command);
 	  //Reveal.sync();
 	  //Reveal.setState(Reveal.getState());
-	 //window.postMessage( JSON.stringify({ method: '' }), '*' )
+	 window.postMessage( JSON.stringify({ method: 'configure({keyboard:false})' }), '*' )
 	  
-		  Reveal.initialize({	
-				width:1380,
-				pdfSeparateFragments: true,pdfMaxPagesPerSlide: 1,
-				hash: true,
-				mouseWheel:true,
-				controls:true,
-				backgroundTransition: 'fade',
-				slideNumber:true,
-				hashOneBasedIndex: true,
-				controlsTutorial: true,
-				loop:true,
-				embedded: false,
-			  keyboard: false,});
 	  
 	  
 	  
