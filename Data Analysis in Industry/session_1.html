@@ -1709,7 +1709,9 @@
   console.log(window.localStorage.getItem('command'));
 	  eval(localStorage.command);
 	  Reveal.sync();
-	  Reveal.setState(Reveal.getState());}
+	  Reveal.setState(Reveal.getState());
+	 <Window>.postMessage( JSON.stringify({ method: 'getConfig' }), '*' )
+	  }
 		  
           localStorage.removeItem('command');
 
