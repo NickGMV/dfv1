@@ -1622,6 +1622,10 @@
 				controlsTutorial: true,
 				loop:true,
 				embedded: false,
+				 // Exposes the reveal.js API through window.postMessage
+                                postMessage: true,
+                                 // Dispatches all reveal.js events to the parent window through postMessage
+                                postMessageEvents: false,
 				
 			
 				// Learn about plugins: https://revealjs.com/plugins/
@@ -1708,11 +1712,16 @@
 		  
           if (localStorage.command){
 	  window.alert('received command');
-  console.log(window.localStorage.getItem('command'));
-	  eval(localStorage.command);
-	  //Reveal.sync();
+          
+	  console.log(window.localStorage.getItem('command'));
+          concole.log(Reveal.getConfig());
+	  console.log(Reveal.getState(););
+		  
+	  //eval(localStorage.command);
+          Reveal.configure({keyboard:false});
+	  Reveal.sync();
 	  //Reveal.setState(Reveal.getState());
-	 //window.postMessage( JSON.stringify({ method: 'configure({keyboard:false})' }), '*' )
+	  revealWindow.postMessage( JSON.stringify({ method: 'configure({keyboard:false})' }), '*' )
 	  
 	  
 	  
