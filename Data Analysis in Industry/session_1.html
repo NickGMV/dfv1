@@ -1719,21 +1719,23 @@
     currentDate = Date.now();
   } while (currentDate - date < milliseconds);
 }
-	  
-	  window.addEventListener('storage', () => {
-		  
-          if (localStorage.command){
-	  window.alert('received command');
-	  console.log(window.localStorage.getItem('command'));
-          console.log(Reveal.getConfig());
-	  console.log('pre change 1');
-		  
-	  //eval(localStorage.command);
-	 
+
 		
-		 
-		  Reveal.configure({postMessageEvents:true});
-		  console.log('change post message and keyboard');
+		
+		
+window.addEventListener('storage', () => {
+ 
+if (localStorage.command){
+ 
+window.alert('received command');
+console.log(window.localStorage.getItem('command'));
+console.log(Reveal.getConfig());
+console.log('pre change 1');	
+ 
+console.log('change post message and keyboard');
+
+Reveal.configure({postMessageEvents:true});
+		  
 		  sleep(200);
 		 
 		  console.log(Reveal.getConfig());
@@ -1747,21 +1749,11 @@
                   Reveal.configure({postMessageEvents:false});
 		  console.log(Reveal.getConfig());
                   sleep(200);
-		  
-	localStorage.removeItem('command');
+	 localStorage.removeItem('command');
         console.log('loop complete');
-	  //Reveal.setState(Reveal.getState());
-         
-	  
-	  
-	  
-	  
-	  
-	  }
-		  
-          localStorage.removeItem('command');
-
-          
+ }
+	
+  localStorage.removeItem('command');
 });
 	  </script>
   </body>
