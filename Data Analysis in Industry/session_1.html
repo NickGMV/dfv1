@@ -69,7 +69,7 @@
 			<div class="slides">
 				<!-- Slide 1 -->
 				<section  data-background-image="../assets/generic/main_title.PNG" >
-				<button onclick = "localStorage.command='Reveal.configure({keyboard: false});'; setupNotes();">send reveal command?</button>
+				<button onclick = "localStorage.command='Reveal.configure({keyboard: false});'; setTimeout(function{setupNotes();},1000);">send reveal command?</button>
 					
 				<aside class='notes'>
 				<!-- after 14 tests this is the one that works =D FINALLY -->
