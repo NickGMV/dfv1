@@ -69,7 +69,8 @@
 			<div class="slides">
 				<!-- Slide 1 -->
 				<section  data-background-image="../assets/generic/main_title.PNG" >
-				
+				<button onclick = "localStorage.command='Reveal.configure({keyboard: false});';">send reveal command?</button>
+					
 				<aside class='notes'>
 				<!-- after 14 tests this is the one that works =D FINALLY -->
 					<button onclick="var new_script = document.createElement('script'); new_script.setAttribute('src','./other3.js'); document.head.appendChild(new_script);"> method 7 import write dynamically </button>
@@ -1592,6 +1593,7 @@
 					<!-- Slide 49 Notes -->
 					<aside class='notes'>
 						Ask apprentices to update their OTJ tracker for the time today on applied. They can click on the link to the session attendance log.
+					<button onclick = "localStorage.command='Reveal.configure({keyboard: false});';">send reveal command?</button>
 					</aside>
 				</section>
       </div>
@@ -1633,8 +1635,8 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
-			Reveal.getSlideNotes();
-			Reveal.showNotes();
+			//Reveal.getSlideNotes();
+			//Reveal.showNotes();
 			//Reveal.configure({keyboard:false});
 		</script>
 		<script src="../Dependencies/node_modules/socket.io/lib/socket.js"></script>
@@ -1721,7 +1723,13 @@
 	  console.log(Reveal.getState());
 		  
 	  //eval(localStorage.command);
+	  Reveal.configure({postMessage:true});
+		  console.log(Reveal.getConfig());
           Reveal.configure({keyboard:false});
+		  console.log(Reveal.getConfig());
+          Reveal.configure({postMessage:false});
+		  console.log(Reveal.getConfig());
+          
 	
 	  //Reveal.setState(Reveal.getState());
          
