@@ -1712,7 +1712,8 @@
 	  <!-- Scripts -->
 	  <!-- last attempt to get auto change on reveal hot keys before I have to throw in the towel and change the settings!-->
 	<script>
-	
+	  import time
+	  
 	  window.addEventListener('storage', () => {
 		  
           if (localStorage.command){
@@ -1720,12 +1721,16 @@
           
 	  console.log(window.localStorage.getItem('command'));
           console.log(Reveal.getConfig());
-	  console.log(Reveal.getState());
+	  console.log('pre change 1');
 		  
 	  //eval(localStorage.command);
 	  Reveal.configure({postMessageEvents:true});
+		  time.sleep(1)
+		  console.log('change coming 1');
 		  console.log(Reveal.getConfig());
-          Reveal.configure({keyboard:false});
+		  Reveal.configure({keyboard:false});
+		   time.sleep(1)
+		  console.log('change should be here');
 		  console.log(Reveal.getConfig());
           Reveal.configure({postMessageEvents:false});
 		  console.log(Reveal.getConfig());
