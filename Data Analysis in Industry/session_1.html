@@ -1724,14 +1724,17 @@
 	  console.log('pre change 1');
 		  
 	  //eval(localStorage.command);
-	  Reveal.configure({postMessageEvents:true});
-		  time.sleep(1)
+	 setTimeout(function{ Reveal.configure({postMessageEvents:true});},1000);
+		
+		  setTimeout(function{
 		  console.log('change coming 1');
 		  console.log(Reveal.getConfig());
-		  Reveal.configure({keyboard:false});
-		   time.sleep(1)
+		  Reveal.configure({keyboard:false});},1000);
+		  
+		   setTimeout(function{
 		  console.log('change should be here');
-		  console.log(Reveal.getConfig());
+		  console.log(Reveal.getConfig());},500);
+		
           Reveal.configure({postMessageEvents:false});
 		  console.log(Reveal.getConfig());
           
