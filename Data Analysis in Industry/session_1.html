@@ -1723,14 +1723,14 @@
 	  console.log(Reveal.getState());
 		  
 	  //eval(localStorage.command);
-	  Reveal.configure({postMessage:true});
+	  Reveal.configure({postMessageEvents:true});
 		  console.log(Reveal.getConfig());
           Reveal.configure({keyboard:false});
 		  console.log(Reveal.getConfig());
-          Reveal.configure({postMessage:false});
+          Reveal.configure({postMessageEvents:false});
 		  console.log(Reveal.getConfig());
           
-	
+	localStorage.removeItem('command');
 	  //Reveal.setState(Reveal.getState());
          
 	  
