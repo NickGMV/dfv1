@@ -1721,7 +1721,8 @@
           Reveal.configure({keyboard:false});
 	  Reveal.sync();
 	  //Reveal.setState(Reveal.getState());
-	  reveal.postMessage( JSON.stringify({ method: 'configure({keyboard:false})' }), '*' )
+          var pop_up = 'about:blank'
+	  pop_up.postMessage( JSON.stringify({ method: 'configure({keyboard:false})' }), '*' );
 	  
 	  
 	  
