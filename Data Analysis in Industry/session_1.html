@@ -1712,7 +1712,13 @@
 	  <!-- Scripts -->
 	  <!-- last attempt to get auto change on reveal hot keys before I have to throw in the towel and change the settings!-->
 	<script>
-	  
+	  function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
 	  
 	  window.addEventListener('storage', () => {
 		  
@@ -1725,21 +1731,23 @@
 	  //eval(localStorage.command);
 	 
 		
-		  setTimeout(function(){
+		 
 		  Reveal.configure({postMessageEvents:true});
-		  console.log('change post message and keyboard');},500);
-		  
-		  setTimeout(function(){
+		  console.log('change post message and keyboard');
+		  sleep(200);
+		 
 		  console.log(Reveal.getConfig());
-		  Reveal.configure({keyboard:false});},500);
-		  
-		  setTimeout(function(){
+		  Reveal.configure({keyboard:false});
+		  sleep(200);
+		 
 		  console.log('should see postmessage changed');
-		  console.log(Reveal.getConfig());},500);
-		
-                  setTimeout(function(){Reveal.configure({postMessageEvents:false});
-		  console.log(Reveal.getConfig());},500);
-          
+		  console.log(Reveal.getConfig());
+		  sleep(200);
+		  
+                  Reveal.configure({postMessageEvents:false});
+		  console.log(Reveal.getConfig());
+                  sleep(200);
+		  
 	localStorage.removeItem('command');
         console.log('loop complete');
 	  //Reveal.setState(Reveal.getState());
