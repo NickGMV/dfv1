@@ -1721,7 +1721,7 @@
           Reveal.configure({keyboard:false});
 	  Reveal.sync();
 	  //Reveal.setState(Reveal.getState());
-	  revealWindow.postMessage( JSON.stringify({ method: 'configure({keyboard:false})' }), '*' )
+	  reveal.postMessage( JSON.stringify({ method: 'configure({keyboard:false})' }), '*' )
 	  
 	  
 	  
