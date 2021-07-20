@@ -22,6 +22,13 @@ function generate_text_area(element){
   document.getElementById(parent).innerHTML += "<textarea onfocus='window.blur();'>add custom notes here</textarea>";
 }
 
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
 
 //window.addEventListener('storage', () => {
 //window.alert('received command');
