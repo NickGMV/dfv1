@@ -1618,6 +1618,7 @@
 				controls:true,
 				backgroundTransition: 'fade',
 				slideNumber:true,
+				showNotes:true,
 				hashOneBasedIndex: true,
 				controlsTutorial: true,
 				loop:true,
@@ -1632,7 +1633,8 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
-			//Reveal.getSlideNotes();
+			Reveal.getSlideNotes();
+			Reveal.showNotes();
 			//Reveal.configure({keyboard:false});
 		</script>
 		<script src="../Dependencies/node_modules/socket.io/lib/socket.js"></script>
