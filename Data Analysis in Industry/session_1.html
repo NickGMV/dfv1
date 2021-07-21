@@ -69,8 +69,8 @@
 			<div class="slides">
 				<!-- Slide 1 -->
 				<section  data-background-image="../assets/generic/main_title.PNG" >
-				<button onclick = "localStorage.command='freeze'; setTimeout(function(){setupNotes();},1000);">send reveal command?</button>
-					
+				<button onclick = "localStorage.command='freeze';">send reveal command?</button>
+				<button onclick = "setupNotes();">send reveal command?</button>	
 				<aside class='notes'>
 				<!-- after 14 tests this is the one that works =D FINALLY -->
 					<button onclick="var new_script = document.createElement('script'); new_script.setAttribute('src','./other3.js'); document.head.appendChild(new_script);"> method 7 import write dynamically </button>
