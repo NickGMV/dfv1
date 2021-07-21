@@ -1729,7 +1729,7 @@ async function keyboard_on_off() {
   const response1 = await Reveal.configure({keyboard:false});
   const data1 = await console.log(response1);
   console.log(Reveal.getConfig());
-  const response2 = Reveal.configure({postMessageEvents:false});
+  const response2 = await Reveal.configure({postMessageEvents:false});
   const data2 = await console.log(response2);
 
   console.log(data)
