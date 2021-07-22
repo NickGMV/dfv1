@@ -181,7 +181,7 @@
         <td>
           <ul style='display:inline-block;text-align:left'>
             <li><a href='https://multiverselearningproducts.github.io/dfv1/Data%20Analysis%20in%20Industry/lesson_plan_v2.html' target='_blank'>Lesson Plan</a> </li>
-            <li><a href='https://multiverselearningproducts.github.io/dfv1/Data%20Analysis%20in%20Industry/session_1_v2.html' target='_blank'> Session 1 </a></li>
+            <li><a href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/session_1_v2.html' target='_blank'> Session 1 </a></li>
             <li><a href='https://multiverselearningproducts.github.io/dfv1/Data%20Analysis%20in%20Industry/session_2_v2.html' target='_blank'> Session 2 </a></li>
           </ul>
         </td>
