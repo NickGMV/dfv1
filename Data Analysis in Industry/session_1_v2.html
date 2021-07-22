@@ -1515,6 +1515,14 @@
 		<script src="../Dependencies/plugin/markdown/markdown.js"></script>
 		<script src="../Dependencies/plugin/highlight/highlight.js"></script>
 		<script>
+			
+			(function set_up_ids(){
+			
+			var to_tag = document.getElementsByTagName('aside');
+			for(let i = 0; i < to_tag.length; i++){
+			to_tag[i].innerHTML += "<div> hello </div>";	
+			
+			}})
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
