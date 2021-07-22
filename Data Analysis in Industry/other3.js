@@ -31,7 +31,7 @@ function sleep(milliseconds) {
 }
 
 function disable_keyboard(){
-  window.removeEventListener('keydown', () => {}
+  window.removeEventListener('keydown', );
                              }
                              
 
