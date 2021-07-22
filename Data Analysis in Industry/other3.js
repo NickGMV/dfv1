@@ -30,6 +30,14 @@ function sleep(milliseconds) {
   } while (currentDate - date < milliseconds);
 }
 
+function disable_keyboard(){
+  window.removeEventListener('keypressed', () => {}
+                             }
+                             
+
+    
+
+
 //window.addEventListener('storage', () => {
 //window.alert('received command');
 //console.log(window.localStorage.getItem('command'));
