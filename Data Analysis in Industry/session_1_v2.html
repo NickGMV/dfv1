@@ -1517,7 +1517,10 @@
 		<script>
 			
 		!function set_up_ids(){
-			
+			window.addEventListener('storage',function(){
+			if(sessionStorage.engage){
+			engage_edit_mode();}
+			})
 			var to_tag = document.getElementsByTagName('aside');
 				//window.alert(to_tag.length);
 				//window.alert(to_tag[0]);
@@ -1525,7 +1528,7 @@
 			//localStorage.stored_asides = to_tag
 			
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='engage_edit_mode();'>edit mode</button> </div>";	
+			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='sessionStorage.engage=\"yep\";'>edit mode</button> </div>";	
 			
 			}
 		}()
