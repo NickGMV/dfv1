@@ -1517,11 +1517,22 @@
 		<script>
 			
 		!function set_up_ids(){
+			
+			// add listener so window for edits can communicate
 			window.addEventListener('storage',function(){
 			if(sessionStorage.engage){
-			engage_edit_mode();}
+			engage_edit_mode();
+			sessionStorage.removeItem('engage');}
 			})
+			
+			//if notes exist find them and make sure they're stored
+			if(stored_notes){
+				
+			}
+			
+			// on first boot if no edits exist load base set of notes
 			var to_tag = document.getElementsByTagName('aside');
+			sessionStorage
 				//window.alert(to_tag.length);
 				//window.alert(to_tag[0]);
 			// use a local storage element to avoid adding buttons to all versions of the asides.
@@ -1535,12 +1546,12 @@
 			
 		function engage_edit_mode(){
 		// start new window	
-		var editorWindow = window.open("","edit mode","width=200,height=200");	
+		var editorWindow = window.open("","edit mode","width=500,height=500");	
 		
 		//var notes = document.getElementsByTagName('aside');
 			//for(let i = 0; i < to_tag.length; i++){
 			//notes[i]
-			window.alert("window ready");
+			editorwindow.alert("window ready");
 			//}
 			
 		}
