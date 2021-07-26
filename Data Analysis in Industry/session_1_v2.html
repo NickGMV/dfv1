@@ -1526,13 +1526,13 @@
 			})
 			
 			//if notes exist find them and make sure they're stored
-			if(stored_notes){
+			if(sessionStorage.stored_notes){
 				
 			}
 			
 			// on first boot if no edits exist load base set of notes
 			var to_tag = document.getElementsByTagName('aside');
-			sessionStorage
+			
 				//window.alert(to_tag.length);
 				//window.alert(to_tag[0]);
 			// use a local storage element to avoid adding buttons to all versions of the asides.
