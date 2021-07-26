@@ -1519,14 +1519,28 @@
 		!function set_up_ids(){
 			
 			var to_tag = document.getElementsByTagName('aside');
-				window.alert(to_tag.length);
-				window.alert(to_tag[0]);
+				//window.alert(to_tag.length);
+				//window.alert(to_tag[0]);
+			// use a local storage element to avoid adding buttons to all versions of the asides.
+			//localStorage.stored_asides = to_tag
 			
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<div> <button onclick='window.open(\"\",\"edit mode\");'>edit mode</button> </div>";	
+			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='engage_edit_mode();'>edit mode</button> </div>";	
 			
 			}
 		}()
+			
+		function engage_edit_mode(){
+		// start new window	
+		var editorWindow = window.open("","edit mode","width=200,height=200");	
+		
+		//var notes = document.getElementsByTagName('aside');
+			//for(let i = 0; i < to_tag.length; i++){
+			//notes[i]
+			window.alert("window ready");
+			}
+			
+		}
 			
 			
 			
