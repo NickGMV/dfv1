@@ -1545,7 +1545,12 @@
 		}()
 			
 		function engage_edit_mode(){
-		// start new window	
+		// start new window
+			
+		var myWindow = window.open("", "MsgWindow", "width=200,height=100");
+myWindow.document.write("<p>This window's name is: " + myWindow.name + "</p>");
+			
+			
 		var editorWindow = window.open("","editorWindow","width=500,height=500");	
 		editorWindow.document.write("<p>This is 'editor window'. notes should appear soon...</P>");
 			
