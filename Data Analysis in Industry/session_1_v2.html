@@ -1546,12 +1546,13 @@
 			
 		function engage_edit_mode(){
 		// start new window	
-		var editorWindow = window.open("","edit mode","width=500,height=500");	
-		
+		var editorWindow = window.open("","edit_mode","width=500,height=500");	
+		editorWindow.document.write("<p>This is 'editor window'. notes should appear soon...</P>");
+			
 		//var notes = document.getElementsByTagName('aside');
-			//for(let i = 0; i < to_tag.length; i++){
-			//notes[i]
-			editorWindow.document.write("<p>This is 'editor window'. notes should appear soon...");
+		//for(let i = 0; i < to_tag.length; i++){
+		//notes[i]
+		
 			
 			//}
 			
