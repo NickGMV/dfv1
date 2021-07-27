@@ -1517,7 +1517,7 @@
 		<script>
 			
 		!function set_up_ids(){
-			engage_edit_mode();
+			
 			// add listener so window for edits can communicate
 			window.addEventListener('storage',function(){
 			if(localStorage.engage){
@@ -1532,14 +1532,15 @@
 			
 			// on first boot if no edits exist load base set of notes
 			var to_tag = document.getElementsByTagName('aside');
-			
+			// get un adulterated copy of notes
+			localStorage.rawnotes = document.getElementsByTagName('aside');
 				//window.alert(to_tag.length);
 				//window.alert(to_tag[0]);
 			// use a local storage element to avoid adding buttons to all versions of the asides.
 			//localStorage.stored_asides = to_tag
 			
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; var editorWindow = window.open(\"\",\"editorWindow\",\"width=500,height=500\");'>edit mode</button> </div>";	
+			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";'>edit mode</button> </div>";	
 			
 			}
 		}()
@@ -1554,6 +1555,13 @@
 			
 			
 		editorWindow.document.write("<p>This is 'editor window'. notes should appear soon...</P>");
+		//put rawnote in to editor window
+		editorWindow.document.write(localStorage.rawNotes[1]);
+			
+		editorWindow.document.write(localStorage.rawNotes[2]);
+			
+		editorWindow.document.write(localStorage.rawNotes);
+			
 			
 		//var notes = document.getElementsByTagName('aside');
 		//for(let i = 0; i < to_tag.length; i++){
