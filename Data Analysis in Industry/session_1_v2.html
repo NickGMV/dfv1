@@ -1535,14 +1535,14 @@
 			
 			// on first boot if no edits exist load base set of notes
 			var to_tag = document.getElementsByTagName('aside');
-			
+			concole.log(to_tag.length);
 			//need to add logic to recover existing additions
 			
 			// get un adulterated copy of notes(no edit buttons)
 			
 			var rawNotes=[];
 			
-			for(let i = 0; i < to_tag.length; i++){
+			for(let i = 0; i < to_tag.length-1; i++){
 			rawNotes[i] = to_tag[i].innerHTML;	
 			
 			}
@@ -1551,7 +1551,7 @@
 			//window.alert(to_tag.length);
 			//window.alert(to_tag[0]);
 			
-			for(let i = 0; i < to_tag.length; i++){
+			for(let i = 0; i < to_tag.length-1; i++){
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";'>edit mode</button> </div>";	
 			
 			}
