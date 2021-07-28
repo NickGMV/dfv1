@@ -1533,7 +1533,15 @@
 			// on first boot if no edits exist load base set of notes
 			var to_tag = document.getElementsByTagName('aside');
 			// get un adulterated copy of notes
-			localStorage.rawNotes = document.getElementsByTagName('aside');
+			// need to change so it's copy of innerHTML
+			var rawNotes=[];
+			
+			for(let i = 0; i < to_tag.length; i++){
+			rawNotes[i] = to_tag[i].innerHTML;	
+			
+			}
+			
+			localStorage.rawNotes = rawNotes;
 				//window.alert(to_tag.length);
 				//window.alert(to_tag[0]);
 			// use a local storage element to avoid adding buttons to all versions of the asides.
