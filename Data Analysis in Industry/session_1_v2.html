@@ -1552,7 +1552,7 @@
 			
 			localStorage.rawNotes = JSON.stringify(rawNotes);
 			
-			console.log(JSON.parse(localStorage.rawNotes.length))
+			console.log(JSON.parse(localStorage.rawNotes).length)
 			//window.alert(to_tag.length);
 			//window.alert(to_tag[0]);
 			
@@ -1577,7 +1577,7 @@
 			
 		//put rawnotes in to editor window this will persist between sessions so should keep all additional notes added	once save routine is written
 		//for each saved aside create a frame to store it localStorage.getItem
-		var editorNotes = JSON>parse(localStorage.getItem('rawNotes'));
+		var editorNotes = JSON.parse(localStorage.getItem('rawNotes'));
 	        
 		console.log(editorNotes.length);	
 		//for(let i = 0;i< editorNotes.length;i++){
