@@ -1558,8 +1558,12 @@
 		//put rawnote in to editor window
 			
 		editorWindow.document.body.innerHTML+=(localStorage.rawNotes);
+		editorWindow.document.body.innerHTML+=(localStorage.rawNotes[0]);	
+		
 			
 			
+			editorWindow.document.body.innerHTML+=(JSON.stringify(localStorage.rawNotes));
+		editorWindow.document.body.innerHTML+=(JSON.stringify(localStorage.rawNotes[0]));
 		//var notes = document.getElementsByTagName('aside');
 		//for(let i = 0; i < to_tag.length; i++){
 		//notes[i]
