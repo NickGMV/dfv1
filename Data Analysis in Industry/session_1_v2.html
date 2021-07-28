@@ -1575,9 +1575,9 @@
 		var editorNotes = localStorage.getItem('rawNotes');
 		console.log(editorNotes[0]);
 		console.log(editorNotes[1]);	
-		//for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div> This is the container "  + editorNotes + "</div>";
-		//}
+		for(let i = 0;i< editorNotes.length;i++){
+		editorWindow.document.body.innerHTML+="<div> This is slide "+ i  + editorNotes[i] + "</div>";
+		}
 		
 		
 			
