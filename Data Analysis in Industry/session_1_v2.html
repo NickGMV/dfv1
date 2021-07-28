@@ -1580,12 +1580,12 @@
 		var editorNotes = JSON.parse(localStorage.getItem('rawNotes'));
 	        
 		console.log(editorNotes.length);	
-		//for(let i = 0;i< editorNotes.length;i++){
-		//editorWindow.document.body.innerHTML+="<div> This is slide "+ i  + editorNotes[i] + "</div>";
-		//}
-			var note = editorNotes[1];
-			editorWindow.document.write(editorNotes.length);
-		editorWindow.document.body.innerHTML+="<div> this is first notes" + note + "</div>";
+		for(let i = 0;i< editorNotes.length;i++){
+		editorWindow.document.body.innerHTML+="<div> This is slide "+ i  + editorNotes[i] + "</div>";
+		}
+			//var note = editorNotes[1];
+			//editorWindow.document.write(editorNotes.length);
+		//editorWindow.document.body.innerHTML+="<div> this is first notes" + note + "</div>";
 		
 			
 		}
