@@ -1573,10 +1573,11 @@
 		//put rawnotes in to editor window this will persist between sessions so should keep all additional notes added	once save routine is written
 		//for each saved aside create a frame to store it
 		var editorNotes = localStorage.rawNotes;
+		console.log(editorNotes);
 			
-		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+=("<div class='slidenote'> this is slide" + i + editorNotes[i] + "</div>");
-		}
+		//for(let i = 0;i< editorNotes.length;i++){
+		//editorWindow.document.body.innerHTML+=("<div class='slidenote'> this is slide" + i + editorNotes[i] + "</div>");
+		//}
 		
 		
 			
