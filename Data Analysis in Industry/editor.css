@@ -1,7 +1,11 @@
-div {background-color:white;}
+
+div {background-color:white;
+margin:2vh;
+min-height: 20vh;}
 
 .note{}
 
 .reminder{color:red;}
 
-body{background-color:431c53;}
+body{background-color:431c53;
+color:white;}
