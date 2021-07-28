@@ -1556,11 +1556,8 @@
 			
 		editorWindow.document.write("<p>This is 'editor window'. notes should appear soon...</P>");
 		//put rawnote in to editor window
-		editorWindow.document.write(localStorage.rawNotes[1]);
 			
-		editorWindow.document.write(localStorage.rawNotes[2]);
-			
-		editorWindow.document.write(localStorage.rawNotes);
+		editorWindow.document.body.innerHTML+=(localStorage.rawNotes);
 			
 			
 		//var notes = document.getElementsByTagName('aside');
