@@ -1575,7 +1575,7 @@
 		var editorNotes = localStorage.rawNotes;
 			
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+=("<div class='slidenote'> this is slide" + i + JSON.stringify(localStorage.editorNotes[i]) + "</div>");
+		editorWindow.document.body.innerHTML+=("<div class='slidenote'> this is slide" + i + editorNotes[i] + "</div>");
 		}
 		
 		
