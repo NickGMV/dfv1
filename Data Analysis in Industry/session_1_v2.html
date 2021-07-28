@@ -1550,7 +1550,9 @@
 			console.log(rawNotes.length);
 			
 			
-			localStorage.rawNotes = rawNotes;
+			localStorage.rawNotes = JSON.stringify(rawNotes);
+			
+			console.log(localStorage.rawNotes.length)
 			//window.alert(to_tag.length);
 			//window.alert(to_tag[0]);
 			
