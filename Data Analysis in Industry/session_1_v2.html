@@ -1515,7 +1515,10 @@
 		<script src="../Dependencies/plugin/markdown/markdown.js"></script>
 		<script src="../Dependencies/plugin/highlight/highlight.js"></script>
 		<script>
+		
 			
+			
+		//run imediately on page load prep current asides -- need to automatically add existing edits aswell!
 		!function set_up_ids(){
 			
 			// add listener so window for edits can communicate
@@ -1532,8 +1535,11 @@
 			
 			// on first boot if no edits exist load base set of notes
 			var to_tag = document.getElementsByTagName('aside');
-			// get un adulterated copy of notes
-			// need to change so it's copy of innerHTML
+			
+			//need to add logic to recover existing additions
+			
+			// get un adulterated copy of notes(no edit buttons)
+			
 			var rawNotes=[];
 			
 			for(let i = 0; i < to_tag.length; i++){
@@ -1542,10 +1548,8 @@
 			}
 			
 			localStorage.rawNotes = rawNotes;
-				//window.alert(to_tag.length);
-				//window.alert(to_tag[0]);
-			// use a local storage element to avoid adding buttons to all versions of the asides.
-			//localStorage.stored_asides = to_tag
+			//window.alert(to_tag.length);
+			//window.alert(to_tag[0]);
 			
 			for(let i = 0; i < to_tag.length; i++){
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";'>edit mode</button> </div>";	
@@ -1558,26 +1562,19 @@
 			
 		
 			
-		// would need to enable popups for github if want this to work.
+		// would need to enable popups for github if want this to work.add a try except loop to advise users to whitelist repo
 		var editorWindow = window.open("","editorWindow","width=500,height=500");	
 			
 			
 		editorWindow.document.write("<p>This is 'editor window'. notes should appear soon...</P>");
-		//put rawnote in to editor window
 			
-		editorWindow.document.body.innerHTML+=(localStorage.rawNotes);
-		editorWindow.document.body.innerHTML+=(localStorage.rawNotes[0]);	
+		//put rawnotes in to editor window this will persist between sessions so should keep all additional notes added	once save routine is written
+		//for each saved aside create a frame to store it
+		for(let i =0;i< localStorage.rawNotes;i++){
+		editorWindow.document.body.innerHTML+=("<div class='slidenote'> this is slide" + i + JSON.stringify(localStorage.rawNotes[i]) + "</div>");
+		}
 		
-			
-			
-			editorWindow.document.body.innerHTML+=(JSON.stringify(localStorage.rawNotes));
-		editorWindow.document.body.innerHTML+=(JSON.stringify(localStorage.rawNotes[0]));
-		//var notes = document.getElementsByTagName('aside');
-		//for(let i = 0; i < to_tag.length; i++){
-		//notes[i]
 		
-			
-			//}
 			
 		}
 			
