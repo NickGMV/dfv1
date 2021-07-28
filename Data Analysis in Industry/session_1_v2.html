@@ -1556,6 +1556,8 @@
 			
 			}
 		}()
+		
+			
 			
 		function engage_edit_mode(){
 		// start new window
@@ -1570,8 +1572,10 @@
 			
 		//put rawnotes in to editor window this will persist between sessions so should keep all additional notes added	once save routine is written
 		//for each saved aside create a frame to store it
-		for(let i = 0;i< localStorage.rawNotes.length;i++){
-		editorWindow.document.body.innerHTML+=("<div class='slidenote'> this is slide" + i + JSON.stringify(localStorage.rawNotes[i]) + "</div>");
+		var editorNotes = localStorage.rawNotes;
+			
+		for(let i = 0;i< editorNotes.length;i++){
+		editorWindow.document.body.innerHTML+=("<div class='slidenote'> this is slide" + i + JSON.stringify(localStorage.editorNotes[i]) + "</div>");
 		}
 		
 		
