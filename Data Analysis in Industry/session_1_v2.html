@@ -1514,6 +1514,12 @@
 		<script src="../Dependencies/plugin/notes/notes.js"></script>
 		<script src="../Dependencies/plugin/markdown/markdown.js"></script>
 		<script src="../Dependencies/plugin/highlight/highlight.js"></script>
+	  
+	  
+	  
+	  
+	  
+	  
 		<script>
 		
 			
@@ -1535,19 +1541,19 @@
 			
 			// on first boot if no edits exist load base set of notes
 			var to_tag = document.getElementsByTagName('aside');
-			console.log(to_tag.length);
+			//console.log(to_tag.length);
 			//need to add logic to recover existing additions
 			
 			// get un adulterated copy of notes(no edit buttons)
 			
 			var rawNotes=[];
 			
-			for(let i = 0; i < to_tag.length-1; i++){
+			for(let i = 0; i < to_tag.length; i++){
 			rawNotes[i] = to_tag[i].innerHTML;	
 		
 			}
 			
-			console.log(rawNotes.length);
+			//console.log(rawNotes.length);
 			
 			
 			localStorage.rawNotes = JSON.stringify(rawNotes);
@@ -1556,7 +1562,7 @@
 			//window.alert(to_tag.length);
 			//window.alert(to_tag[0]);
 			
-			for(let i = 0; i < to_tag.length-1; i++){
+			for(let i = 0; i < to_tag.length; i++){
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";'>edit mode</button> </div>";	
 			
 			}
@@ -1579,18 +1585,17 @@
 		//for each saved aside create a frame to store it localStorage.getItem
 		var editorNotes = JSON.parse(localStorage.getItem('rawNotes'));
 	        
-		console.log(editorNotes.length);	
+		//console.log(editorNotes.length);	
 		for(let i = 0;i< editorNotes.length;i++){
 		editorWindow.document.body.innerHTML+="<div> This is slide "+ i  + editorNotes[i] + "</div>";
 		}
-			//var note = editorNotes[1];
-			//editorWindow.document.write(editorNotes.length);
-		//editorWindow.document.body.innerHTML+="<div> this is first notes" + note + "</div>";
+		
+		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";
 		
 			
 		}
 			
-			
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
 			
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
