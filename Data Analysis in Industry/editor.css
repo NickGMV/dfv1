@@ -10,3 +10,8 @@ color:black;}
 
 body{background-color:431c53;
 color:white;}
+
+
+textarea {
+  display:block;
+}
