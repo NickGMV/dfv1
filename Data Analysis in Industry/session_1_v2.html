@@ -1587,7 +1587,7 @@
 	        
 		//console.log(editorNotes.length);	
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div> This is slide "+ i  + editorNotes[i] + "</div>";
+		editorWindow.document.body.innerHTML+="<div id="+ i +"> This is slide "+ i  +"<textarea>add new notes above</textarea>" + editorNotes[i] + " <textarea> add new notes below </textarea>       </div>";
 		}
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";
