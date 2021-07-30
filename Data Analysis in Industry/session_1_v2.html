@@ -1618,9 +1618,10 @@ var script = editorWindow.document.createElement("script");
 // Add script content
 
 script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('saveLocation');} ";
-script.innerHTML += "function save_and_close(){window.alert('working'); "
+			
+script.innerHTML += "function save_and_close() {window.alert('working'); "
 script.innerHTML+= "var to_save = []; var new_notes = document.getElementsByTagname('div');"
-script.innerHTML += "for(i=0; i< new_notes.length ;i++){to_save[i]= new_notes[i].innerHTML }; localStorage.setItem(saveLocation,to_save };"
+script.innerHTML += "for(let i=0; i< new_notes.length ;i++){to_save[i]= new_notes[i].innerHTML }; localStorage.setItem(saveLocation,to_save) };"
 // Append
 
 editorWindow.document.head.appendChild(script);
