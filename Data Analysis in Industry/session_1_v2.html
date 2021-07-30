@@ -1616,10 +1616,8 @@
 		var js = "<script>!function prep(){var saveLocation = localStorage.saveLocation;  console.log(saveLocation); }()</sc" + "ript>"
 		
 		
-		
-		editorWindow.document.head.innerHTML += js;
 		editorWindow.document.body.innerHTML += "<button onclick = ''> save your updates</button>";	
-			
+		editorWindow.document.body.innerHTML += js;	
 			
 		}
 			
