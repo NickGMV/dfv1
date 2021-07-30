@@ -1616,12 +1616,26 @@
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";
 			
+// Create the element
+
+var script = document.createElement("script");
+
+// Add script content
+
+script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('saveLocation');  console.log(saveLocation);} ";
+
+// Append
+
+editorWindow.document.head.appendChild(script);
+			
+			
+			
 			//potentially make this a js file too
-		var js = "<script>   function prep(){ var saveLocation = localStorage.getItem('saveLocation');  console.log(saveLocation);}</scr" + "ipt>"
+		//var js = "<script> \n  function prep(){ \n var saveLocation = localStorage.getItem('saveLocation'); \n console.log(saveLocation); \n } \n </scr" + "ipt>"
 		
 		
 		editorWindow.document.body.innerHTML += "<button onclick = 'prep()'> save your updates</button>";	
-		editorWindow.document.body.innerHTML += js;	
+		//editorWindow.document.body. += js;	
 			
 		}
 			
