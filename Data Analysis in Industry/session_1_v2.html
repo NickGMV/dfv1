@@ -1545,10 +1545,13 @@
 			
 			//if notes exist find them and make sure they're stored
 			//use saveId to allow multiple presentations
+			try{
 			if(localStorage.getItem(saveId)){
-				
 			}
-			else{
+			}
+			
+			catch(err){
+			
 			saveId = window.location + "save_data";
 				console.log(saveId);
 			localStorage.setItem('saveLocation',saveId);
