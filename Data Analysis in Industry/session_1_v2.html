@@ -1613,10 +1613,10 @@
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";
 			
 			//potentially make this a js file too
-		var js = "<script>!function prep(){var saveLocation = localStorage.getItem('saveLocation');  console.log(saveLocation);}(); function()saveAndClose(){}</sc" + "ript>"
+		var js = "<script>function prep(){var saveLocation = localStorage.getItem('saveLocation');  console.log(saveLocation);}; function()saveAndClose(){}</sc" + "ript>"
 		
 		
-		editorWindow.document.body.innerHTML += "<button onclick = ''> save your updates</button>";	
+		editorWindow.document.body.innerHTML += "<button onclick = 'prep()'> save your updates</button>";	
 		editorWindow.document.body.innerHTML += js;	
 			
 		}
