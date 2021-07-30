@@ -1544,7 +1544,8 @@
 			})
 			
 			//if notes exist find them and make sure they're stored
-			if(localStorage.stored_notes){
+			//use saveId to allow multiple presentations
+			if(localStorage.getItem(saveId)){
 				
 			}
 			
@@ -1564,7 +1565,8 @@
 			
 			//console.log(rawNotes.length);
 			saveId = window.location + "save_data";
-			localStorage.saveId = saveId
+			localStorage.setItem(saveId,'value');
+			
 			localStorage.rawNotes = JSON.stringify(rawNotes);
 			
 			console.log(JSON.parse(localStorage.rawNotes).length)
