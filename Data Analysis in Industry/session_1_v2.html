@@ -1548,6 +1548,10 @@
 			if(localStorage.getItem(saveId)){
 				
 			}
+			else{
+			saveId = window.location + "save_data";
+			localStorage.setItem(saveId,'value');
+			}
 			
 			// on first boot if no edits exist load base set of notes
 			var to_tag = document.getElementsByTagName('aside');
@@ -1564,8 +1568,8 @@
 			}
 			
 			//console.log(rawNotes.length);
-			saveId = window.location + "save_data";
-			localStorage.setItem(saveId,'value');
+			//saveId = window.location + "save_data";
+			//localStorage.setItem(saveId,'value');
 			
 			localStorage.rawNotes = JSON.stringify(rawNotes);
 			
