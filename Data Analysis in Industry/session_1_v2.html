@@ -1631,7 +1631,7 @@ editorWindow.document.head.appendChild(script);
 		//var js = "<script> \n  function prep(){ \n var saveLocation = localStorage.getItem('saveLocation'); \n console.log(saveLocation); \n } \n </scr" + "ipt>"
 		
 		
-		editorWindow.document.body.innerHTML += "<button onclick = 'prep()'> save your updates</button>";	
+		editorWindow.document.body.innerHTML += "<button onclick = 'prep(); save_and_close();'> save your updates</button>";	
 		//editorWindow.document.body. += js;	
 			
 		}
