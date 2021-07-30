@@ -1588,10 +1588,11 @@
 			}
 		}()
 		
-		function prep(){ 
-			var saveLocation = localStorage.getItem('saveLocation');  
+		!function prep(){ 
+			var saveLocation = localStorage.getItem('saveLocation'); 
+			console.log('got it');
 			console.log(saveLocation);
-		}	
+		}()
 			
 		function engage_edit_mode(){
 		// start new window
