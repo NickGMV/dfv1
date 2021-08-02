@@ -1557,6 +1557,12 @@
 			console.log(saved_notes);
 			console.log(JSON.parse(saved_notes));
 			console.log('got data');
+			var to_replace = document.getElementsByTagName('aside');
+			for(let i = 0; i<save_data.length;i++){
+			to_replace[i].innerHTML = save_data[i];
+			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";'>edit mode</button> </div>";
+			
+			}
 			}
 			}
 			
