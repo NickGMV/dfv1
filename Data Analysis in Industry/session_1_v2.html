@@ -1535,9 +1535,9 @@
 			
 		//run imediately on page load prep current asides -- need to automatically add existing edits aswell!
 		!function set_up_ids(){
-			saveId = window.location + "save_data";	
-			var log = JSON.parse(localStorage.getItem(saveId));
-			console.log(log);
+			//saveId = window.location + "save_data";	
+			//var log = JSON.parse(localStorage.getItem(saveId));
+			//console.log(log);
 			localStorage.removeItem('engage');
 			// add listener so window for edits can communicate
 			window.addEventListener('storage',function(){
