@@ -1551,7 +1551,7 @@
 			if(localStorage.getItem(saveId)){
 			window.alert('working');
 			var log = JSON.parse(localStorage.getItem(saveId)).length
-			console.log(log);
+			console.log('got data');
 			}
 			}
 			
@@ -1632,11 +1632,6 @@ script.innerHTML += "for(let i=0; i< new_notes.length ;i++){to_save[i]= new_note
 
 editorWindow.document.head.appendChild(script);
 			
-			
-			
-			//potentially make this a js file too
-		//var js = "<script> \n  function prep(){ \n var saveLocation = localStorage.getItem('saveLocation'); \n console.log(saveLocation); \n } \n </scr" + "ipt>"
-		
 		
 		editorWindow.document.body.innerHTML += "<button onclick = 'prep(); save_and_close();'> save your updates</button>";	
 		//editorWindow.document.body. += js;	
