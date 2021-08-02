@@ -1599,9 +1599,6 @@
 			
 		function engage_edit_mode(){
 		// start new window
-			
-		
-		
 		// would need to enable popups for github if want this to work.add a try except loop to advise users to whitelist repo
 		var editorWindow = window.open("","editorWindow","width=500,height=500");	
 			
@@ -1629,7 +1626,7 @@ script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('sa
 			
 script.innerHTML += "function save_and_close() { " 
 script.innerHTML += "var saveLocation = localStorage.getItem('saveLocation');"
-script.innerHTML+= "var to_save = []; var new_notes = document.getElementsByTagName('div');"
+script.innerHTML+= "var to_save = []; var new_notes = editorWindow.document.getElementsByTagName('div');"
 script.innerHTML += "for(let i=0; i< new_notes.length ;i++){to_save[i]= new_notes[i].innerHTML }; save_data = JSON.stringify(to_save); localStorage.setItem(saveLocation,save_data) };"
 // Append
 
