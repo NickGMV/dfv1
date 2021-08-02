@@ -1625,7 +1625,7 @@ var script = editorWindow.document.createElement("script");
 
 // Add script content
 
-script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('saveLocation') console.log(saveLocation);} ";
+script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('saveLocation'); console.log(saveLocation);} "
 			
 script.innerHTML += "function save_and_close() { " 
 script.innerHTML += "var saveLocation = JSON.parse(localStorage.getItem('saveLocation')); console.log(saveLocation);"
