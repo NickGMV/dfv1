@@ -1564,6 +1564,7 @@
 			
 			saveId = window.location + "save_data";
 				console.log(saveId);
+				saveId = JSON.stringify(saveId);
 			localStorage.setItem('saveLocation',saveId);
 			localStorage.setItem(saveId,'value');
 			}
@@ -1627,7 +1628,7 @@ var script = editorWindow.document.createElement("script");
 script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('saveLocation');} ";
 			
 script.innerHTML += "function save_and_close() { " 
-script.innerHTML += "var saveLocation = localStorage.getItem('saveLocation');"
+script.innerHTML += "var saveLocation = JSON.parse(localStorage.getItem('saveLocation')); console.log(saveLocation);"
 script.innerHTML+= "var to_save = []; var new_notes = document.getElementsByTagName('div');"
 script.innerHTML += "for(let i=0; i< new_notes.length ;i++){to_save[i]= new_notes[i].innerHTML }; "
 script.innerHTML += "save_data = JSON.stringify(to_save); localStorage.setItem(saveLocation,save_data);"
