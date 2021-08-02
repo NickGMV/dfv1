@@ -1559,9 +1559,13 @@
 			console.log('got data');
 			var to_replace = document.getElementsByTagName('aside');
 			for(let i = 0; i<save_data.length;i++){
-				console.log('attempt' + i);
-			to_replace[i].innerHTML = save_data[i].innerHTML;
-				console.log('item' + i + 'added to speaker notes');
+				
+			console.log('attempt' + i);
+				
+			to_replace[i].innerHTML = saved_notes[i];
+				
+			console.log('item' + i + 'added to speaker notes');
+				
 			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";'>edit mode</button> </div>";
 			
 			}
