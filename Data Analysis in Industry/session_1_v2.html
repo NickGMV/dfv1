@@ -1559,10 +1559,10 @@
 			console.log('got data');
 			var to_replace = document.getElementsByTagName('aside');
 			for(let i = 0; i<saved_notes.length;i++){
-				
+			var saved_notes2 = JSON.parse(saved_notes);	
 			console.log('attempt' + i);
 				
-			to_replace[i].innerHTML = saved_notes[i];
+			to_replace[i].innerHTML = saved_notes2[i];
 				
 			console.log('item' + i + 'added to speaker notes');
 				
