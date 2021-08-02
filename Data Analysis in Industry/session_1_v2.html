@@ -1558,8 +1558,10 @@
 			console.log(JSON.parse(saved_notes));
 			console.log('got data');
 			var to_replace = document.getElementsByTagName('aside');
-			for(let i = 0; i<saved_notes.length;i++){
-			var saved_notes2 = JSON.parse(saved_notes);	
+			var saved_notes2 = JSON.parse(saved_notes);
+			console.log(saved_notes2)	
+			for(let i = 0; i<saved_notes2.length;i++){
+			
 			console.log('attempt' + i);
 				
 			to_replace[i].innerHTML = saved_notes2[i];
