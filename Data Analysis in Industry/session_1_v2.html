@@ -1551,9 +1551,10 @@
 			try{
 				
 			saveId = window.location + "save_data";	
-			if(localStorage.getItem(saveId)){
+			var saved_notes = localStorage.getItem(saveId);
+			if(saved_notes){
 			window.alert('working');
-			var log = JSON.parse(localStorage.getItem(saveId))
+			console.log(JSON.parse(saved_notes));
 			console.log('got data');
 			}
 			}
