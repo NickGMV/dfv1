@@ -1632,7 +1632,7 @@ script.innerHTML += "var saveLocation = JSON.parse(localStorage.getItem('saveLoc
 script.innerHTML+= "var to_save = []; var new_notes = document.getElementsByTagName('div');"
 script.innerHTML += "for(let i=0; i< new_notes.length ;i++){to_save[i]= new_notes[i].innerHTML }; "
 script.innerHTML += "save_data = JSON.stringify(to_save); localStorage.setItem(saveLocation,save_data);"
-script.innerHTML += "console.log(to_save.length); console.log(save_data); console.log(JSON.parse(save_data));}"
+script.innerHTML += "console.log(to_save.length); console.log(save_data); console.log(JSON.parse(save_data)); console.log(localStorage.getItem(saveLocation));}"
 // Append
 
 editorWindow.document.head.appendChild(script);
