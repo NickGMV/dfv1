@@ -1566,7 +1566,7 @@
 				console.log(saveId);
 				saveId = JSON.stringify(saveId);
 			localStorage.setItem('saveLocation',saveId);
-			localStorage.setItem(saveId,'value');
+			localStorage.setItem(saveId,'boop');
 			}
 			
 			// on first boot if no edits exist load base set of notes
@@ -1625,7 +1625,7 @@ var script = editorWindow.document.createElement("script");
 
 // Add script content
 
-script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('saveLocation');} ";
+script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('saveLocation') console.log(saveLocation);} ";
 			
 script.innerHTML += "function save_and_close() { " 
 script.innerHTML += "var saveLocation = JSON.parse(localStorage.getItem('saveLocation')); console.log(saveLocation);"
