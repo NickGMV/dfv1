@@ -1550,7 +1550,7 @@
 			//use saveId to allow multiple presentations
 			try{
 				
-			saveId = window.location + "save_data";	
+			var saveId = window.location + "save_data";	
 			var saved_notes = localStorage.getItem(saveId);
 			if(saved_notes){
 			window.alert('working');
@@ -1558,7 +1558,7 @@
 			console.log(JSON.parse(saved_notes));
 			console.log('got data');
 			var to_replace = document.getElementsByTagName('aside');
-			for(let i = 0; i<save_data.length;i++){
+			for(let i = 0; i<saved_notes.length;i++){
 				
 			console.log('attempt' + i);
 				
