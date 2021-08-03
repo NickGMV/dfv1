@@ -1564,13 +1564,12 @@
 			//cycle through the two lists replacing the HTML content of the asides with edited content
 			// this is pulling the editor buttons back through so could get way out of hand introduce nuke button during development so memory can be cleared
 			for(let i = 0; i<saved_notes2.length;i++){
-			console.log('attempt' + i);
+			//console.log('attempt' + i);	
+			to_replace[i].innerHTML = saved_notes2[i];	
+			//console.log('item' + i + 'added to speaker notes');
 				
-			to_replace[i].innerHTML = saved_notes2[i];
-				
-			console.log('item' + i + 'added to speaker notes');
-				
-			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";'>edit mode</button> </div>";
+			// adding comms for posiiton between pages check this 	
+			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";' onload = 'localStorage.position="+ i + "'>edit mode</button> </div>";
 			
 			}
 			}
@@ -1607,7 +1606,7 @@
 			localStorage.rawNotes = JSON.stringify(rawNotes);
 			console.log(JSON.parse(localStorage.rawNotes).length)
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";'>edit mode</button> </div>";	
+			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";' onload = 'localStorage.position = " + i + "'>edit mode</button> </div>";	
 			
 			}
 		}()
@@ -1629,7 +1628,7 @@
 		//store each aside in a div to make presentation easier and to make scraping them back in to main presentation easier
 		//console.log(editorNotes.length);	
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div id="+ i +"> slide "+ i  +"<textarea placeholder='add notes above'></textarea>" + editorNotes[i] + " <textarea placeholder = 'add notes below'> </textarea>  </div>";
+		editorWindow.document.body.innerHTML+="<div id="+ i +"> <textarea placeholder='add notes above'></textarea>" + editorNotes[i] + " <textarea placeholder = 'add notes below'> </textarea>  </div>";
 		}
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";
@@ -1637,6 +1636,9 @@
 //Adding functions to the editor window.
 //this script element allows functions to be added to the editor window
 var script = editorWindow.document.createElement("script");
+
+// add listener to refocus on divs when slide changes			
+			
 
 // These functions are added to the editor window to allow it to return the edited content to the main presentation and speaker notes
 
