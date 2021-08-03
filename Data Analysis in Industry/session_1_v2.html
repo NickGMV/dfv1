@@ -1556,7 +1556,7 @@
 			// look for notes stored under this saveId if blank will error out and create a saveId
 			var saved_notes = localStorage.getItem(saveId);
 			console.log(saved_notes)	
-			if(saved_notes && saved_notes!='boop'){
+			if(saved_notes){
 			window.alert('working');
 			//console.log(saved_notes);
 			//console.log(JSON.parse(saved_notes));
@@ -1587,7 +1587,7 @@
 			localStorage.setItem('saveLocation',saveId);
 				//the saveId stores lesson content but to make sure it has something in use 'boop'
 				//maybe sort this out later was added so that error didn't repeatedly trigger
-			localStorage.setItem(saveId,'boop');
+			//localStorage.setItem(saveId,'boop');
 			
 			}
 			
