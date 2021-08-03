@@ -1566,12 +1566,25 @@
 			for(let i = 0; i<saved_notes2.length;i++){
 			//console.log('attempt' + i);	
 			to_replace[i].innerHTML = saved_notes2[i];	
-			//console.log('item' + i + 'added to speaker notes');
-				
+			//console.log('item' + i + 'added to speaker notes');	
 			// adding comms for posiiton between pages check this 	
 			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";' onload = 'localStorage.position="+ i + "'>edit mode</button> </div>";
 			
 			}
+			}
+			else{
+			window.alert('no local data saved')
+			//if no local data found create save Id
+			saveId = window.location + "save_data";
+				//console.log(saveId);
+				//stringify to send to editor window
+				saveId = JSON.stringify(saveId);
+				//pass the saveId to local storage so editor window can find it.
+			localStorage.setItem('saveLocation',saveId);
+				//the saveId stores lesson content but to make sure it has something in use 'boop'
+				//maybe sort this out later was added so that error didn't repeatedly trigger
+			localStorage.setItem(saveId,'boop');
+			
 			}
 			}
 			
