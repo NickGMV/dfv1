@@ -1648,7 +1648,7 @@ script.innerHTML += "for(let i=0; i< new_notes.length ;i++){to_save[i]= new_note
 script.innerHTML += "save_data = JSON.stringify(to_save); localStorage.setItem(saveLocation,save_data);"
 script.innerHTML += "console.log(to_save.length); var save = localStorage.getItem(saveLocation); console.log(save);}"
 			//nuke function
-script.innerHTML += "function nuke(){window.alert('nuke imminent...'); window.alert('3'); window.alert('2'); window.alert('1'); window.alert('boom'); local.storage.clear();}"
+script.innerHTML += "function nuke(){console.log('nuke imminent...'); console.log('3'); console.log('2'); console.log('1'); console.log('BOOM'); localStorage.clear();}"
 // Append
 
 editorWindow.document.head.appendChild(script);
