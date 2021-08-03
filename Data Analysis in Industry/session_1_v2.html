@@ -1548,12 +1548,12 @@
 			//if notes exist find them and make sure they're stored
 			//use saveId to allow multiple presentations
 			try{
-			//to allow saves on multiple sets of slides generate a sveId from the URL crude but should work	
+			//to allow saves on multiple sets of slides generate a saveId from the URL crude but should work	
 			var saveId = window.location + "save_data";	
 			// look for notes stored under this saveId if blank will error out and create a saveId
 			var saved_notes = localStorage.getItem(saveId);
 			if(saved_notes){
-			//window.alert('working');
+			window.alert('working');
 			//console.log(saved_notes);
 			//console.log(JSON.parse(saved_notes));
 			console.log('got data');
