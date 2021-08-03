@@ -1549,7 +1549,7 @@
 			//use saveId to allow multiple presentations
 			
 			//to allow saves on multiple sets of slides generate a saveId from the URL crude but should work	
-			var saveId = window.location + "save_data";
+			var saveId = window.location.pathname + "save_data";
 			console.log(saveId);
 			var saveId = JSON.stringify(saveId);
 			console.log(saveId);
@@ -1589,7 +1589,7 @@
 			else{
 			window.alert('no local data saved')
 			//if no local data found create save Id
-			saveId = window.location + "save_data";
+			saveId = window.location.pathname + "save_data";
 				console.log(saveId);
 				//stringify to send to editor window
 				saveId = JSON.stringify(saveId);
