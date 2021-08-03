@@ -1639,7 +1639,7 @@ var script = editorWindow.document.createElement("script");
 
 // add listener to refocus on divs when slide changes	
 // when speaker notes move to new slide editor should transition to new set of notes.
-script.innerHTML += "!function(){window.addEventListener('storage',function(){
+script.innerHTML += "!function editor_start(){window.addEventListener('storage',function(){
 			var position = localStorage.position;
 			document.getElementById(position).scrollIntoView({behavior: 'smooth'});
 			})}()"		
