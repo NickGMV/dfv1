@@ -4,6 +4,11 @@ margin:2vh;
 min-height: 20vh;
 color:black;}
 
+.editable{
+  color:black;
+  background-color:#ffffbf;
+  min-width: 20px;}
+
 .note{}
 
 .reminder{color:red;}
