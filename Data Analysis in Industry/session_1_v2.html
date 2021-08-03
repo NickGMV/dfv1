@@ -1535,13 +1535,12 @@
 			
 		//run imediately on page load prep current asides -- need to automatically add existing edits aswell!
 		!function set_up_ids(){
-			//saveId = window.location + "save_data";	
-			//var log = JSON.parse(localStorage.getItem(saveId));
-			//console.log(log);
+			//engage is a flag that let's the main window check if editor window should be opened. 
+			//reset the flag on load to stop editor from opening on load.
 			localStorage.removeItem('engage');
-			// add listener so window for edits can communicate
 			window.addEventListener('storage',function(){
 			if(localStorage.engage){
+			// function to start the editor window and load speaker notes content into it.
 			engage_edit_mode();
 			localStorage.removeItem('engage');}
 			})
@@ -1549,19 +1548,22 @@
 			//if notes exist find them and make sure they're stored
 			//use saveId to allow multiple presentations
 			try{
-				
+			//to allow saves on multiple sets of slides generate a sveId from the URL crude but should work	
 			var saveId = window.location + "save_data";	
+			// look for notes stored under this saveId if blank will error out and create a saveId
 			var saved_notes = localStorage.getItem(saveId);
 			if(saved_notes){
-			window.alert('working');
-			console.log(saved_notes);
-			console.log(JSON.parse(saved_notes));
+			//window.alert('working');
+			//console.log(saved_notes);
+			//console.log(JSON.parse(saved_notes));
 			console.log('got data');
+			//to_replace is the content held in asides [array]
 			var to_replace = document.getElementsByTagName('aside');
+			//parse the locally stored JSON string back in to HTML elements
 			var saved_notes2 = JSON.parse(saved_notes);
-				
+			//cycle through the two lists replacing the HTML content of the asides with edited content
+			// this is pulling the editor buttons back through so could get way out of hand introduce nuke button during development so memory can be cleared
 			for(let i = 0; i<saved_notes2.length;i++){
-			
 			console.log('attempt' + i);
 				
 			to_replace[i].innerHTML = saved_notes2[i];
@@ -1575,15 +1577,20 @@
 			}
 			
 			catch(err){
-			
+			//if no local data found create save Id
 			saveId = window.location + "save_data";
-				console.log(saveId);
+				//console.log(saveId);
+				//stringify to send to editor window
 				saveId = JSON.stringify(saveId);
+				//pass the saveId to local storage so editor window can find it.
 			localStorage.setItem('saveLocation',saveId);
+				//the saveId stores lesson content but to make sure it has something in use 'boop'
+				//maybe sort this out later was added so that error didn't repeatedly trigger
 			localStorage.setItem(saveId,'boop');
 			}
 			
-			// on first boot if no edits exist load base set of notes
+			// on first boot if no edits exist load base set of notes if edits exists load that set.
+			// edited notes would be loaded in the try block.
 			var to_tag = document.getElementsByTagName('aside');
 			//console.log(to_tag.length);
 			//need to add logic to recover existing additions
@@ -1597,16 +1604,8 @@
 		
 			}
 			
-			//console.log(rawNotes.length);
-			//saveId = window.location + "save_data";
-			//localStorage.setItem(saveId,'value');
-			
 			localStorage.rawNotes = JSON.stringify(rawNotes);
-			
 			console.log(JSON.parse(localStorage.rawNotes).length)
-			//window.alert(to_tag.length);
-			//window.alert(to_tag[0]);
-			
 			for(let i = 0; i < to_tag.length; i++){
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";'>edit mode</button> </div>";	
 			
@@ -1616,16 +1615,18 @@
 			
 		function engage_edit_mode(){
 		// start new window
-		// would need to enable popups for github if want this to work.add a try except loop to advise users to whitelist repo
+		// would need to enable popups for github if want this to work.add a try except loop to advise 
+		//users to whitelist repo or could use while loop to windowalert each attemot until fixed?
+		//maybe loom link in alert?
 		var editorWindow = window.open("","editorWindow","width=500,height=500");	
 			
 			
 		editorWindow.document.write("<p>This is 'editor window'. notes should appear soon...</P>");
 			
-		//put rawnotes in to editor window this will persist between sessions so should keep all additional notes added	once save routine is written
-		//for each saved aside create a frame to store it localStorage.getItem
+		//put rawnotes in to editor window edits will persist between sessions and be loaded at first start up 
 		var editorNotes = JSON.parse(localStorage.getItem('rawNotes'));
 	        
+		//store each aside in a div to make presentation easier and to make scraping them back in to main presentation easier
 		//console.log(editorNotes.length);	
 		for(let i = 0;i< editorNotes.length;i++){
 		editorWindow.document.body.innerHTML+="<div id="+ i +"> slide "+ i  +"<textarea placeholder='add notes above'></textarea>" + editorNotes[i] + " <textarea placeholder = 'add notes below'> </textarea>  </div>";
@@ -1633,26 +1634,29 @@
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";
 			
-// Create the element
-
+//Adding functions to the editor window.
+//this script element allows functions to be added to the editor window
 var script = editorWindow.document.createElement("script");
 
-// Add script content
+// These functions are added to the editor window to allow it to return the edited content to the main presentation and speaker notes
 
-script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('saveLocation'); console.log(saveLocation);} "
-			
+script.innerHTML = "function prep(){ var saveLocation = localStorage.getItem('saveLocation'); console.log(saveLocation);} "			
 script.innerHTML += "function save_and_close() { " 
 script.innerHTML += "var saveLocation = JSON.parse(localStorage.getItem('saveLocation')); console.log(saveLocation);"
 script.innerHTML+= "var to_save = []; var new_notes = document.getElementsByTagName('div');"
 script.innerHTML += "for(let i=0; i< new_notes.length ;i++){to_save[i]= new_notes[i].innerHTML }; "
 script.innerHTML += "save_data = JSON.stringify(to_save); localStorage.setItem(saveLocation,save_data);"
 script.innerHTML += "console.log(to_save.length); var save = localStorage.getItem(saveLocation); console.log(save);}"
+			//nuke function
+script.innerHTML += "function nuke(){window.alert('nuke imminent...'); window.alert('3'); window.alert('2'); window.alert('1'); window.alert('boom'); local.storage.clear();}"
 // Append
 
 editorWindow.document.head.appendChild(script);
 			
 		
-		editorWindow.document.body.innerHTML += "<button onclick = 'prep(); save_and_close();'> save your updates</button>";	
+		editorWindow.document.body.innerHTML += "<button onclick = 'prep(); save_and_close();'> save your updates</button>";
+		//button to wipe all local storage
+		editorWindow.document.body.innerHTML += "<button onclick = 'nuke();'> destroy all saved data </button>;"
 		//editorWindow.document.body. += js;	
 			
 		}
