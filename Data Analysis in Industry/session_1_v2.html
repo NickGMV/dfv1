@@ -1552,6 +1552,7 @@
 			var saveId = window.location + "save_data";	
 			// look for notes stored under this saveId if blank will error out and create a saveId
 			var saved_notes = localStorage.getItem(saveId);
+			console.log(saved_notes)	
 			if(saved_notes){
 			window.alert('working');
 			//console.log(saved_notes);
@@ -1576,7 +1577,7 @@
 			window.alert('no local data saved')
 			//if no local data found create save Id
 			saveId = window.location + "save_data";
-				//console.log(saveId);
+				console.log(saveId);
 				//stringify to send to editor window
 				saveId = JSON.stringify(saveId);
 				//pass the saveId to local storage so editor window can find it.
@@ -1653,8 +1654,8 @@ var script = editorWindow.document.createElement("script");
 
 // add listener to refocus on divs when slide changes	
 // when speaker notes move to new slide editor should transition to new set of notes.
-script.innerHTML += "!function editor_start(){  window.addEventListener('storage',function(){ var position = localStorage.position; "
-script.innerHTML += "document.getElementById(position).scrollIntoView({behavior: 'smooth'});})}()"		
+//script.innerHTML += "!function editor_start(){  window.addEventListener('storage',function(){ var position = localStorage.position; "
+//script.innerHTML += "document.getElementById(position).scrollIntoView({behavior: 'smooth'});})}()"		
 
 // These functions are added to the editor window to allow it to return the edited content to the main presentation and speaker notes
 
