@@ -1547,7 +1547,7 @@
 			
 			//if notes exist find them and make sure they're stored
 			//use saveId to allow multiple presentations
-			try{
+			
 			//to allow saves on multiple sets of slides generate a saveId from the URL crude but should work	
 			var saveId = window.location + "save_data";	
 			var saveId = JSON.stringify(saveId);
@@ -1588,21 +1588,8 @@
 			localStorage.setItem(saveId,'boop');
 			
 			}
-			}
 			
-			catch(err){
-				window.alert('no local data saved')
-			//if no local data found create save Id
-			saveId = window.location + "save_data";
-				//console.log(saveId);
-				//stringify to send to editor window
-				saveId = JSON.stringify(saveId);
-				//pass the saveId to local storage so editor window can find it.
-			localStorage.setItem('saveLocation',saveId);
-				//the saveId stores lesson content but to make sure it has something in use 'boop'
-				//maybe sort this out later was added so that error didn't repeatedly trigger
-			localStorage.setItem(saveId,'boop');
-			}
+			
 			
 			// on first boot if no edits exist load base set of notes if edits exists load that set.
 			// edited notes would be loaded in the try block.
