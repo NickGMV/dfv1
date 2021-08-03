@@ -1563,6 +1563,7 @@
 			console.log('found some data');
 			console.log(saved_notes);
 			Try{
+				
 			//to_replace is the content held in asides [array]
 			var to_replace = document.getElementsByTagName('aside');
 			//parse the locally stored JSON string back in to HTML elements
@@ -1570,16 +1571,21 @@
 			//cycle through the two lists replacing the HTML content of the asides with edited content
 			// this is pulling the editor buttons back through so could get way out of hand introduce nuke button during development so memory can be cleared
 			for(let i = 0; i<saved_notes2.length;i++){
+				
 			//console.log('attempt' + i);	
 			to_replace[i].innerHTML = saved_notes2[i];	
 			//console.log('item' + i + 'added to speaker notes');	
 			// adding comms for posiiton between pages check this 	
 			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";' onload = 'localStorage.position="+ i + "'>edit mode</button> </div>";
 			}
-				catch(err){console.log('only stock data found');
+				
+				catch(err){
+				console.log('only stock data found');
+			
+			}
 			        
 			}
-			}
+			
 			else{
 			window.alert('no local data saved')
 			//if no local data found create save Id
