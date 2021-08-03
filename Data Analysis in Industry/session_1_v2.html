@@ -1550,7 +1550,7 @@
 			
 			//to allow saves on multiple sets of slides generate a saveId from the URL crude but should work	
 			var saveId = window.location + "save_data";	
-			var saveId = JSON.stringify(saveId);
+			//var saveId = JSON.stringify(saveId);
 			// look for notes stored under this saveId if blank will error out and create a saveId
 			var saved_notes = localStorage.getItem(saveId);
 			console.log(saved_notes)	
