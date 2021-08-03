@@ -1642,7 +1642,7 @@ var script = editorWindow.document.createElement("script");
 script.innerHTML += "!function(){window.addEventListener('storage',function(){
 			var position = localStorage.position;
 			document.getElementById(position).scrollIntoView({behavior: 'smooth'});
-			})}()			
+			})}()"		
 
 // These functions are added to the editor window to allow it to return the edited content to the main presentation and speaker notes
 
