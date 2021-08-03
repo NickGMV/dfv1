@@ -1554,7 +1554,7 @@
 			// look for notes stored under this saveId if blank will error out and create a saveId
 			var saved_notes = localStorage.getItem(saveId);
 			console.log(saved_notes)	
-			if(saved_notes){
+			if(saved_notes!='boop'){
 			window.alert('working');
 			//console.log(saved_notes);
 			//console.log(JSON.parse(saved_notes));
