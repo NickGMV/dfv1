@@ -1557,7 +1557,7 @@
 			var saved_notes = localStorage.getItem(saveId);
 			//console.log(saved_notes)	
 			if(saved_notes){
-			window.alert('trying to load edits');
+			//window.alert('trying to load edits');
 			//console.log(saved_notes);
 			//console.log(JSON.parse(saved_notes));
 			console.log('found some data');
@@ -1643,7 +1643,7 @@
 		//store each aside in a div to make presentation easier and to make scraping them back in to main presentation easier
 		//console.log(editorNotes.length);	
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div id="+ i +"> <textarea placeholder='add notes above'></textarea>" + editorNotes[i] + " <textarea placeholder = 'add notes below'> </textarea>  </div>";
+		editorWindow.document.body.innerHTML+="<div id="+ i +"> <textarea placeholder='add notes above'></textarea>" + editorNotes[i] + " <p class = 'editable' contenteditable = 'true'></p>";
 		}
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";
@@ -1654,8 +1654,8 @@ var script = editorWindow.document.createElement("script");
 
 // add listener to refocus on divs when slide changes	
 // when speaker notes move to new slide editor should transition to new set of notes.
-//script.innerHTML += "!function editor_start(){  window.addEventListener('storage',function(){ var position = localStorage.position; "
-//script.innerHTML += "document.getElementById(position).scrollIntoView({behavior: 'smooth'});})}()"		
+script.innerHTML += "!function editor_start(){  window.addEventListener('storage',function(){ var position = localStorage.position; "
+script.innerHTML += "document.getElementById(position).scrollIntoView({behavior: 'smooth'});})}()"		
 
 // These functions are added to the editor window to allow it to return the edited content to the main presentation and speaker notes
 
