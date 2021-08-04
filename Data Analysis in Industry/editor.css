@@ -1,13 +1,15 @@
 
+
 div {
 background-color:white;
 margin:2vh;
 min-height: 20vh;
-color:black;}
+color:black;
+}
 
 
 #buffer {
-  min-height:11vh;
+  height:11vh;
 }
 
 #user_controls{
@@ -22,20 +24,26 @@ color:black;}
   background-color:431c53;
   color:white;
 }
+.notes{
+background-color:white;
+margin:2vh;
+min-height: 20vh;
+color:black;
+}
 .editable{
   color:black;
   background-color:#ffffbf;
   min-width: 20px;
-  display:inline-block;}
-
-.note{}
-
-.reminder{color:red;}
-
-body{background-color:431c53;
-color:white;}
-
-
-textarea {
-  display:block;
+  display:inline-block;
 }
+
+
+.reminder{
+  color:red;
+}
+
+body{
+background-color:431c53;
+color:white;
+}
+
