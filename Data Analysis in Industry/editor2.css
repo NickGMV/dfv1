@@ -1,0 +1,41 @@
+
+#buffer {
+  height:11vh;
+}
+
+#user_controls{
+  position:fixed;
+  top:1em;
+  min-width: 100vw;
+  min-height:8vh;
+  background-color:#CBC3E3;
+}
+
+#user_controls button{
+  background-color:431c53;
+  color:white;
+}
+
+.notes{
+background-color:white;
+margin:2vh;
+min-height: 20vh;
+color:black;
+}
+
+.editable{
+  color:black;
+  background-color:#ffffbf;
+  min-width: 20px;
+  display:inline-block;
+}
+
+
+.reminder{
+  color:red;
+}
+
+body{
+background-color:431c53;
+color:white;
+}
