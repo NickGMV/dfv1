@@ -1,14 +1,12 @@
 
-div {background-color:white;
+div {
+background-color:white;
 margin:2vh;
 min-height: 20vh;
 color:black;}
 
-.editable{
-  display:inline-block;
-}
 
-#buffer{
+#buffer {
   min-height:11vh;
 }
 
@@ -27,7 +25,8 @@ color:black;}
 .editable{
   color:black;
   background-color:#ffffbf;
-  min-width: 20px;}
+  min-width: 20px;
+  display:inline-block;}
 
 .note{}
 
