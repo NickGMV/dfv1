@@ -4,11 +4,19 @@ margin:2vh;
 min-height: 20vh;
 color:black;}
 
+.editable{
+  display:inline-block;
+}
+
+#buffer{
+  min-height:11vh;
+}
+
 #user_controls{
   position:fixed;
   top:1em;
   min-width: 100vw;
-  min-height:10vh;
+  min-height:8vh;
   background-color:#CBC3E3;
 }
 
