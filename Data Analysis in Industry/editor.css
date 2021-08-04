@@ -7,9 +7,14 @@ color:black;}
 #user_controls{
   position:fixed;
   top:1em;
-  left:1em;
   min-width: 100vw;
   min-height:10vh;
+  background-color:#CBC3E3;
+}
+
+#user_controls button{
+  background-color:431c53;
+  color:white;
 }
 .editable{
   color:black;
