@@ -1,14 +1,3 @@
-div {
-background-color:white;
-margin:2vh;
-min-height: 20vh;
-color:black;
-}
-
-
-#buffer {
-  height:11vh;
-}
 
 #user_controls{
   position:fixed;
@@ -37,10 +26,6 @@ color:black;
   display:inline-block;
 }
 
-
-.reminder{
-  color:red;
-}
 
 body{
 background-color:431c53;
