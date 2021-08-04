@@ -1634,19 +1634,23 @@
 		//maybe loom link in alert?
 		var editorWindow = window.open("","editorWindow","width=500,height=500");	
 			
-			
+		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
 		editorWindow.document.body.innerHTML +="<p>This is 'editor window'. notes should appear soon...</P>";
-		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";	
+		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
+			
 		//put rawnotes in to editor window edits will persist between sessions and be loaded at first start up 
 		var editorNotes = JSON.parse(localStorage.getItem('rawNotes'));
 	        
 		//store each aside in a div to make presentation easier and to make scraping them back in to main presentation easier
-		//console.log(editorNotes.length);	
+		//console.log(editorNotes.length);
+			
+		// to avoid divs being written in multiple times will need to iether write a script to check for editable divs on load up, or create a flag variable to check?
+			
 		for(let i = 0;i< editorNotes.length;i++){
 		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div>";
 		}
 		
-		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";
+		
 			
 //Adding functions to the editor window.
 //this script element allows functions to be added to the editor window
