@@ -4,6 +4,11 @@ margin:2vh;
 min-height: 20vh;
 color:black;}
 
+#user_controls{
+  position:fixed;
+  top:1em;
+  left:1em;
+}
 .editable{
   color:black;
   background-color:#ffffbf;
