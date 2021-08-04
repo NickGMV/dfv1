@@ -1635,8 +1635,8 @@
 		var editorWindow = window.open("","editorWindow","width=500,height=500");	
 			
 			
-		editorWindow.document.write("<p>This is 'editor window'. notes should appear soon...</P>");
-			
+		editorWindow.document.body.innerHTML +="<p>This is 'editor window'. notes should appear soon...</P>";
+		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";	
 		//put rawnotes in to editor window edits will persist between sessions and be loaded at first start up 
 		var editorNotes = JSON.parse(localStorage.getItem('rawNotes'));
 	        
@@ -1647,7 +1647,7 @@
 		}
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";
-		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";	
+			
 //Adding functions to the editor window.
 //this script element allows functions to be added to the editor window
 var script = editorWindow.document.createElement("script");
