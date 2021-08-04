@@ -1634,7 +1634,7 @@
 		//maybe loom link in alert?
 		var editorWindow = window.open("","editorWindow","width=500,height=500");	
 			
-		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
+		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
 		editorWindow.document.body.innerHTML +="<p>This is 'editor window'. notes should appear soon...</P>";
 		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
 			
@@ -1679,6 +1679,7 @@ editorWindow.document.head.appendChild(script);
 		
 		editorWindow.document.body.innerHTML += "<div id='user_controls'><button onclick = 'prep(); save_and_close();'> save your updates</button><button onclick = 'nuke();'> destroy all saved data </button></div>";
 		
+		editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
 			
 		}
 			
