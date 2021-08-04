@@ -8,6 +8,8 @@ color:black;}
   position:fixed;
   top:1em;
   left:1em;
+  min-width: 100vw;
+  min-height:10vh;
 }
 .editable{
   color:black;
