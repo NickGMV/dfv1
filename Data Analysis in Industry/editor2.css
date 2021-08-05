@@ -6,15 +6,16 @@
 #user_controls{
   position:fixed;
   top:5vh;
-  min-width: 100vw;
+  min-width: 95vw;
   min-height:8vh;
+  margin:2vh;
   background-color:#CBC3E3;
 }
 
 #user_controls button{
   background-color:#431c53;
   color:white;
-  min-width: 40vw;
+  min-width: 45vw;
   height: 6vh;
 }
 
