@@ -9,20 +9,20 @@
   left:0;
   min-width: 100vw;
   min-height:8vh;
-  background-color:#702963;
+  background-color:#fe7b66;
 }
 
 #user_controls button{
-  background-color:#301934;
+  background-color:#4d61f4;
   color:white;
-  min-width: 45vw;
+  min-width: 46vw;
   font-size: 3vmin;
   margin:1vmin 1vmin 1vmin 1vmin;
   height: 6vh;
 }
 
 .notes{
-  position:relative;
+
 background-color:white;
 margin:2vh;
 min-height: 20vh;
@@ -30,11 +30,11 @@ color:black;
 }
 
 .editable{
-  position:absolute;
+ 
   color:black;
   background-color:#ffffbf;
-  min-width:100%;
-  margin: 2%;
+  min-width:90vw;
+  margin: 1vh;
   display:inline-block;
 }
 
@@ -44,6 +44,6 @@ color:black;
 }
 
 body{
-background-color:#431c53;
+background-color:#242456;
 color:white;
 }
