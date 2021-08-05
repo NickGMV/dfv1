@@ -6,6 +6,7 @@
 #user_controls{
   position:fixed;
   top:5vh;
+  left:0;
   min-width: 95vw;
   min-height:8vh;
   margin:2vh;
@@ -29,7 +30,7 @@ color:black;
 .editable{
   color:black;
   background-color:#ffffbf;
-  max-width:100%;
+  min-width:95%;
   margin: 2%;
   display:inline-block;
 }
