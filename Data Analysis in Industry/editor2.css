@@ -9,18 +9,20 @@
   left:0;
   min-width: 100vw;
   min-height:8vh;
-  background-color:#CBC3E3;
+  background-color:#702963;
 }
 
 #user_controls button{
-  background-color:#431c53;
+  background-color:#301934;
   color:white;
   min-width: 45vw;
+  font-size: 3vmin;
   margin:1vmin 1vmin 1vmin 1vmin;
   height: 6vh;
 }
 
 .notes{
+  position:relative;
 background-color:white;
 margin:2vh;
 min-height: 20vh;
@@ -28,6 +30,7 @@ color:black;
 }
 
 .editable{
+  position:absolute;
   color:black;
   background-color:#ffffbf;
   min-width:100%;
