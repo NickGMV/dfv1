@@ -5,7 +5,7 @@
 
 #user_controls{
   position:fixed;
-  top:1em;
+  top:5vh;
   min-width: 100vw;
   min-height:8vh;
   background-color:#CBC3E3;
