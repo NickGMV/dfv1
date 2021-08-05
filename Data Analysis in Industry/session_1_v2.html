@@ -1545,6 +1545,10 @@
 			localStorage.removeItem('engage');}
 			})
 			
+			// checking ahead to see if domain problems will occurr with local storage
+			var domain = window.location.hostname;
+			console.log(domain);
+			
 			//if notes exist find them and make sure they're stored
 			//use saveId to allow multiple presentations
 			
