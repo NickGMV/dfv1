@@ -26,9 +26,11 @@ color:black;
 }
 
 .editable{
+  position:absolute;
   color:black;
   background-color:#ffffbf;
-  margin: 2vh;
+  max-width:100%;
+  margin: 2%;
   display:inline-block;
 }
 
