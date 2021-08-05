@@ -7,7 +7,7 @@
   position:fixed;
   top:5vh;
   left:0;
-  min-width: 95vw;
+  max-width: 95vw;
   min-height:8vh;
   margin:2vh;
   background-color:#CBC3E3;
@@ -17,7 +17,7 @@
   background-color:#431c53;
   color:white;
   min-width: 45vw;
-  height: 6vh;
+  height: 8vh;
 }
 
 .notes{
