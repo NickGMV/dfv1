@@ -1651,7 +1651,7 @@
 		console.log(edited.length);
 		// to avoid divs being written in multiple times will need to iether write a script to check for editable divs on load up, or create a flag variable to check?
 		
-		if(document.getElementsByClassName('editable'))	{
+		if(edited.length!=0)	{
 		   
 		for(let i = 0;i< editorNotes.length;i++){
 		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +">" + editorNotes[i];
