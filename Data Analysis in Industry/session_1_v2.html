@@ -1647,9 +1647,10 @@
 	        
 		//store each aside in a div to make presentation easier and to make scraping them back in to main presentation easier
 		//console.log(editorNotes.length);
-			
-		console.log(document.getElementsByClassName('editable'));
+		var edited = document.getElementsByClassName('editable')
+		console.log(edited.length);
 		// to avoid divs being written in multiple times will need to iether write a script to check for editable divs on load up, or create a flag variable to check?
+		
 		if(document.getElementsByClassName('editable'))	{
 		   
 		for(let i = 0;i< editorNotes.length;i++){
