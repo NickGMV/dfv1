@@ -1580,7 +1580,7 @@
 			to_replace[i].innerHTML = saved_notes2[i];	
 			//console.log('item' + i + 'added to speaker notes');	
 			// adding comms for posiiton between pages check this 	
-			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; localStorage.position="+ i + "'>edit mode</button> </div>";
+			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";onload='console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";
 			}
 			}	
 				catch(err){
