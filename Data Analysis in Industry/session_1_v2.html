@@ -1625,7 +1625,7 @@
 			localStorage.rawNotes = JSON.stringify(rawNotes);
 			//console.log(JSON.parse(localStorage.rawNotes).length)
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";' onstorage='console.log(\"hi\"); 'localStorage.position = " + i + "'>edit mode</button> </div>";	
+			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\";' onstorage='console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";	
 			
 			}
 		}()
