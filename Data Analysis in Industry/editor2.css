@@ -1,6 +1,6 @@
 
 #buffer {
-  height:11vh;
+  height:15vh;
 }
 
 #user_controls{
@@ -8,33 +8,34 @@
   top:5vh;
   left:0;
   min-width: 100vw;
-  min-height:8vh;
+  min-height:12vh;
   background-color:#64abff;
 }
 
 #user_controls button{
-  background-color:#4d61f4;
+  background-color:#14ceaa;
   color:white;
   min-width: 46vw;
   font-size: 3vmin;
   margin:1vmin 1vmin 1vmin 1vmin;
-  height: 6vh;
+  height: 8vh;
 }
 
 .notes{
 
 background-color:white;
-margin:2vmin;
+margin:1vmin;
 min-height: 20vh;
+min-width:90vw;
 color:black;
 }
 
 .editable{
  
   color:black;
-  background-color:#14ceaa;
-  min-width:90vw;
-  margin: 1vh;
+  background-color:#64abff;
+  min-width:89vw;
+  margin: 1vmin;
   display:inline-block;
 }
 
@@ -44,6 +45,6 @@ color:black;
 }
 
 body{
-background-color:#5f9bfc;
+background-color:#303674;
 color:white;
 }
