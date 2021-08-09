@@ -67,7 +67,7 @@
 						<p style='color:#f4f4f4'> Session 1 </p>
 					</div>
 					<!-- Slide 2 Notes-->
-					<aside class='notes'>
+					<aside onload = 'window.alert("hello");' class='notes'>
 						Welcome apprentices to the session and select a warmup from <a href='https://docs.google.com/presentation/d/1jrSQya9EVyTf0t5e1FTP0g-jJOz6Lzw0g7xjJoixojk/edit?usp=sharing'> here</a>.
 					</aside>
 				</section>
@@ -1580,7 +1580,7 @@
 			to_replace[i].innerHTML = saved_notes2[i];	
 			//console.log('item' + i + 'added to speaker notes');	
 			// adding comms for posiiton between pages check this 	
-			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; console.log(\"hi\"); localStorage.position="+ i + "' onload='window.alert(\"ho\");'>edit mode</button> </div>";
+			to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";
 			console.log('loaded');}
 			}	
 				catch(err){
@@ -1625,7 +1625,7 @@
 			localStorage.rawNotes = JSON.stringify(rawNotes);
 			//console.log(JSON.parse(localStorage.rawNotes).length)
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; console.log(\"hi\"); localStorage.position="+ i + "' onload='window.alert(\"ho\");'>edit mode</button> </div>";	
+			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";	
 			
 			}
 		}()
