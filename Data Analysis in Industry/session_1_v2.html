@@ -1631,7 +1631,22 @@
 			}
 		}()
 		
-	
+		function isInViewport(element) {
+                         const rect = element.getBoundingClientRect();
+                           return (
+                            rect.top >= 0 &&
+                                 rect.left >= 0 &&
+                          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                                                             );
+                                                             }
+		
+		function should_show(element, content){
+			if(isInViewPort(element)){
+			window.alert(content);
+			}
+			
+		}
 			
 		function engage_edit_mode(){
 		// start new window
@@ -1677,7 +1692,7 @@ script.innerHTML = "window.addEventListener('storage',function(){ var position =
 script.innerHTML += "document.getElementById(position).scrollIntoView({block:'end' ,behavior: 'smooth'})}); "	
 	//potential problems here hopefully all this can be cleaned up by refactoring in to external js files		
 script.innerHTML +="function add_reminder(el){var content = prompt('set you reminder, it will pop up in speaker notes when you reach the slide'); "
-script.innerHTML +="var parentID = el.parentNode.id; el.parentNode.innerHTML += ' <img id = \"' + parentID + 'reminder\"  height =\"10\" width=\"10\" src=\"https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg\" class = \"reminder\" onload=window.alert(\"' + content + '\");>'}";
+script.innerHTML +="var parentID = el.parentNode.id; el.parentNode.innerHTML += ' <img id = \"' + parentID + 'reminder\"  height =\"10\" width=\"10\" src=\"https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg\" class = \"reminder\" should_show(this,\"' + content + '\");>'}";
 			
 script.innerHTML +="function remove_reminders(el){var del = el.parentNode.getElementsByClassName('reminder');"
 script.innerHTML +="for(let i=0;i<del.length;i++){del[i].remove;}}";
