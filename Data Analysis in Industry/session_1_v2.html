@@ -1680,7 +1680,10 @@
 		}
 	        }
 		
-		
+var script2 = editorWindow.document.createElement("script");
+script2.setAttribute('src','http://example.com/site.js');
+
+editorWindow.document.head.appendChild(script2);
 			
 //Adding functions to the editor window.
 //this script element allows functions to be added to the editor window
