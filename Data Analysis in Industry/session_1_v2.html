@@ -68,7 +68,7 @@
 					</div>
 					<!-- Slide 2 Notes-->
 					<aside class='notes'>
-							     <img src='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg' class = 'reminder' onload='window.alert("reminder");'>reminder</a>
+							    
 						Welcome apprentices to the session and select a warmup from <a href='https://docs.google.com/presentation/d/1jrSQya9EVyTf0t5e1FTP0g-jJOz6Lzw0g7xjJoixojk/edit?usp=sharing'> here</a>.
 					</aside>
 				</section>
@@ -1631,6 +1631,20 @@
 			}
 		}()
 		
+		function add_reminder(el){
+		
+			var content = prompt('set you reminder, it will pop up in speaker notes when you reach the slide');
+			var parentID = el.parentNode.id;
+		        el.parentNode.innerHTML += " <img id = '" + parentID + "reminder'   src='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg' class = 'reminder' onload=window.alert(" + content + ");'>reminder</a>"
+		
+		}
+			
+	        function remove_reminders(el){
+		var del = el.parentNode.getElementsByClassName('reminder');
+			for(let i=0;i<del.length;i++){
+			del[i].remove;
+			}
+		}
 			
 		function engage_edit_mode(){
 		// start new window
@@ -1655,11 +1669,12 @@
 		if(edited.length!=0)	{
 		   
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +">" + editorNotes[i];
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +">" + editorNotes[i] + "</div>";
 		}
 		}
 		else{
-		for(let i = 0;i< editorNotes.length;i++){editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div>";
+		for(let i = 0;i< editorNotes.length;i++){
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <div class = 'editable' contenteditable = 'true'><button onclick = 'add_reminder(this)'>add reminder</button></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div>";
 		}
 	        }
 		
