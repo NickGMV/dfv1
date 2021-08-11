@@ -148,44 +148,18 @@
 		}
 	        }
 		
-		
+
+                //pulling editor specific js in to the popup window.		
+                var script = editorWindow.document.createElement("script");
+                script.setAttribute('src','https://nickgmvp.github.io/dfv1/editordependencies/editorinternal.js');			
 			
-//Adding functions to the editor window.
-//this script element allows functions to be added to the editor window
-var script = editorWindow.document.createElement("script");
-
-// add listener to refocus on divs when slide changes	
-// when speaker notes move to new slide editor should transition to new set of notes.
-script.innerHTML = "window.addEventListener('storage',function(){ var position = localStorage.position; console.log(position);"
-script.innerHTML += "document.getElementById(position).scrollIntoView({block:'end' ,behavior: 'smooth'})}); "	
-	//potential problems here hopefully all this can be cleaned up by refactoring in to external js files		
-script.innerHTML +="function add_reminder(el){var content = prompt('set you reminder, it will pop up in speaker notes when you reach the slide'); "
-script.innerHTML +="var parentID = el.parentNode.id; el.parentNode.innerHTML += ' <img id = \"' + parentID + 'reminder\"  height =\"10\" width=\"10\" src=\"https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg\" class = \"reminder\" onload = \"should_show(this,'+'\'' + content +'\'' + ');\">'}";
-			
-script.innerHTML +="function remove_reminders(el){var del = el.parentNode.getElementsByClassName('reminder');"
-script.innerHTML +="for(let i=0;i<del.length;i++){del[i].remove;}}";
-
-// These functions are added to the editor window to allow it to return the edited content to the main presentation and speaker notes
-
-script.innerHTML += "function prep(){ var saveLocation = localStorage.getItem('saveLocation'); console.log(saveLocation);} "			
-script.innerHTML += "function save_and_close() { " 
-script.innerHTML += "var saveLocation = localStorage.getItem('saveLocation'); console.log(saveLocation);"
-script.innerHTML += "var to_save = []; var new_notes = document.getElementsByClassName('notes');"
-script.innerHTML += "for(let i=0; i< new_notes.length ;i++){to_save[i]= new_notes[i].innerHTML }; "
-script.innerHTML += "save_data = JSON.stringify(to_save); localStorage.setItem(saveLocation,save_data);"
-script.innerHTML += "console.log(to_save.length); var save = localStorage.getItem(saveLocation); console.log(save);}"
-			//nuke function
-script.innerHTML += "function nuke(){console.log('nuke imminent...'); console.log('3'); console.log('2'); console.log('1'); console.log('BOOM'); localStorage.clear();}"
-// Append
-
-editorWindow.document.head.appendChild(script);
+                editorWindow.document.head.appendChild(script);
 			
 		
 		editorWindow.document.body.innerHTML += "<div id='user_controls'><button onclick = 'prep(); save_and_close();'> save your updates</button><button onclick = 'nuke();'> destroy all saved data </button></div>";
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/editor2.css'>";
-			//editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='./editor2.css'>";
-			//editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='../editor2.css'>";
+			
 		
 			
 		}
