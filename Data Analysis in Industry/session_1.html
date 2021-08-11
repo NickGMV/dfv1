@@ -1602,7 +1602,14 @@
   
 	  
 	  
-	  </script>
+		  <script>
+		  var openedWindows = [];
+window._open = window.open; // saving original function
+window.open = function(url,name,params){
+    openedWindows.push(window._open(url,name,params));
+	console.log(openedWindows);
+    // you can store names also...
+}</script>
 	  
                 <script src="../Dependencies/dist/reveal.js"></script>
 		<script src="../Dependencies/plugin/notes/notes.js"></script>
@@ -1713,14 +1720,7 @@
 	
 	  <!-- Scripts -->
 	  <!-- last attempt to get auto change on reveal hot keys before I have to throw in the towel and change the settings!-->
-	<script>
-var openedWindows = [];
-window._open = window.open; // saving original function
-window.open = function(url,name,params){
-    openedWindows.push(window._open(url,name,params));
-    // you can store names also...
-}
-	  </script>
+
   </body>
   
 </html>
