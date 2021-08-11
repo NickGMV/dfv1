@@ -1779,6 +1779,13 @@
 		</div>
  
     <!-- Scripts -->
+	  <script>
+		  var openedWindows = [];
+window._open = window.open; // saving original function
+window.open = function(url,name,params){
+    openedWindows.push(window._open(url,name,params));
+    // you can store names also...
+}</script>
 
 		<script src="../Dependencies/dist/reveal.js"></script>
 		<script src="../Dependencies/plugin/notes/notes.js"></script>
