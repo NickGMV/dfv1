@@ -1784,6 +1784,7 @@
 window._open = window.open; // saving original function
 window.open = function(url,name,params){
     openedWindows.push(window._open(url,name,params));
+	console.log(openedWindows);
     // you can store names also...
 }</script>
 
