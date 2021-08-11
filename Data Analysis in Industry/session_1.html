@@ -1714,63 +1714,12 @@
 	  <!-- Scripts -->
 	  <!-- last attempt to get auto change on reveal hot keys before I have to throw in the towel and change the settings!-->
 	<script>
-	  function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
+var openedWindows = [];
+window._open = window.open; // saving original function
+window.open = function(url,name,params){
+    openedWindows.push(window._open(url,name,params));
+    // you can store names also...
 }
-		
-
-async function keyboard_on_off() {
-	console.log('change post message and keyboard');
-	
-  const response = await Reveal.configure({postMessageEvents:true});
-  const data = await console.log(response);
-  const response1 = await Reveal.configure({keyboard:false});
-  const data1 = await console.log(response1);
-  console.log(Reveal.getConfig());
-  const response2 = await Reveal.configure({postMessageEvents:false});
-  const data2 = await console.log(response2);
-
-  console.log(data)
-}
-		
-		
-		
-window.addEventListener('storage', () => {
- 
-if (localStorage.command){
-window.alert('received command');	
-console.log(window.localStorage.getItem('command'));
-//console.log(Reveal.getConfig());
-//console.log('pre change 1');	
-keyboard_on_off(); 
-	Reveal.setupNotes();
-//console.log('change post message and keyboard');
-
-//Reveal.configure({postMessageEvents:true});
-		  
-		  //sleep(200);
-		 
-		  //console.log(Reveal.getConfig());
-		  //Reveal.configure({keyboard:false});
-		  //sleep(200);
-		 
-		  //console.log('should see postmessage changed');
-		  //console.log(Reveal.getConfig());
-		  //sleep(200);
-		  
-                  //Reveal.configure({postMessageEvents:false});
-		  //console.log(Reveal.getConfig());
-                  //sleep(200);
-	 localStorage.removeItem('command');
-        console.log('loop complete');
- }
-	
-  localStorage.removeItem('command');
-});
 	  </script>
   </body>
   
