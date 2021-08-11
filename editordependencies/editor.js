@@ -110,10 +110,10 @@
 
 	// uses prior function to determine if allerts should go out	
 		function should_show(element, content){
-			if(isInViewPort(element)){
-			window.alert(string(content));
+			if(isInViewport(element)){
+			window.alert(content);
 			}
-			}
+			};
 		
 // function to open the editor window and add HTML content from intitial function
 		function engage_edit_mode(){
