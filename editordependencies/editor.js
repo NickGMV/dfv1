@@ -108,23 +108,6 @@
  //                                                            );
  //                                                            };
        
-
-function check_parent(element){
-	var parent = element.parentNode;
-	console.log(parent.classList);
-	console.log(element.id);
-	if(parent.classList.contains('value')){
-		return true;}
-	else{return false;}
-}
-	// uses prior function to determine if allerts should go out
-        // only triggers for parent window need to find the name of reveal window
-		function should_show(element, content)
-                         {
-			if(check_parent(element)){
-			window.alert(content);
-			}
-			};
 		
 // function to open the editor window and add HTML content from intitial function
 		function engage_edit_mode(){
@@ -167,7 +150,7 @@ function check_parent(element){
                 editorWindow.document.head.appendChild(script);
 			
 		
-		editorWindow.document.body.innerHTML += "<div id='user_controls'><button onclick = 'prep(); save_and_close();'> save your updates</button><button onclick = 'nuke();'> destroy all saved data </button></div>";
+		editorWindow.document.body.innerHTML += "<div id='user_controls'><button onclick = 'prep(); save_and_close();'> save updates</button><button onclick='reset_notes();'>reset notes</button><button onclick='reset_reminders();'>reset reminders</button><button onclick = 'nuke();'> clear all memory </button></div>";
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/editor2.css'>";
 			
