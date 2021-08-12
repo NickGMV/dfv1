@@ -42,7 +42,22 @@ function add_reminder(el){
     console.log(save);
   };
 
-
+function check_parent(element){
+	var parent = element.parentNode;
+	console.log(parent.classList);
+	console.log(element.id);
+	if(parent.classList.contains('value')){
+		return true;}
+	else{return false;}
+}
+	// uses prior function to determine if allerts should go out
+        // only triggers for parent window need to find the name of reveal window
+		function should_show(element, content)
+                         {
+			if(check_parent(element)){
+			window.alert(content);
+			}
+			};
 
   function nuke(){
     console.log('nuke imminent...'); 
