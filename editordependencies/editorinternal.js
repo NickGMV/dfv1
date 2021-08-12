@@ -9,8 +9,9 @@ window.addEventListener('storage',function(){
 function add_reminder(el){
   var content = prompt('set you reminder, it will pop up in speaker notes when you reach the slide');
   var parentID = el.parentNode.id;
-  el.parentNode.innerHTML += ' <img id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg" class = "reminder" onload = "should_show(this,\'' + content +'\')";>';
-
+//  el.parentNode.innerHTML += ' <img id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg" class = "reminder" onload = "should_show(this,\'' + content +'\')";>';
+ el.parentNode.innerHTML += ' <img id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg" class = "reminder" onload ="if(this.parentNode.classList.contains('value')){window.alert(\''+ content + '\');">';                                                
+	
 };
 			
   function remove_reminders(el){
