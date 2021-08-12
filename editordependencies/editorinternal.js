@@ -1,9 +1,6 @@
 //called in editor.js to add javascript to the editor window/
-!function start(){
-  window.alert('script loaded');
-}()
 
-// all of this needs to be cleaned up significantly to remove inner HTML formatting
+
 window.addEventListener('storage',function(){
   var position = localStorage.position;
   console.log(position);
