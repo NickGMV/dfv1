@@ -98,15 +98,18 @@
 
 
 // experimental use this function to determine if elements are on screen before running reminder function (might remove this)
+// this is redundant but cool so saving for future projects
 		function isInViewport(element) {
+			
                          const rect = element.getBoundingClientRect();
                            return (rect.top >= 0 && rect.left >= 0 && 
-				   rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
-				   rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+				   rect.bottom <= (reveal.js - Notes.innerHeight || reveal.js - Notes.document.documentElement.clientHeight) && 
+				   rect.right <= (reveal.js - Notes.innerWidth || reveal.js - Notes.document.documentElement.clientWidth)
                                                              );
                                                              };
-
-	// uses prior function to determine if allerts should go out	
+       
+	// uses prior function to determine if allerts should go out
+        // only triggers for parent window need to find the name of reveal window
 		function should_show(element, content)
                          {
 			if(isInViewport(element)){
