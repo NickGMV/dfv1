@@ -99,19 +99,19 @@
 
 // experimental use this function to determine if elements are on screen before running reminder function (might remove this)
 // this is redundant but cool so saving for future projects
-		function isInViewport(element) {
+//		function isInViewport(element) {
 			
-                         const rect = element.getBoundingClientRect();
-                           return (rect.top >= 0 && rect.left >= 0 && 
-				   rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
-				   rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                                                             );
-                                                             };
+//                         const rect = element.getBoundingClientRect();
+////                           return (rect.top >= 0 && rect.left >= 0 && 
+//				   rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
+//				   rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+ //                                                            );
+ //                                                            };
        
 
 function check_parent(element){
-	var parent = element.parentNode
-	if(parent.classList.contains('value'){
+	var parent = element.parentNode;
+	if(parent.classList.contains('value')){
 	   result = true;
 	   }
 	return result;
