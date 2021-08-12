@@ -13,10 +13,20 @@ function add_reminder(el){
  el.parentNode.innerHTML += ' <img id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg" class = "reminder" onload ="if(this.parentNode.classList.contains(\'value\')){window.alert(\''+ content + '\')};">';                                                
 	
 };
-			
-  function remove_reminders(el){
+	
+
+  function reset_notes(){
+         var to_reset = document.getElementsByClassName('notes');
+	  for(let i = 0; i<to_reset.length;i++){
+	  to_reset[i].innerHTML = " ";
+	  }
+  
+  }
+
+
+  function reset_reminders(){
     
-    var del = el.parentNode.getElementsByClassName('reminder');
+    var del = document.getElementsByClassName('reminder');
     for(let i=0;i<del.length;i++){
 	    del[i].remove;
             }
