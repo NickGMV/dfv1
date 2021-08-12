@@ -113,7 +113,9 @@ function check_parent(element){
 	var parent = element.parentNode;
 	console.log(parent.id);
 	console.log(element.id);
-	return(parent.classList.contains('value'));
+	if(parent.classList.contains('value')){
+		return true;}
+	else{return false;}
 }
 	// uses prior function to determine if allerts should go out
         // only triggers for parent window need to find the name of reveal window
