@@ -121,7 +121,8 @@ function check_parent(element){
 		function should_show(element, content)
                          {
 			if(check_parent(element)){
-			window.alert(content};
+			window.alert(content);
+			}
 			};
 		
 // function to open the editor window and add HTML content from intitial function
