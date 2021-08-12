@@ -103,18 +103,25 @@
 			
                          const rect = element.getBoundingClientRect();
                            return (rect.top >= 0 && rect.left >= 0 && 
-				   rect.bottom <= (reveal.js - Notes.innerHeight || reveal.js - Notes.document.documentElement.clientHeight) && 
-				   rect.right <= (reveal.js - Notes.innerWidth || reveal.js - Notes.document.documentElement.clientWidth)
+				   rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
+				   rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                                                              );
                                                              };
        
+
+function check_parent(element){
+	var parent = element.parentNode
+	if(parent.classList.contains('value'){
+	   result = true;
+	   }
+	return result;
+}
 	// uses prior function to determine if allerts should go out
         // only triggers for parent window need to find the name of reveal window
 		function should_show(element, content)
                          {
-			if(isInViewport(element)){
-			window.alert(content);
-			}
+			if(check_parent(element)){
+			window.alert(content};
 			};
 		
 // function to open the editor window and add HTML content from intitial function
