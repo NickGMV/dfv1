@@ -16,7 +16,7 @@ function add_reminder(el){
 	
 
   function reset_notes(){
-         var to_reset = document.getElementsByClassName('notes');
+         var to_reset = document.getElementsByClassName('editable');
 	  for(let i = 0; i<to_reset.length;i++){
 	  to_reset[i].innerHTML = " ";
 	  }
@@ -28,7 +28,7 @@ function add_reminder(el){
     
     var del = document.getElementsByClassName('reminder');
     for(let i=0;i<del.length;i++){
-	    del[i].remove;
+	    del[i].remove();
             }
   };
   
