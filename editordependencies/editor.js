@@ -111,7 +111,7 @@
 
 function check_parent(element){
 	var parent = element.parentNode;
-	console.log(parent.id);
+	console.log(parent.classList);
 	console.log(element.id);
 	if(parent.classList.contains('value')){
 		return true;}
