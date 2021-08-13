@@ -40,7 +40,7 @@ function add_reminder(el){
   function strip_reminder_buttons(){
   var to_strip = document.getElementsByClassName('reminder_button');
   console.log(to_strip);
-  for(let i=0; i<to_strip.length; i++){
+  for(let i=0; i<to_strip.length; i=i+1){
   to_strip[i].remove();
   }
   };
