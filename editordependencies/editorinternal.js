@@ -4,7 +4,7 @@
 	var divs = document.getElementsByClassName('editable');
 	for(let i = 0; i<divs.length;i++){
 	divs[i].setAttribute("contenteditable", true);
-	}();
+	}}();
 		
 window.addEventListener('storage',function(){
   var position = localStorage.position;
