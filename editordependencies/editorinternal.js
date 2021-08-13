@@ -37,6 +37,13 @@ function add_reminder(el){
   
   }
 
+function remove_edittable2(){
+	var divs = document.getElementsByClassName('editable');
+	console.log(divs.length);
+	for(let i = 0; i<divs.length;i++){
+	divs[i].setAttribute("contenteditable", false);
+}}
+
 
   function reset_reminders(){
     
@@ -63,6 +70,7 @@ function add_reminder(el){
     var saveLocation = localStorage.getItem('saveLocation'); 
     console.log(saveLocation);
     strip_reminder_buttons();
+    remove_edittable2();
     var to_save = []; 
     var new_notes = document.getElementsByClassName('notes');
     for(let i=0; i< new_notes.length ;i++){
@@ -77,23 +85,6 @@ function add_reminder(el){
 	  window.close();
 	 
   };
-// the should_show and check_parent functions are defunct!
-function check_parent(element){
-	var parent = element.parentNode;
-	console.log(parent.classList);
-	console.log(element.id);
-	if(parent.classList.contains('value')){
-		return true;}
-	else{return false;}
-}
-	// uses prior function to determine if allerts should go out
-        // only triggers for parent window need to find the name of reveal window
-		function should_show(element, content)
-                         {
-			if(check_parent(element)){
-			window.alert(content);
-			}
-			};
 
   function nuke(){
     console.log('nuke imminent...'); 
