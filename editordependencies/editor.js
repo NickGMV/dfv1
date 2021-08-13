@@ -48,7 +48,9 @@
 				remove_edittable(to_replace[i]);
 				to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";
 			            }
-				
+				/// check this through on MONDAY
+			console.log('editables have been stripped');
+				console.log(to_replace);
         console.log('loaded');
 			}	
         
