@@ -52,7 +52,7 @@ function add_reminder(el){
     var save = localStorage.getItem(saveLocation); 
     console.log(save);
   };
-
+// the should show functions are defunct!
 function check_parent(element){
 	var parent = element.parentNode;
 	console.log(parent.classList);
