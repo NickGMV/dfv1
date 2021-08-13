@@ -47,6 +47,7 @@
 		             	to_replace[i].innerHTML = saved_notes2[i];	
 			 	          to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";
 			            }
+				remove_edittable();
         console.log('loaded');
 			}	
         
@@ -108,6 +109,11 @@
  //                                                            );
  //                                                            };
        
+function remove_edittable(){
+	var divs = document.getElementsByClassName('editable');
+	for(let i = 0; i<divs.length;i++){
+	divs[i].contenteditable=false;
+}}
 		
 // function to open the editor window and add HTML content from intitial function
 		function engage_edit_mode(){
