@@ -124,7 +124,7 @@ function remove_edittable(element){
 	var divs = element.getElementsByClassName('editable');
 	console.log(divs.length);
 	for(let i = 0; i<divs.length;i++){
-	divs[i].setAttribute("contenteditable", false);
+	divs[i].setAttribute("contenteditable", "false");
 }}
 
 //function restore_edittable(){
