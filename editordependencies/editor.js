@@ -44,10 +44,11 @@
 			//cycle through the two lists replacing the HTML content of the asides with edited content
         
 			for(let i = 0; i<saved_notes2.length;i++){
-		             	to_replace[i].innerHTML = saved_notes2[i];	
-			 	          to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";
+		             	to_replace[i].innerHTML = saved_notes2[i];
+				remove_edittable(to_replace[i]);
+				to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";
 			            }
-				remove_edittable();
+				
         console.log('loaded');
 			}	
         
@@ -109,8 +110,8 @@
  //                                                            );
  //                                                            };
        
-function remove_edittable(){
-	var divs = document.getElementsByClassName('editable');
+function remove_edittable(element){
+	var divs = element.getElementsByClassName('editable');
 	for(let i = 0; i<divs.length;i++){
 	divs[i].setAttribute("contenteditable", false);
 }}
