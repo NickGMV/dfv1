@@ -1,1 +1,55 @@
 /* contains the styles used for the editor window*/
+
+#buffer {
+  height:15vh;
+}
+
+#user_controls{
+  position:fixed;
+  top:5vh;
+  left:0;
+  min-width: 100vw;
+  min-height:12vh;
+  background-color:#0c008b;
+}
+
+#user_controls button{
+  background-color:#2c2d74;
+  color:white;
+  min-width: 46vw;
+  font-size: 3vmin;
+  margin:1vmin 1vmin 1vmin 1vmin;
+  height: 8vh;
+}
+.reminder{
+  height:3vh;
+  width:3vh;
+}
+
+.notes{
+
+background-color:white;
+margin:1vmin;
+min-height: 20vh;
+min-width:90vw;
+color:black;
+}
+
+.editable{
+ 
+  color:black;
+  background-color:#e7feff;
+  min-width:89vw;
+  margin: 1vmin;
+  display:inline-block;
+}
+
+
+.reminder{
+  color:red;
+}
+
+body{
+background-color:#303674;
+color:white;
+}
