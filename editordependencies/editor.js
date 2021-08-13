@@ -112,13 +112,13 @@
 function remove_edittable(){
 	var divs = document.getElementsByClassName('editable');
 	for(let i = 0; i<divs.length;i++){
-	divs[i].contenteditable=false;
+	divs[i].setAttribute("contenteditable", false);
 }}
 
 function restore_edittable(){
 	var divs = document.getElementsByClassName('editable');
 	for(let i = 0; i<divs.length;i++){
-	divs[i].contenteditable=true;
+	divs[i].setAttribute("contenteditable", true);
 }}
 		
 // function to open the editor window and add HTML content from intitial function
