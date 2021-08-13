@@ -93,6 +93,7 @@
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; localStorage.position="+ i + "'>edit mode</button> </div>";	
 			
 			}
+		remove_edittable2();	
 		}()
 		// evrything is ready to go now that the start up finction has portioned out and sent all data
 
@@ -109,7 +110,15 @@
 //				   rect.right <= (window.innerWidth || document.documentElement.clientWidth)
  //                                                            );
  //                                                            };
-       
+
+
+function remove_edittable2(){
+	var divs = document.getElementsByClassName('editable');
+	for(let i = 0; i<divs.length;i++){
+	divs[i].setAttribute("contenteditable", false);
+}}
+
+
 function remove_edittable(element){
 	var divs = element.getElementsByClassName('editable');
 	for(let i = 0; i<divs.length;i++){
