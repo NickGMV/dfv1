@@ -1,7 +1,7 @@
 /* contains the styles used for the editor window*/
 
 #buffer {
-  height:15vh;
+  height:16.5vh;
 }
 
 #user_controls{
@@ -31,7 +31,7 @@
 background-color:white;
 margin:1vmin;
 min-height: 20vh;
-min-width:90vw;
+max-width:90vw;
 color:black;
 }
 
@@ -39,7 +39,7 @@ color:black;
  
   color:black;
   background-color:#e7feff;
-  min-width:89vw;
+  min-width:89.5vw;
   margin: 1vmin;
   display:inline-block;
 }
