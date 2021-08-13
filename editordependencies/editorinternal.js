@@ -26,9 +26,9 @@ function add_reminder(el){
 
   function reset_reminders(){
     
-    var del = document.getElementsByClassName('reminder');
-    for(let i=0;i<del.length;i++){
-	    del[i].remove();
+       var del = document.getElementsByClassName('reminder');
+    while(del.length!=0){
+	    del[0].remove();
             }
   };
   
@@ -38,11 +38,9 @@ function add_reminder(el){
   } ;
 
   function strip_reminder_buttons(){
-  var strip = document.getElementsByClassName('reminder_button');
-  const to_strip = Array.from(strip);
-  console.log(to_strip);
-  for(let i=0; i<to_strip.length; i=i++){
-  to_strip[i].remove();
+  var to_strip = document.getElementsByClassName('reminder_button');
+  while(to_strip.length!=0){
+  to_strip[0].remove();
   }
   };
 
