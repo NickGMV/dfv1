@@ -38,7 +38,7 @@ function add_reminder(el){
   } ;
 
   function strip_reminder_buttons(){
-  var to_strip = document.querySelectorAll('.reminder_button');
+  var to_strip = document.querySelectorAll('reminder_button');
   console.log(to_strip);
   for(let i=0; i<to_strip.length; i=i++){
   to_strip[i].remove();
