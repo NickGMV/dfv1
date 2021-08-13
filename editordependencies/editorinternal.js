@@ -7,10 +7,10 @@ window.addEventListener('storage',function(){
   document.getElementById(position).scrollIntoView({block:'end' ,behavior: 'smooth'})});
 
 //function to loop round once edits are saved.
-window.addEventListener('beforeunload', function (e) {
+//window.addEventListener('beforeunload', function (e) {
   // the absence of a returnValue property on the event will guarantee the browser unload happens
-  localStorage.engage='yep';
-});
+ // localStorage.engage='yep';
+//});
 
 
 
