@@ -115,11 +115,11 @@ function remove_edittable(){
 	divs[i].setAttribute("contenteditable", false);
 }}
 
-function restore_edittable(){
-	var divs = document.getElementsByClassName('editable');
-	for(let i = 0; i<divs.length;i++){
-	divs[i].setAttribute("contenteditable", true);
-}}
+//function restore_edittable(){
+	//var divs = document.getElementsByClassName('editable');
+	//for(let i = 0; i<divs.length;i++){
+	//divs[i].setAttribute("contenteditable", true);
+//}}
 		
 // function to open the editor window and add HTML content from intitial function
 		function engage_edit_mode(){
@@ -147,7 +147,7 @@ function restore_edittable(){
 		for(let i = 0;i< editorNotes.length;i++){
 		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button>" + editorNotes[i] + "</div>";
 		}
-			restore_edittable();
+			//restore_edittable();
 		}
 			//editor button for reminders was origninally added here just in case !
 		else{
