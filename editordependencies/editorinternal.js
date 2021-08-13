@@ -1,5 +1,5 @@
 //called in editor.js to add javascript to the editor window/
-
+// there are 1 links that will need refactoring in this file
 
 window.addEventListener('storage',function(){
   var position = localStorage.position;
@@ -10,7 +10,7 @@ function add_reminder(el){
   var content = prompt('set you reminder, it will pop up in speaker notes when you reach the slide');
   var parentID = el.parentNode.id;
 //  el.parentNode.innerHTML += ' <img id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg" class = "reminder" onload = "should_show(this,\'' + content +'\')";>';
- el.parentNode.innerHTML += ' <img id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg" class = "reminder" onload ="if(this.parentNode.classList.contains(\'value\')){window.alert(\''+ content + '\')};">';                                                
+ el.parentNode.innerHTML += ' <img alt="' + content + '" id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/editordependencies/alarm.svg" class = "reminder" onload ="if(this.parentNode.classList.contains(\'value\')){window.alert(\''+ content + '\')};">';                                                
 	
 };
 	
