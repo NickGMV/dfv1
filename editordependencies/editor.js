@@ -116,7 +116,7 @@ function remove_edittable(){
 }}
 
 //function restore_edittable(){
-	//var divs = document.getElementsByClassName('editable');
+	//var divs = editorWindow.document.getElementsByClassName('editable');
 	//for(let i = 0; i<divs.length;i++){
 	//divs[i].setAttribute("contenteditable", true);
 //}}
