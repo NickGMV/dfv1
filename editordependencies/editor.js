@@ -136,9 +136,10 @@
 		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +">" + editorNotes[i] + "</div>";
 		}
 		}
+			//editor button for reminders was origninally added here just in case !
 		else{
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button onclick = 'add_reminder(this)'>add reminder</button> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div>";
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div>";
 		}
 	        }
 		
