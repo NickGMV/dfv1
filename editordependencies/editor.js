@@ -152,7 +152,7 @@
 		
 		editorWindow.document.body.innerHTML += "<div id='user_controls'><button onclick = 'prep(); save_and_close();'> save updates</button><button onclick='reset_notes();'>reset notes</button><button onclick='reset_reminders();'>reset reminders</button><button onclick = 'nuke();'> clear all memory </button></div>";
 		
-		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/editor2.css'>";
+		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='https://nickgmvp.github.io/editordependencies/editorstyles.css'>";
 			
 		
 			
