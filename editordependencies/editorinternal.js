@@ -6,6 +6,14 @@ window.addEventListener('storage',function(){
   console.log(position);
   document.getElementById(position).scrollIntoView({block:'end' ,behavior: 'smooth'})});
 
+//function to loop round once edits are saved.
+window.addEventListener('beforeunload', function (e) {
+  // the absence of a returnValue property on the event will guarantee the browser unload happens
+  localStorage.engage='yep';
+});
+
+
+
 function add_reminder(el){
   var content = prompt('set you reminder, it will pop up in speaker notes when you reach the slide');
   var parentID = el.parentNode.id;
@@ -60,6 +68,8 @@ function add_reminder(el){
     console.log(to_save.length); 
     var save = localStorage.getItem(saveLocation); 
     console.log(save);
+	  window.close();
+	 
   };
 // the should_show and check_parent functions are defunct!
 function check_parent(element){
