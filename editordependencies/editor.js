@@ -95,7 +95,7 @@
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; localStorage.position="+ i + "'>edit mode</button> </div>";	
 			
 			}
-		remove_edittable2();	
+			
 		}()
 		// evrything is ready to go now that the start up finction has portioned out and sent all data
 
