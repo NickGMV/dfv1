@@ -36,10 +36,19 @@ function add_reminder(el){
     var saveLocation = localStorage.getItem('saveLocation'); 
     console.log(saveLocation);
   } ;
-  
+
+  function strip_reminder_buttons(){
+  var to_strip = document.getElementsByClassName('reminder_button');
+  for(let i=0;i<to_strip.length;i++){
+  to_strip[i].remove();
+  }
+  };
+
+
   function save_and_close() {
     var saveLocation = localStorage.getItem('saveLocation'); 
     console.log(saveLocation);
+    strip_reminder_buttons();
     var to_save = []; 
     var new_notes = document.getElementsByClassName('notes');
     for(let i=0; i< new_notes.length ;i++){
@@ -52,7 +61,7 @@ function add_reminder(el){
     var save = localStorage.getItem(saveLocation); 
     console.log(save);
   };
-// the should show functions are defunct!
+// the should_show and check_parent functions are defunct!
 function check_parent(element){
 	var parent = element.parentNode;
 	console.log(parent.classList);
