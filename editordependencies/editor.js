@@ -88,7 +88,7 @@
       
       //add editor mode buttons to notes in speaker notes window
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<div id = edit_button" + i + "><button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button> <button onclick='localStorage.engage=\"yep\"; localStorage.position="+ i + "'>edit mode</button> </div>";	
+			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; localStorage.position="+ i + "'>edit mode</button> </div>";	
 			
 			}
 		}()
@@ -133,13 +133,13 @@
 		if(edited.length!=0)	{
 		   
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +">" + editorNotes[i] + "</div>";
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button>" + editorNotes[i] + "</div>";
 		}
 		}
 			//editor button for reminders was origninally added here just in case !
 		else{
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div>";
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div>";
 		}
 	        }
 		
