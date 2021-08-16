@@ -114,12 +114,12 @@
  //                                                            };
 
 
-function remove_edittable2(){
-	var divs = document.getElementsByClassName('editable');
-	console.log(divs.length);
-	for(let i = 0; i<divs.length;i++){
-	divs[i].setAttribute("contenteditable", false);
-}}
+//function remove_edittable2(){
+	//var divs = document.getElementsByClassName('editable');
+	//console.log(divs.length);
+	//for(let i = 0; i<divs.length;i++){
+	//divs[i].setAttribute("contenteditable", false);
+//}}
 
 
 function remove_edittable(element){
@@ -134,17 +134,15 @@ function remove_edittable(element){
 	//for(let i = 0; i<divs.length;i++){
 	//divs[i].setAttribute("contenteditable", true);
 //}}
-var editor_flag = 0;		
+	
 // function to open the editor window and add HTML content from intitial function
 		function engage_edit_mode(){
-			
-		if(editor_flag==0){
 		// start new window
 		// would need to enable popups for github if want this to work.add a try except loop to advise 
 		//users to whitelist repo or could use while loop to windowalert each attemot until fixed?
 		//maybe loom link in alert?
 		var editorWindow = window.open("","editorWindow","width=500,height=500");	
-		editor_flag = 1;	
+			
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
 		editorWindow.document.body.innerHTML ="<p>This is 'editor window'. notes should appear soon...</P>";
 		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
@@ -185,5 +183,5 @@ var editor_flag = 0;
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='https://nickgmvp.github.io/dfv1/editordependencies/editorstyles.css'>";
 			
 		
-		}//close if 1?	
+			
 		}//close function
