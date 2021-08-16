@@ -20,6 +20,7 @@ window.addEventListener('beforeunload', function (e) {
   // the absence of a returnValue property on the event will guarantee the browser unload happens
 	//change the editor flag back to zero
  editor_flag = 0;
+ window.opener.location.reload();
 });
 
 
