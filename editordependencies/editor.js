@@ -146,7 +146,7 @@ var editor_flag = 0;
 		var editorWindow = window.open("","editorWindow","width=500,height=500");	
 		editor_flag = 1;	
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
-		editorWindow.document.body.innerHTML +="<p>This is 'editor window'. notes should appear soon...</P>";
+		editorWindow.document.body.innerHTML ="<p>This is 'editor window'. notes should appear soon...</P>";
 		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
 			
 		//put rawnotes in to editor window edits will persist between sessions and be loaded at first start up 
@@ -157,21 +157,21 @@ var editor_flag = 0;
 		var edited = document.getElementsByClassName('editable')
 		console.log(edited.length);
 		// to avoid divs being written in multiple times will need to iether write a script to check for editable divs on load up, or create a flag variable to check?
-		
+		//open if 2
 		if(edited.length!=0)	{
 		   
 		for(let i = 0;i< editorNotes.length;i++){
 		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button>" + editorNotes[i] + "</div>";
 		}
 			
-		}
-			//editor button for reminders was origninally added here just in case !
+		} //close if 2
+			//open else
 		else{
 		for(let i = 0;i< editorNotes.length;i++){
 		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div>";
 		}
 	        }
-		
+		//close else 
 
                 //pulling editor specific js in to the popup window.		
                 var script = editorWindow.document.createElement("script");
@@ -185,5 +185,5 @@ var editor_flag = 0;
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='https://nickgmvp.github.io/dfv1/editordependencies/editorstyles.css'>";
 			
 		
-		}	
-		}
+		}//close if 1?	
+		}//close function
