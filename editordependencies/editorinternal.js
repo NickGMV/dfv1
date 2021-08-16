@@ -1,10 +1,10 @@
 //called in editor.js to add javascript to the editor window/
 // there are 1 links that will need refactoring in this file
-function restore_edittable(){
+!function restore_edittable(){
 	var divs = document.getElementsByClassName('editable');
 	for(let i = 0; i<divs.length;i++){
 	divs[i].setAttribute("contenteditable", true);
-	}};
+	}}();
 		
 window.addEventListener('storage',function(){
   var position = localStorage.position;
