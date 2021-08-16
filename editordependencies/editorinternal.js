@@ -16,11 +16,12 @@ window.addEventListener('storage',function(){
  }
 	);
 
-//function to loop round once edits are saved.
-//window.addEventListener('beforeunload', function (e) {
+function to loop round once edits are saved.
+window.addEventListener('beforeunload', function (e) {
   // the absence of a returnValue property on the event will guarantee the browser unload happens
- // localStorage.engage='yep';
-//});
+	//change the editor flag back to zero
+ editor_flag = 0;
+});
 
 
 
