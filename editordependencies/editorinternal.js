@@ -8,9 +8,13 @@
 		
 window.addEventListener('storage',function(){
   var position = localStorage.position;
+ if(position){
+	 
   console.log(position);
-	restore_editable();
-  document.getElementById(position).scrollIntoView({block:'end' ,behavior: 'smooth'})});
+	//restore_editable();
+  document.getElementById(position).scrollIntoView({block:'end' ,behavior: 'smooth'})}
+ }
+	);
 
 //function to loop round once edits are saved.
 //window.addEventListener('beforeunload', function (e) {
@@ -22,10 +26,11 @@ window.addEventListener('storage',function(){
 
 function add_reminder(el){
   var content = prompt('set you reminder, it will pop up in speaker notes when you reach the slide');
+  if(content){
   var parentID = el.parentNode.id;
 //  el.parentNode.innerHTML += ' <img id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/alarm.svg" class = "reminder" onload = "should_show(this,\'' + content +'\')";>';
  el.parentNode.innerHTML += ' <img title="' + content + '" id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/editordependencies/alarm.svg" class = "reminder" ondblclick="this.remove();" onload ="if(this.parentNode.classList.contains(\'value\')){window.alert(\''+ content + '\')};">';                                                
-	
+  }	
 };
 	
 
