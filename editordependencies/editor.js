@@ -180,7 +180,7 @@ var editor_flag = 0;
                 editorWindow.document.head.appendChild(script);
 			
 		
-		editorWindow.document.body.innerHTML += "<div id='user_controls'><button onclick = 'prep(); save_and_close();'> save updates</button><button onclick='reset_notes();'>reset notes</button><button onclick='reset_reminders();'>reset reminders</button><button onclick = 'nuke();'> clear all memory </button></div>";
+		editorWindow.document.body.innerHTML += "<div id='user_controls'><button onclick = 'prep(); save_and_close();'> save updates</button><button onclick='reset_notes();'>reset notes</button><button onclick='reset_reminders();'>reset reminders</button><button id = 'clear_all' onclick = 'nuke();'> clear all memory </button></div>";
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='https://nickgmvp.github.io/dfv1/editordependencies/editorstyles.css'>";
 			
