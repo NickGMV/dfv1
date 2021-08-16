@@ -21,6 +21,12 @@
   margin:1vmin 1vmin 1vmin 1vmin;
   height: 8vh;
 }
+
+#clear_all{
+  background-color:#990000;
+  color:white;
+}
+
 .reminder{
   height:3vh;
   width:3vh;
@@ -31,7 +37,7 @@
 background-color:white;
 margin:1vmin;
 min-height: 20vh;
-max-width:90vw;
+min-width:90vw;
 color:black;
 }
 
