@@ -15,8 +15,7 @@ window.addEventListener('storage',function(){
   document.getElementById(position).scrollIntoView({block:'end' ,behavior: 'smooth'})}
  }
 	);
-
-function to loop round once edits are saved.
+//reset flag variable once window is closed
 window.addEventListener('beforeunload', function (e) {
   // the absence of a returnValue property on the event will guarantee the browser unload happens
 	//change the editor flag back to zero
