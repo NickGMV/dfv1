@@ -138,7 +138,7 @@ function remove_edittable(element){
 // function to open the editor window and add HTML content from intitial function
 		function engage_edit_mode(){
 			
-		if(editorWindow.closed){
+		if(!editorWindow){
 		// start new window
 		// would need to enable popups for github if want this to work.add a try except loop to advise 
 		//users to whitelist repo or could use while loop to windowalert each attemot until fixed?
