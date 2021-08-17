@@ -1,34 +1,10 @@
 // this file will set up and initialise the editor it must be added as a script tag to presentations
-
+var newPathname = "https://nickgmvp.github.io/df1/editordependencies"
 						
 //run imediately on page load prep current asides for edited versions
 !function set_up_ids(){
 			
-	               /// generating the right addresses 
-	        var pathArray = window.location.pathname.split('/');
-	        var newPathname = "";
-                              for (i = 0; i < pathArray.length-1; i++) {
-                                 newPathname += "/";
-                                 newPathname += pathArray[i];
-                                     }
-	               var domain = window.location.hostname
-	              console.log(domain + newPathname);
-	              window.alert(newPathname);
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-			// checking ahead to see if domain problems will occurr with local storage
+	               // checking ahead to see if domain problems will occurr with local storage
 			var domain = window.location.hostname;
 			console.log('the current domain is' + domain);
 			
@@ -160,15 +136,7 @@ function setup_edit_mode(){
 	        //*** look in to this
 	
 	
-	        /// generating the right addresses 
-	        var pathArray = window.location.pathname.split('/');
-	        var newPathname = "";
-                              for (i = 0; i < pathArray.length-1; i++) {
-                                 newPathname += "/";
-                                 newPathname += pathArray[i];
-                                     }
-	              console.log(window.location.hostname+"/"+newPathname);
-	              window.alert(newPathname);
+	    
 	        
                 script.setAttribute('src',newPathname + '/editorinternal.js');			
 			
