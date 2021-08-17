@@ -60,10 +60,10 @@ function remove_edittable2(){
             }
   };
   
-  function prep(){ 
-    var saveLocation = localStorage.getItem('saveLocation'); 
-    console.log(saveLocation);
-  } ;
+  //function prep(){ 
+  //  var saveLocation = localStorage.getItem('saveLocation'); 
+  //  console.log(saveLocation);
+ // } ;
 
   function strip_reminder_buttons(){
   var to_strip = document.getElementsByClassName('reminder_button');
@@ -86,9 +86,9 @@ function remove_edittable2(){
 	  
     save_data = JSON.stringify(to_save); 
     localStorage.setItem(saveLocation,save_data);
-    console.log(to_save.length); 
+    console.log("the save data has ..." + to_save.length + "entries"); 
     var save = localStorage.getItem(saveLocation); 
-    console.log(save);
+    console.log("saved data is ...." + save);
 	  //window.close();
 	 
   };
