@@ -28,7 +28,7 @@
 			console.log('save location for this presentation is' + saveId);
       //stringify to send over localstorage to editor window
 			  saveId = JSON.stringify(saveId);
-			var saved_notes = localStorage.getItem(saveId2);
+			var saved_notes = localStorage.getItem(saveId);
       
        // look for notes stored under this saveId if blank will error out and create a saveId
 			if(saved_notes){
