@@ -1,6 +1,6 @@
 // this file will set up and initialise the editor it must be added as a script tag to presentations
-var newPathname = "https://nickgmvp.github.io/df1/editordependencies"
-						
+var newPathname = "https://nickgmvp.github.io/dfv1/editordependencies"
+	//editordependencies/editorstyles.css					
 //run imediately on page load prep current asides for edited versions
 !function set_up_ids(){
 			
