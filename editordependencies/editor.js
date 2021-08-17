@@ -138,7 +138,7 @@ function setup_edit_mode(){
 	
 	
 	        /// generating the right addresses 
-	        var pathArray = window.location.pathname.split('/');
+	        var pathArray = window.location.split('/');
 	        var newPathname = "";
                               for (i = 0; i < pathArray.length-1; i++) {
                                  newPathname += "/";
