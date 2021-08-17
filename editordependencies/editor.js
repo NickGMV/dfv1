@@ -11,7 +11,8 @@
                                  newPathname += "/";
                                  newPathname += pathArray[i];
                                      }
-	              console.log(window.location.hostname+"/"+newPathname);
+	               var domain = window.location.hostname
+	              console.log(domain + newPathname);
 	              window.alert(newPathname);
 	
 	
