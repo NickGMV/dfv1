@@ -24,11 +24,11 @@
 			
 			//if notes exist find them and make sure they're stored
 			//use saveId to allow multiple presentations to be saved without crossover	
-			const saveId = window.location.pathname + "save_data";
-			console.log('save location for this presntation is' + saveId);
+			var saveId = window.location.pathname + "save_data";
+			console.log('save location for this presentation is' + saveId);
       //stringify to send over localstorage to editor window
-			const saveId = JSON.stringify(saveId);
-			const saved_notes = localStorage.getItem(saveId);
+			  saveId = JSON.stringify(saveId);
+			var saved_notes = localStorage.getItem(saveId2);
       
        // look for notes stored under this saveId if blank will error out and create a saveId
 			if(saved_notes){
@@ -71,7 +71,7 @@
 				saveId = JSON.stringify(saveId);
 				//pass the saveId to local storage so editor window can find it.
 			localStorage.setItem('saveLocation',saveId);
-				//the saveId stores lesson content but to make sure it has something in use 'boop'
+				
 			}
 			
 			// on first boot if no edits exist load base set of notes if edits exists load that set.
@@ -151,7 +151,7 @@ function remove_edittable(element){
 			
 			
 		var editorWindow = window.open("","editorWindow" + window.location.pathname ,"width=500,height=500");	
-			
+		editorWindow.document.head.innerHTML = "<title>"+ window.location.pathname   +" editor </title>"	
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
 		editorWindow.document.body.innerHTML ="<p>This is 'editor window'. notes should appear soon...</P>";
 		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
