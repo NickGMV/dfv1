@@ -4,6 +4,28 @@
 //run imediately on page load prep current asides for edited versions
 !function set_up_ids(){
 			
+	               /// generating the right addresses 
+	        var pathArray = window.location.pathname.split('/');
+	        var newPathname = "";
+                              for (i = 0; i < pathArray.length-1; i++) {
+                                 newPathname += "/";
+                                 newPathname += pathArray[i];
+                                     }
+	              console.log(window.location.hostname+"/"+newPathname);
+	              window.alert(newPathname);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
 			// checking ahead to see if domain problems will occurr with local storage
 			var domain = window.location.hostname;
