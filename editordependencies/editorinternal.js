@@ -67,7 +67,8 @@ function remove_edittable2(){
     console.log("location data is being saved is ..." + saveLocation);
     //reformat elements to be reintegrated with presentation
     strip_reminder_buttons();
-    remove_edittable2();
+	  //check if this is needed
+   // remove_edittable2();
     // create array for elements to be stored in and fill it
     var to_save = []; 
     var new_notes = document.getElementsByClassName('notes');
