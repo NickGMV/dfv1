@@ -141,7 +141,16 @@ function remove_edittable(element){
 		// would need to enable popups for github if want this to work.add a try except loop to advise 
 		//users to whitelist repo or could use while loop to windowalert each attemot until fixed?
 		//maybe loom link in alert?
-		var editorWindow = window.open("","editorWindow","width=500,height=500");	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		var editorWindow = window.open("","editorWindow" + window.location.pathname ,"width=500,height=500");	
 			
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
 		editorWindow.document.body.innerHTML ="<p>This is 'editor window'. notes should appear soon...</P>";
