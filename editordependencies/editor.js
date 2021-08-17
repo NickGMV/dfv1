@@ -138,13 +138,13 @@ function setup_edit_mode(){
 	
 	
 	        /// generating the right addresses 
-	        var pathArray = window.location.split('/');
+	        var pathArray = window.location.pathname.split('/');
 	        var newPathname = "";
                               for (i = 0; i < pathArray.length-1; i++) {
                                  newPathname += "/";
                                  newPathname += pathArray[i];
                                      }
-	              console.log(newPathname);
+	              console.log(window.location.hostname+"/"+newPathname);
 	              window.alert(newPathname);
 	        
                 script.setAttribute('src',newPathname + '/editorinternal.js');			
