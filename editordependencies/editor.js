@@ -46,7 +46,7 @@
 			for(let i = 0; i<saved_notes2.length;i++){
 		             	to_replace[i].innerHTML = saved_notes2[i];
 				remove_edittable(to_replace[i]);
-				to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";
+				to_replace.innerHTML += "<div id = edit_button" + i + "> <button onclick='opener.engage_edit_mode(); console.log(\"hi\"); localStorage.position="+ i + "'>edit mode</button> </div>";
 			            }
 				/// check this through on MONDAY
 			console.log('editables have been stripped');
