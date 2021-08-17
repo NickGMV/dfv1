@@ -46,10 +46,10 @@
 			for(let i = 0; i<saved_notes2.length;i++){
 		             	to_replace[i].innerHTML = saved_notes2[i];
 				remove_edittable(to_replace[i]);
-				to_replace[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='opener.engage_edit_mode(); console.log(\"hi\");'>edit mode</button> </div>";
+				//to_replace[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='opener.engage_edit_mode(); console.log(\"hi\");'>edit mode</button> </div>";
 				
 				// tracker pixel added
-				to_replace[i].innerHTML +=  "<img src='https://nickgmvp.github.io/dfv1/editordependencies/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
+				//to_replace[i].innerHTML +=  "<img src='https://nickgmvp.github.io/dfv1/editordependencies/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
 			            }
 				/// check this through on MONDAY
 			console.log('editables have been stripped');
