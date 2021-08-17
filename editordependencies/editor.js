@@ -24,11 +24,11 @@
 			
 			//if notes exist find them and make sure they're stored
 			//use saveId to allow multiple presentations to be saved without crossover	
-			var saveId = window.location.pathname + "save_data";
+			const saveId = window.location.pathname + "save_data";
 			console.log('save location for this presntation is' + saveId);
       //stringify to send over localstorage to editor window
-			var saveId = JSON.stringify(saveId);
-			var saved_notes = localStorage.getItem(saveId);
+			const saveId = JSON.stringify(saveId);
+			const saved_notes = localStorage.getItem(saveId);
       
        // look for notes stored under this saveId if blank will error out and create a saveId
 			if(saved_notes){
