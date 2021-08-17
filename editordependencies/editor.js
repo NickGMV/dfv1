@@ -145,7 +145,7 @@ function setup_edit_mode(){
                                  newPathname += pathArray[i];
                                      }
 	              console.log(newPathname);
-	
+	              window.alert(newPathname);
 	        
                 script.setAttribute('src',newPathname + '/editorinternal.js');			
 			
