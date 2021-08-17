@@ -3,17 +3,8 @@
 						
 //run imediately on page load prep current asides for edited versions
 !function set_up_ids(){
-			//Engage is defunct remove?
 			
-			//reset the flag on load to stop editor from opening on load.
-			//localStorage.removeItem('engage');
-			//window.addEventListener('storage',function(){
-			//if(localStorage.engage){
-			// function to start the editor window and load speaker notes content into it.
-			//engage_edit_mode();
-			//localStorage.removeItem('engage');}
-			//})
-			
+		
 			// checking ahead to see if domain problems will occurr with local storage
 			var domain = window.location.hostname;
 			console.log('the current domain is' + domain);
@@ -104,9 +95,9 @@ function engage_edit_mode(){
 		setup_edit_mode();
 	   }
 	catch(err){
-	         let domain = window.location.hostname
+	         let domain = window.location.hostname;
 	         window.alert("Error 1 : Your browser is blocking popups, go in to your browser setttigns and allow this domain to creat pop ups copy this in to the whitelist... "+domain);
-	}
+	}};
 
 function setup_edit_mode(){
 		// start new window
