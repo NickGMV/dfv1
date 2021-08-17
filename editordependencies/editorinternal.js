@@ -89,7 +89,7 @@ function remove_edittable2(){
     console.log(to_save.length); 
     var save = localStorage.getItem(saveLocation); 
     console.log(save);
-	  window.close();
+	  //window.close();
 	 
   };
 
