@@ -60,10 +60,10 @@ function remove_edittable2(){
             }
   };
   
-  //function prep(){ 
+  function prep(){ 
   //  var saveLocation = localStorage.getItem('saveLocation'); 
-  //  console.log(saveLocation);
- // } ;
+  console.log("saving data");
+ } ;
 
   function strip_reminder_buttons(){
   var to_strip = document.getElementsByClassName('reminder_button');
