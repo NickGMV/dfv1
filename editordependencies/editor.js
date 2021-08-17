@@ -99,9 +99,16 @@ function remove_edittable(element){
 	divs[i].setAttribute("contenteditable", "false");
 }}
 
-
-
 function engage_edit_mode(){
+	try{
+		setup_edit_mode();
+	   }
+	catch(err){
+	         let domain = window.location.hostname
+	         window.alert("Error 1 : Your browser is blocking popups, go in to your browser setttigns and allow this domain to creat pop ups copy this in to the whitelist... "+domain);
+	}
+
+function setup_edit_mode(){
 		// start new window
 		// would need to enable popups for github if want this to work.add a try except loop to advise 
 		//users to whitelist repo or could use while loop to windowalert each attempt until fixed?
@@ -137,14 +144,26 @@ function engage_edit_mode(){
                 var script = editorWindow.document.createElement("script");
 	        // add js to editor window dynamically this link could probably be generate using the domain so that it doesn't have to be manually changed.
 	        //*** look in to this
-                script.setAttribute('src','https://nickgmvp.github.io/dfv1/editordependencies/editorinternal.js');			
+	
+	
+	        /// generating the right addresses 
+	        var pathArray = window.location.pathname.split('/');
+	        var newPathname = "";
+                              for (i = 0; i < pathArray.length-1; i++) {
+                                 newPathname += "/";
+                                 newPathname += pathArray[i];
+                                     }
+	              console.log(newPathname);
+	
+	        
+                script.setAttribute('src',newPathname + '/editorinternal.js');			
 			
                 editorWindow.document.head.appendChild(script);
 			
 		
 		editorWindow.document.body.innerHTML += "<div id='user_controls'><button onclick = 'save_and_close();'> save updates</button><button onclick='reset_notes();'>reset notes</button><button onclick='reset_reminders();'>reset reminders</button><button id = 'clear_all' onclick = 'nuke();'> clear all memory </button></div>";
 		
-		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='https://nickgmvp.github.io/dfv1/editordependencies/editorstyles.css'>";
+		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href="+ newPathname +"'/editorstyles.css'>";
 		}
 
-// The whole of engage edit mode could potentiall be put in a single try except loop to catch the whitelist error + any other potential errors found in testing.
+// The whole of engage edit mode could potentially be put in a single try except loop to catch the whitelist error + any other potential errors found in testing.
