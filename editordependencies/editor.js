@@ -92,7 +92,7 @@
       
       //add editor mode buttons to notes in speaker notes window
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='localStorage.engage=\"yep\"; localStorage.position="+ i + "'>edit mode</button> </div>";	
+			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='opener.engage_edit_mode(); localStorage.position="+ i + "'>edit mode</button> </div>";	
 			
 			}
 			
