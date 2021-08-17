@@ -75,7 +75,7 @@ function remove_edittable2(){
 
   function save_and_close() {
     var saveLocation = window.opener.location.pathname + "save_data"; 
-    console.log("location data is being saved is ..."saveLocation);
+    console.log("location data is being saved is ..." + saveLocation);
     strip_reminder_buttons();
     remove_edittable2();
     var to_save = []; 
