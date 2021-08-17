@@ -48,7 +48,8 @@ var newPathname = "https://nickgmvp.github.io/dfv1/editordependencies"
 			
 			else{
                         //if no data found set up saveId to allow editting
-			//window.alert('no local data saved')
+			//window.alert('no local data saved');
+			console.log('no local data found');
 			//if no local data found create saveId
 			saveId = window.location.pathname + "save_data";
 				console.log('save location is ' + saveId);
