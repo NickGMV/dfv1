@@ -10,7 +10,7 @@
   left:0;
   min-width: 100vw;
   min-height:12vh;
-  background-color:#0c008b;
+  background-color:#002b66;
 }
 
 .normal{
@@ -22,7 +22,7 @@
   height: 8vh;
 }
 .danger{
-  background-color:#990000;!important
+  background-color:#990000;
   color:white;
   min-width: 46vw;
   font-size: 3vmin;
