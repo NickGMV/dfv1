@@ -32,14 +32,6 @@ function add_reminder(el){
 	  to_reset[i].innerHTML = " ";
 	  }
   }
-// one of two functions that strips out all ther editabilty ready for when notes are passed back to the presentation.
-function remove_edittable2(){
-	var divs = document.getElementsByClassName('editable');
-	console.log(divs.length);
-	for(let i = 0; i<divs.length;i++){
-	divs[i].setAttribute("contenteditable", false);
-}}
-
 // selects and destroys all the reminders in the editor window, must save afterwards to make changes permanent
 //*** consider adding instant save here *** 
   function reset_reminders(){
@@ -50,7 +42,7 @@ function remove_edittable2(){
             }
   };
   
-// this function ensures no "add reminder buttons" are saved to the presentation 
+// this function ensures no "add reminder buttons" are added to the presentation 
 //notes as they only work in the editor window
   function strip_reminder_buttons(){
   var to_strip = document.getElementsByClassName('reminder_button');
@@ -60,6 +52,8 @@ function remove_edittable2(){
   };
 
 // function ot save and close the editor window.
+// split in to two one for save on for save and close
+
   function save_and_close() {
 	  //generates and formats a save id using path
     var saveLocation = window.opener.location.pathname + "save_data"; 
@@ -82,7 +76,7 @@ function remove_edittable2(){
     console.log("the save data has ..." + to_save.length + "entries"); 
     var save = localStorage.getItem(saveLocation); 
     console.log("saved data is ...." + save);
-	  //window.close();
+	  window.close();
 	 
   };
 
