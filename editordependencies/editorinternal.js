@@ -85,6 +85,9 @@ function add_reminder(el){
   function nuke(){
 	  var sure = confirm("this will wipe *#!# ALL stored session data from your browser !#?! are you sure?, if you want to reset THIS presentation use the reset buttons then save and close")
 	  if (sure){
+        console.log('wipe this presentation first');
+	reset_reminders();
+        reset_notes();
     console.log('total wipe is imminent...'); 
     console.log('3');
     console.log('2');
