@@ -23,7 +23,11 @@
 }
 .danger{
   background-color:#990000;!important
-  color:white;!important
+  color:white;
+  min-width: 46vw;
+  font-size: 3vmin;
+  margin:1vmin 1vmin 1vmin 1vmin;
+  height: 8vh;
 }
 
 .reminder{
