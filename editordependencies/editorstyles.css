@@ -9,7 +9,7 @@
   top:5vh;
   left:0;
   min-width: 100vw;
-  min-height:12vh;
+  min-height:16vh;
   background-color:#002b66;
 }
 
@@ -19,7 +19,7 @@
   min-width: 46vw;
   font-size: 3vmin;
   margin:1vmin 1vmin 1vmin 1vmin;
-  height: 8vh;
+  height: 7vh;
 }
 .danger{
   background-color:#990000;
@@ -27,7 +27,7 @@
   min-width: 46vw;
   font-size: 3vmin;
   margin:1vmin 1vmin 1vmin 1vmin;
-  height: 8vh;
+  height: 7vh;
 }
 
 .reminder{
