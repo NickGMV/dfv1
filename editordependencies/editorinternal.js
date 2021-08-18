@@ -83,9 +83,13 @@ function add_reminder(el){
 // This function completely wipes browser of ALL data
 //** add user verification here also colour the button red
   function nuke(){
-    console.log('nuke imminent...'); 
+	  var sure = confirm("this will wipe *#!# ALL stored session data from your browser !#?! are you sure?, if you want to reset THIS presentation use the reset buttons then save and close")
+	  if (sure){
+    console.log('total wipe is imminent...'); 
     console.log('3');
     console.log('2');
     console.log('1'); 
     console.log('BOOM'); 
-    localStorage.clear();}
+    localStorage.clear();
+	  }
+  };
