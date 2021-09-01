@@ -105,6 +105,7 @@ function add_reminder(el){
     console.log("the save data has ..." + to_save.length + "entries"); 
     var save = localStorage.getItem(saveLocation); 
     console.log("saved data is ...." + save);
+    window.opener.location.reload();
   };
 
 // This function completely wipes browser of ALL data
