@@ -24,21 +24,23 @@ function add_reminder(el){
  el.parentNode.innerHTML += ' <img title="' + content + '" id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/editordependencies/alarm.svg" class = "reminder" ondblclick="this.remove();" onload ="if(this.parentNode.classList.contains(\'value\')){window.alert(\''+ content + '\')};">';                                                
   }	
 };
-//This function will clear all the user editted sections, the user must save afterwards to make this permanent.
+//This function will clear all the user editted sections, and save.
 // *****Consider adding instant save here.***
   function reset_notes(){
          var to_reset = document.getElementsByClassName('editable');
 	  for(let i = 0; i<to_reset.length;i++){
 	  to_reset[i].innerHTML = " ";
+	  save();
 	  }
   }
-// selects and destroys all the reminders in the editor window, must save afterwards to make changes permanent
+// selects and destroys all the reminders in the editor window, saves afterwards
 //*** consider adding instant save here *** 
   function reset_reminders(){
     
        var del = document.getElementsByClassName('reminder');
     while(del.length!=0){
 	    del[0].remove();
+	    save();
             }
   };
   
@@ -80,6 +82,31 @@ function add_reminder(el){
 	 
   };
 
+
+ function save() {
+	  //generates and formats a save id using path
+    var saveLocation = window.opener.location.pathname + "save_data"; 
+    saveLocation = JSON.stringify(saveLocation);
+    console.log("location data is being saved is ..." + saveLocation);
+    //reformat elements to be reintegrated with presentation
+    strip_reminder_buttons();
+	  //check if this is needed
+   // remove_edittable2();
+    // create array for elements to be stored in and fill it
+    var to_save = []; 
+    var new_notes = document.getElementsByClassName('notes');
+    for(let i=0; i< new_notes.length ;i++){
+      to_save[i]= new_notes[i].innerHTML 
+    } 
+    //format savedata to it can be regathered at load by the presentation.  
+    save_data = JSON.stringify(to_save); 
+    // put in to browser storage
+    localStorage.setItem(saveLocation,save_data);
+    console.log("the save data has ..." + to_save.length + "entries"); 
+    var save = localStorage.getItem(saveLocation); 
+    console.log("saved data is ...." + save);
+  };
+
 // This function completely wipes browser of ALL data
 //** add user verification here also colour the button red
   function nuke(){
@@ -88,6 +115,7 @@ function add_reminder(el){
         console.log('wipe this presentation first');
 	reset_reminders();
         reset_notes();
+        // add save and second confirmation
     console.log('total wipe is imminent...'); 
     console.log('3');
     console.log('2');
