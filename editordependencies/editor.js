@@ -113,7 +113,7 @@ function setup_edit_mode(){
 		var editorWindow = window.open("","editorWindow" + window.location.pathname ,"width=500,height=500");	
 		editorWindow.document.head.innerHTML = "<title>"+ window.location.pathname   +" editor </title>"	
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
-		editorWindow.document.body.innerHTML ="<div class = 'top'><p>Remember: Close speaker notes and refresh after saving notes to make changes take effect</P><img src = " + newPathname + "'/editordependencies/Black_skull.svg.png' alt = 'wipe all user data' ondblclick='nuke();'></div>";
+		editorWindow.document.body.innerHTML ="<div class = 'top'><p>Remember: Close speaker notes and refresh after saving notes to make changes take effect</P><img src = '" + newPathname + "/Black_skull.svg.png' alt = 'wipe all user data' ondblclick='nuke();'></div>";
 		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
 			
 		//put rawnotes in to editor window edits will persist between sessions and be loaded at first start up 
