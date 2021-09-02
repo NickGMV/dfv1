@@ -113,7 +113,7 @@ function setup_edit_mode(){
 		var editorWindow = window.open("","editorWindow" + window.location.pathname ,"width=500,height=500");	
 		editorWindow.document.head.innerHTML = "<title>"+ window.location.pathname   +" editor </title>"	
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
-		editorWindow.document.body.innerHTML ="<p>Remember: Close speaker notes and refresh after saving notes to make changes take effect</P>";
+		editorWindow.document.body.innerHTML ="<div class = 'top'><p>Remember: Close speaker notes and refresh after saving notes to make changes take effect</P><img src = " + newPathname + "'/editordependencies/Black_skull.svg.png' alt = 'wipe all user data' ondblclick='nuke();'></div>";
 		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
 			
 		//put rawnotes in to editor window edits will persist between sessions and be loaded at first start up 
@@ -150,7 +150,7 @@ function setup_edit_mode(){
                 editorWindow.document.head.appendChild(script);
 			
 		
-		editorWindow.document.body.innerHTML += "<div id='user_controls'><button class='normal' onclick = 'save_and_close();'> save and close</button><button class='normal' onclick='reset_notes();'>reset notes</button><button class='normal' onclick='reset_reminders();'>reset reminders</button><button class='danger' id = 'clear_all' onclick = 'nuke();'> clear all memory </button></div>";
+		editorWindow.document.body.innerHTML += "<div id='user_controls'><button class='normal' onclick = 'save_and_close();'> save and close</button><button class='normal' onclick='reset_notes();'>reset notes</button><button class='normal' onclick='reset_reminders();'>reset reminders</button><button class='danger' id = 'clear_all' onclick = 'reset_reminders(); reset_notes();'> clear presentation </button></div>";
 		
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='"+ newPathname +"/editorstyles.css'>";
 	        return true;
