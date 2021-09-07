@@ -6,24 +6,24 @@
 
 #user_controls{
   position:fixed;
-  top:5vh;
+  top:0;
   left:0;
   min-width: 100vw;
-  min-height:16vh;
+  min-height:12vh;
   background-color:#002b66;
 }
 
-.top{
+.bottom{
   background-color:#d1edf2;
   position:fixed;
   top:95vh;
 height:5vh; 
 }
 
-.top:hover{
-  z-index:4;
-  top:80vh;
-  height:20vh;
+.top{
+  position: fixed;
+  top:15vh;
+  height:5vh;
   }
   
 .top p {font-size:2vmin;
