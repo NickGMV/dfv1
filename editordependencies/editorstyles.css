@@ -14,11 +14,14 @@
 }
 
 .top{
+  position:fixed;
+  top:95vh;
 height:5vh; 
 }
 
 .top:hover{
   z-index:4;
+  top:80vh;
   height:20vh;
   background-color:white;
 }
