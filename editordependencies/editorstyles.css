@@ -57,19 +57,19 @@ height:5vh;
 }
 
 .notes{
-
+font-size:10vmin;
 background-color:white;
 margin:1vmin;
 min-height: 20vh;
-min-width:90vw;
+width:95vw;
 color:black;
 }
 
 .editable{
- 
+  font-size:10vmin;
   color:black;
   background-color:#e7feff;
-  min-width:89.99vw;
+  width:94vw;
   margin: 1vmin;
   display:inline-block;
 }
