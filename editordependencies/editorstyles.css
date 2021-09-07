@@ -17,6 +17,12 @@
 height:5vh; 
 }
 
+.top:hover{
+  z-index:4;
+  height:20vh;
+  background-color:white;
+}
+  
 .top p {font-size:2vmin;
 display:block;}
 
