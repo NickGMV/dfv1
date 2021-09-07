@@ -13,6 +13,18 @@
   background-color:#002b66;
 }
 
+.top{
+height:5vh; 
+}
+
+.top p {font-size:2vmin;
+display:block;}
+
+.top img{
+  height:4vh; 
+  width:4vh
+}
+
 .normal{
   background-color:#2c2d74;
   color:white;
