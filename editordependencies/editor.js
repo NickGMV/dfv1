@@ -110,7 +110,7 @@ function setup_edit_mode(){
 		// would need to enable popups for github if want this to work.add a try except loop to advise 
 		//users to whitelist repo or could use while loop to windowalert each attempt until fixed?
 			
-		var editorWindow = window.open("","editorWindow" + window.location.pathname ,"width=500,height=500");	
+		var editorWindow = window.open("","editorWindow" + window.location.pathname ,"width=600,height=750");	
 		editorWindow.document.head.innerHTML = "<title>"+ window.location.pathname   +" editor </title>"	
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
 		editorWindow.document.body.innerHTML ="<div class = 'top'><p>Remember: Close speaker notes and refresh after saving notes to make changes take effect</P><img src = '" + newPathname + "/Black_skull.svg.png' alt = 'wipe all user data' ondblclick='nuke();'><img src = '" + newPathname + "/qm.png' alt = '' onclick='reveal_help();'></div>";
