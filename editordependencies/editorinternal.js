@@ -5,6 +5,8 @@
 	for(let i = 0; i<divs.length;i++){
 	divs[i].setAttribute("contenteditable", true);
 	}}();
+//function to reveal the help box
+function reveal_help(){}
 
 // this listens for psoition updates from the tracker pixels embedded in the 
 //presentation and scrolls the window to view the corresponding section in the editor
@@ -24,6 +26,7 @@ function add_reminder(el){
  el.parentNode.innerHTML += ' <img title="' + content + '" id = "' + parentID + 'reminder"  height ="10" width="10" src="https://nickgmvp.github.io/dfv1/editordependencies/alarm.svg" class = "reminder" ondblclick="this.remove();" onload ="if(this.parentNode.classList.contains(\'value\')){window.alert(\''+ content + '\')};">';                                                
   }	
 };
+
 //This function will clear all the user editted sections, and save.
 // *****Consider adding instant save here.***
   function reset_notes(){
@@ -71,7 +74,7 @@ function add_reminder(el){
     for(let i=0; i< new_notes.length ;i++){
       to_save[i]= new_notes[i].innerHTML 
     } 
-    //format savedata to it can be regathered at load by the presentation.  
+    //format savedata so it can be regathered at load by the presentation.  
     save_data = JSON.stringify(to_save); 
     // put in to browser storage
     localStorage.setItem(saveLocation,save_data);
