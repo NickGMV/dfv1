@@ -8,13 +8,14 @@
   position:fixed;
   top:0;
   left:0;
-  min-width: 100vw;
-  min-height:12vh;
+  width: 100vw;
+  height:12vh;
   background-color:#002b66;
 }
 
 .bottom{
-  background-color:#d1edf2;
+  background-color:#002b66;
+  color:white;
   position:fixed;
   top:95vh;
 height:5vh; 
@@ -24,12 +25,9 @@ height:5vh;
   position: fixed;
   top:15vh;
   height:5vh;
+  background-color:white;
   }
   
-.top p {font-size:2vmin;
-display:block;
-color:black;}
-
 .top img{
   height:4vh; 
   width:4vh
@@ -38,18 +36,19 @@ color:black;}
 .normal{
   background-color:#2c2d74;
   color:white;
-  min-width: 46vw;
+  width: 46vw;
   font-size: 3vmin;
   margin:1vmin 1vmin 1vmin 1vmin;
-  height: 7vh;
+  height: 5vh;
 }
+
 .danger{
   background-color:#990000;
   color:white;
-  min-width: 46vw;
+  width: 46vw;
   font-size: 3vmin;
   margin:1vmin 1vmin 1vmin 1vmin;
-  height: 7vh;
+  height: 5vh;
 }
 
 .reminder{
