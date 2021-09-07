@@ -113,8 +113,9 @@ function setup_edit_mode(){
 		var editorWindow = window.open("","editorWindow" + window.location.pathname ,"width=600,height=750");	
 		editorWindow.document.head.innerHTML = "<title>"+ window.location.pathname   +" editor </title>"	
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
-		editorWindow.document.body.innerHTML ="<div class = 'top'><p>Remember: Close speaker notes and refresh after saving notes to make changes take effect</P><img src = '" + newPathname + "/Black_skull.svg.png' title = 'wipe all user data' ondblclick='nuke();'><img src = '" + newPathname + "/qm.png' title = 'need help?' onclick='reveal_help();'></div>";
-		editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
+		editorWindow.document.body.innerHTML ="<div class = 'bottom'><p>Remember: Close speaker notes and refresh after saving notes to make changes take effect</P></div>";
+		editorWindow.document.body.innerHTML +="<div class ='top'> <img src = '" + newPathname + "/Black_skull.svg.png' title = 'wipe all user data' ondblclick='nuke();'><img src = '" + newPathname + "/qm.png' title = 'need help?' onclick='reveal_help()';</div>>"
+	        editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
 			
 		//put rawnotes in to editor window edits will persist between sessions and be loaded at first start up 
 		var editorNotes = JSON.parse(localStorage.getItem('rawNotes'));
@@ -140,7 +141,6 @@ function setup_edit_mode(){
                 //pulling editor specific js in to the popup window.		
                 var script = editorWindow.document.createElement("script");
 	        // add js to editor window dynamically this link could probably be generate using the domain so that it doesn't have to be manually changed.
-	        //*** look in to this
 	
 	
 	    
