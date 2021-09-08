@@ -4,6 +4,11 @@
   height:16vh;
 }
 
+#bottom_buffer
+{
+  height 6vh;
+}
+
 #user_controls{
   position:fixed;
   top:0;
