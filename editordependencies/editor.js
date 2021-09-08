@@ -81,7 +81,7 @@ var newPathname = "https://nickgmvp.github.io/dfv1/editordependencies"
                         //add editor mode buttons and tracker pixels to notes in speaker notes window
 			for(let i = 0; i < to_tag.length; i++){
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='opener.engage_edit_mode(); localStorage.position="+ i + "'>edit mode</button> </div>";	
-			to_tag[i].innerHTML +=  "<img src='" + newPathname "/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
+			to_tag[i].innerHTML +=  "<img src='" + newPathname + "/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
 			}
 			
 		}()
