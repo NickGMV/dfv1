@@ -1,7 +1,7 @@
 /* contains the styles used for the editor window*/
 
 #buffer {
-  height:15vh;
+  height:16vh;
 }
 
 #user_controls{
@@ -24,7 +24,7 @@
 
 .top{
   position: fixed;
-  top:12.5vh;
+  top:12.1vh;
   height:5vh;
   background-color:white;
   border-style:solid;
