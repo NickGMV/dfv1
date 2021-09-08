@@ -5,8 +5,7 @@
 	for(let i = 0; i<divs.length;i++){
 	divs[i].setAttribute("contenteditable", true);
 	}}();
-//function to reveal the help box
-function reveal_help(){}
+
 
 // this listens for psoition updates from the tracker pixels embedded in the 
 //presentation and scrolls the window to view the corresponding section in the editor
@@ -108,11 +107,9 @@ function add_reminder(el){
     console.log("the save data has ..." + to_save.length + "entries"); 
     var save = localStorage.getItem(saveLocation); 
     console.log("saved data is ...." + save);
-    window.opener.location.reload();
-	 window.location.reload();
   };
 
-// This function completely wipes browser of ALL data
+// This function completely wipes browser of ALL user data
 //** add user verification here also colour the button red
   function nuke(){
 	  var sure = confirm("this will wipe *#!# ALL stored session data from your browser !#?! are you sure?, if you want to reset THIS presentation use the reset buttons then save and close")
