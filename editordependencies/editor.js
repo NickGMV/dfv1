@@ -6,7 +6,7 @@
 var pathName2 = window.location.href
 var pathArray = pathName2.split('/')
 var newPathname = "";
-for (i = 0; i < 2; i++) {
+for (i = 0; i < 4; i++) {
   newPathname += "/";
   newPathname += pathArray[i];
 	console.log(newPathname);
