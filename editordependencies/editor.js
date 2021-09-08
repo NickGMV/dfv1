@@ -152,7 +152,7 @@ function setup_edit_mode(){
 			
 		
 		editorWindow.document.body.innerHTML += "<div id='user_controls'><button class='normal' onclick = 'save_and_close();'> save and close</button><button class='normal' onclick='reset_notes();'>reset notes</button><button class='normal' onclick='reset_reminders();'>reset reminders</button><button class='danger' id = 'clear_all' onclick = 'reset_reminders(); reset_notes();'> clear presentation </button></div>";
-		editorWindow.document.body.innerHTML +="<div id='bottom_buffer'></div>
+		editorWindow.document.body.innerHTML +="<div id='bottom_buffer'></div>";
 		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='"+ newPathname +"/editorstyles.css'>";
 	        return true;
 		}
