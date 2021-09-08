@@ -81,7 +81,7 @@ var newPathname = "https://nickgmvp.github.io/dfv1/editordependencies"
                         //add editor mode buttons and tracker pixels to notes in speaker notes window
 			for(let i = 0; i < to_tag.length; i++){
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='opener.engage_edit_mode(); localStorage.position="+ i + "'>edit mode</button> </div>";	
-			to_tag[i].innerHTML +=  "<img src='https://nickgmvp.github.io/dfv1/editordependencies/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
+			to_tag[i].innerHTML +=  "<img src='" + newPathname "/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
 			}
 			
 		}()
@@ -114,7 +114,7 @@ function setup_edit_mode(){
 		editorWindow.document.head.innerHTML = "<title>"+ window.location.pathname   +" editor </title>"	
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
 		editorWindow.document.body.innerHTML ="<div class = 'bottom'><p>Remember: Close speaker notes and refresh after saving notes to make changes take effect</P></div>";
-		editorWindow.document.body.innerHTML +="<div class ='top'> <img src = '" + newPathname + "/Black_skull.svg.png' title = 'double click to wipe all user data' ondblclick='nuke();'><img src = '" + newPathname + "/qm.png' title = 'click to read help' onclick='reveal_help()';</div>>"
+		editorWindow.document.body.innerHTML +="<div class ='top'> <img src = '" + newPathname + "/Black_skull.svg.png' title = 'double click to wipe all user data' ondblclick='nuke();'><img href='"+ newPathname + "help.html' target='_blank' src = '" + newPathname + "/qm.png' title = 'click to read help' onclick='reveal_help()';</div>>"
 	        editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
 			
 		//put rawnotes in to editor window edits will persist between sessions and be loaded at first start up 
