@@ -89,7 +89,7 @@ for (i = 0; i < 4; i++) {
                         //add editor mode buttons and tracker pixels to notes in speaker notes window
 			for(let i = 0; i < to_tag.length; i++){
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='opener.engage_edit_mode(); localStorage.position="+ i + "'>edit mode</button> </div>";	
-			to_tag[i].innerHTML +=  "<img src='" + newPathname + "/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
+			to_tag[i].innerHTML +=  "<img src='" + newPathname + "editordependencies/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
 			}
 			
 		}()
@@ -122,7 +122,7 @@ function setup_edit_mode(){
 		editorWindow.document.head.innerHTML = "<title>"+ window.location.pathname   +" editor </title>"	
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
 		editorWindow.document.body.innerHTML ="<div class = 'bottom'><p>Remember: Close speaker notes and refresh the presentation after you save to make your changes take effect</P></div>";
-		editorWindow.document.body.innerHTML +="<div class ='top'> <img src = '" + newPathname + "/Black_skull.svg.png' title = 'double click to wipe all user data' ondblclick='nuke();'><a href='"+ newPathname + "/help.html' target='_blank'><img src = '" + newPathname + "/qm.png' title = 'click to read help'></a></div>";
+		editorWindow.document.body.innerHTML +="<div class ='top'> <img src = '" + newPathname + "editordependencies/Black_skull.svg.png' title = 'double click to wipe all user data' ondblclick='nuke();'><a href='"+ newPathname + "editordependencies/help.html' target='_blank'><img src = '" + newPathname + "editordependencies/qm.png' title = 'click to read help'></a></div>";
 	        editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
 			
 		//put rawnotes in to editor window edits will persist between sessions and be loaded at first start up 
@@ -153,14 +153,14 @@ function setup_edit_mode(){
 	
 	    
 	        
-                script.setAttribute('src',newPathname + '/editorinternal.js');			
+                script.setAttribute('src',newPathname + 'editordependencies/editorinternal.js');			
 			
                 editorWindow.document.head.appendChild(script);
 			
 		
 		editorWindow.document.body.innerHTML += "<div id='user_controls'><button class='normal' onclick = 'save_and_close();'> save and close</button><button class='normal' onclick='reset_notes();'>reset notes</button><button class='normal' onclick='reset_reminders();'>reset reminders</button><button class='danger' id = 'clear_all' onclick = 'reset_reminders(); reset_notes();'> clear presentation </button></div>";
 		editorWindow.document.body.innerHTML +="<div id='bottom_buffer'></div>";
-		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='"+ newPathname +"/editorstyles.css'>";
+		editorWindow.document.head.innerHTML += "<link rel='stylesheet' type='text/css' href='"+ newPathname +"editordependencies/editorstyles.css'>";
 	        return true;
 		}
 
