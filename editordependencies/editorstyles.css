@@ -18,7 +18,8 @@
   color:white;
   position:fixed;
   top:95vh;
-height:5vh; 
+  width:100vw;
+  height:5vh; 
 }
 
 .top{
@@ -57,7 +58,7 @@ height:5vh;
 }
 
 .notes{
-font-size:2vmin;
+font-size:5vmin;
 background-color:white;
 margin:1vmin;
 min-height: 20vh;
@@ -66,7 +67,7 @@ color:black;
 }
 
 .editable{
-  font-size:2vmin;
+  font-size:5vmin;
   color:black;
   background-color:#e7feff;
   width:89vw;
