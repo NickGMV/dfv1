@@ -18,8 +18,13 @@
   color:white;
   position:fixed;
   top:95vh;
+  left:0;
   width:100vw;
-  height:5vh; 
+  height:6vh; 
+}
+
+.bottom p {
+  font-size: 2vmin;
 }
 
 .top{
