@@ -2,6 +2,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // this file will set up and initialise the editor it must be added as a script tag to presentations
+//newPathname is used to set all relative paths and must be updated at setup.
 var newPathname = "https://nickgmvp.github.io/dfv1/editordependencies"
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -113,7 +114,7 @@ function setup_edit_mode(){
 		var editorWindow = window.open("","editorWindow" + window.location.pathname ,"width=600,height=750");	
 		editorWindow.document.head.innerHTML = "<title>"+ window.location.pathname   +" editor </title>"	
 		//editorWindow.document.head.innerHTML += "<link rel='stylesheet' href='./editor.css'>";	
-		editorWindow.document.body.innerHTML ="<div class = 'bottom'><p>Remember: Close speaker notes and refresh after saving notes to make changes take effect</P></div>";
+		editorWindow.document.body.innerHTML ="<div class = 'bottom'><p>Remember: Close speaker notes and refresh the presentation after you save to make your changes take effect</P></div>";
 		editorWindow.document.body.innerHTML +="<div class ='top'> <img src = '" + newPathname + "/Black_skull.svg.png' title = 'double click to wipe all user data' ondblclick='nuke();'><a href='"+ newPathname + "/help.html' target='_blank'><img src = '" + newPathname + "/qm.png' title = 'click to read help'></a></div>";
 	        editorWindow.document.body.innerHTML += "<div id='buffer'></div>";
 			
