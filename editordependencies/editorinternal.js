@@ -1,3 +1,9 @@
+/////////////////////////////////////// some links to change/automate ///////////////////////////////////////////////////////
+
+
+
+
+
 //called in editor.js to add javascript to the editor window/
 // there are 1 links that will need refactoring in this file
 !function restore_edittable(){
@@ -32,7 +38,7 @@ function add_reminder(el){
          var to_reset = document.getElementsByClassName('editable');
 	  for(let i = 0; i<to_reset.length;i++){
 	  to_reset[i].innerHTML = " ";
-	  save();
+	  //save();
 	  }
   }
 // selects and destroys all the reminders in the editor window, saves afterwards
@@ -42,7 +48,7 @@ function add_reminder(el){
        var del = document.getElementsByClassName('reminder');
     while(del.length!=0){
 	    del[0].remove();
-	    save();
+	   // save();
             }
   };
   
@@ -91,7 +97,7 @@ function add_reminder(el){
     saveLocation = JSON.stringify(saveLocation);
     console.log("location data is being saved is ..." + saveLocation);
     //reformat elements to be reintegrated with presentation
-    strip_reminder_buttons();
+    //strip_reminder_buttons();
 	  //check if this is needed
    // remove_edittable2();
     // create array for elements to be stored in and fill it
