@@ -136,7 +136,7 @@ function setup_edit_mode(){
 	        // if presentation has no previous edits add edittable divs in so users can input text and buttons to generate reminders
 		else{
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div>";
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div></div>";
 		}
 	        }
                 //pulling editor specific js in to the popup window.		
