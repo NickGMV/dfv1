@@ -35,7 +35,7 @@ function add_reminder(el){
   var content = prompt('set you reminder, it will pop up in speaker notes when you reach the slide');
   if(content){
   var parentID = el.parentNode.id;
- el.parentNode.innerHTML += ' <img title="' + content + '" id = "' + parentID + 'reminder"  height ="10" width="10" src="' + newPathname + '/alarm.svg" class = "reminder" ondblclick="this.remove();" onload ="if(this.parentNode.classList.contains(\'value\')){window.alert(\''+ content + '\')};">';                                                
+ el.parentNode.innerHTML += ' <img title="' + content + '" id = "' + parentID + 'reminder"  height ="10" width="10" src="' + newPathname + 'editordependencies/alarm.svg" class = "reminder" ondblclick="this.remove();" onload ="if(this.parentNode.classList.contains(\'value\')){window.alert(\''+ content + '\')};">';                                                
   }	
 };
 
