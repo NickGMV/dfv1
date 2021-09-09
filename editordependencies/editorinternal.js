@@ -4,8 +4,8 @@ var pathName2 = opener.location.href
 var pathArray = pathName2.split('/')
 var newPathname = "";
 for (i = 0; i < pathArray.length; i++) {
-  newPathname += "/";
   newPathname += pathArray[i];
+	newPathname += "/";
 	console.log(newPathname);
 }
 
