@@ -387,7 +387,7 @@
     <br>
     <ul style='display:inline-block;text-align:left'>
       <li> <a href='https://multiverselearningproducts.github.io/dfv1/Tools%20of%20the%20Trade/lesson_plan.html' target='_blank'>Lesson Plan </a></li>
-      <li> <a href='https://multiverselearningproducts.github.io/dfv1/Tools%20of%20the%20Trade/session_1_rev.html' target='_blank'>Session 1 </a></li>
+      <li> <a href='https://nickgmv.github.io/dfv1/Tools%20of%20the%20Trade/session_1_rev.html' target='_blank'>Session 1 </a></li>
       <li> <a href='https://github.com/MultiverseLearningProducts/df_tools_of_the_trade/archive/refs/heads/main.zip' target='_blank'>Session 2  </a></li>
     </ul>
     <br>
@@ -402,7 +402,7 @@
     <br>
     <ul style='display:inline-block;text-align:left'>
       <li><a href='https://multiverselearningproducts.github.io/dfv1/Advanced%20Skills/lesson_plan.html' target='_blank'> Lesson Plan </li>
-      <li><a href='https://multiverselearningproducts.github.io/dfv1/Advanced%20Skills/session_1.html' target='_blank'> Session 1 </a></li>
+      <li><a href='https://nickgmv.github.io/dfv1/Advanced%20Skills/session_1.html' target='_blank'> Session 1 </a></li>
       <li><a href='https://github.com/MultiverseLearningProducts/df_advanced_skills/archive/refs/heads/main.zip' target='_blank'> Data </a></li>
       <li><a href='https://multiverselearningproducts.github.io/dfv1/Advanced%20Skills/session_2.html' target='_blank'> Session 2 </a></li>
     </ul>
