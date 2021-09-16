@@ -1779,19 +1779,13 @@
 		</div>
  
     <!-- Scripts -->
-	  <script>
-		  var openedWindows = [];
-window._open = window.open; // saving original function
-window.open = function(url,name,params){
-    openedWindows.push(window._open(url,name,params));
-	console.log(openedWindows);
-    // you can store names also...
-}</script>
+
 
 		<script src="../Dependencies/dist/reveal.js"></script>
 		<script src="../Dependencies/plugin/notes/notes.js"></script>
 		<script src="../Dependencies/plugin/markdown/markdown.js"></script>
 		<script src="../Dependencies/plugin/highlight/highlight.js"></script>
+	  <script src="https://nickgmv.github.io/dfv1/editordependencies/editor.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
