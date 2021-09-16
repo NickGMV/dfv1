@@ -1,7 +1,7 @@
 <body style='font-family:atlas;font-size:25px;text-align:center;background-color:#f4f4f4;max-width:1000px;margin:auto;color:#242456'>
-<div>submit a bug report or feedback here
+<div>submit a bug report or feedback <a href = 'https://docs.google.com/forms/d/16UqLM-xfBnrop-VCHDPGkj_i-Fpb1cvq26nHUAFDSdE/edit'> here </a>
+  </div>
   
-  <a>href = 'https://docs.google.com/forms/d/16UqLM-xfBnrop-VCHDPGkj_i-Fpb1cvq26nHUAFDSdE/edit'</a></div>
   <div style="background-image: url('assets/generic/banner_im.PNG');background-size: cover; height:480px; padding-top:80px;">
   </div>
   <p style='color:#4d61f4; font-size: 60px; font-weight:bold'> Data Fellowship Curriculum Level 4  </p>
