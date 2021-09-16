@@ -1,17 +1,7 @@
 <body style='font-family:atlas;font-size:25px;text-align:center;background-color:#f4f4f4;max-width:1000px;margin:auto;color:#242456'>
-  <script src='https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other.js'></script>
-  <script src='https://github.com/nickGMVP/dfv1/blob/main/Data%20Analysis%20in%20Industry/other2.js'></script>
-  <script src = './Data Analysis in Industry/other3.js'></script>
+<div>submit a bug report or feedback here
   
-  <button onclick='test();'>test</button>
-  
-  
-  
-  
-  
-  
-  
-  
+  <a>href = 'https://docs.google.com/forms/d/16UqLM-xfBnrop-VCHDPGkj_i-Fpb1cvq26nHUAFDSdE/edit'</a></div>
   <div style="background-image: url('assets/generic/banner_im.PNG');background-size: cover; height:480px; padding-top:80px;">
   </div>
   <p style='color:#4d61f4; font-size: 60px; font-weight:bold'> Data Fellowship Curriculum Level 4  </p>
@@ -172,17 +162,17 @@
       <tr>
         <td>
           <ul style='display:inline-block;text-align:left'>
-            <li><a href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/lesson_plan.html' target='_blank'>Lesson Plan</a> </li>
-            <li><a href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/session_1.html' target='_blank'> Session 1 </a></li>
-            <li><a href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/session_2.html' target='_blank'> Session 2 </a></li>
+            <li><a href='https://nickgmv.github.io/dfv1/Data%20Analysis%20in%20Industry/lesson_plan.html' target='_blank'>Lesson Plan</a> </li>
+            <li><a href='https://nickgmv.github.io/dfv1/Data%20Analysis%20in%20Industry/session_1.html' target='_blank'> Session 1 </a></li>
+            <li><a href='https://nickgmv.github.io/dfv1/Data%20Analysis%20in%20Industry/session_2.html' target='_blank'> Session 2 </a></li>
           </ul>
         </td>
         <td> &nbsp; </td>
         <td>
           <ul style='display:inline-block;text-align:left'>
-            <li><a href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/lesson_plan_v2.html' target='_blank'>Lesson Plan</a> </li>
-            <li><a href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/session_1_v2.html' target='_blank'> Session 1 </a></li>
-            <li><a href='https://nickgmvp.github.io/dfv1/Data%20Analysis%20in%20Industry/session_2_v2.html' target='_blank'> Session 2 </a></li>
+            <li><a href='https://nickgmv.github.io/dfv1/Data%20Analysis%20in%20Industry/lesson_plan_v2.html' target='_blank'>Lesson Plan</a> </li>
+            <li><a href='https://nickgmv.github.io/dfv1/Data%20Analysis%20in%20Industry/session_1_v2.html' target='_blank'> Session 1 </a></li>
+            <li><a href='https://nickgmv.github.io/dfv1/Data%20Analysis%20in%20Industry/session_2_v2.html' target='_blank'> Session 2 </a></li>
           </ul>
         </td>
       </tr>
@@ -224,15 +214,15 @@
       <tr>
         <td>
           <ul style='display:inline-block;text-align:left'>
-            <li><a href='https://nickgmvp.github.io/dfv1/Database%20Fundamentals/lesson_plan.html' target='_blank'>Lesson Plan</a> </li>
-            <li><a href='https://nickgmvp.github.io/dfv1/Database%20Fundamentals/session_resources.html' target='_blank'> Session Resources </a></li>
+            <li><a href='https://nickgmv.github.io/dfv1/Database%20Fundamentals/lesson_plan.html' target='_blank'>Lesson Plan</a> </li>
+            <li><a href='https://nickgmv.github.io/dfv1/Database%20Fundamentals/session_resources.html' target='_blank'> Session Resources </a></li>
           </ul>
         </td>
         <td> &nbsp; </td>
         <td>
           <ul style='display:inline-block;text-align:left'>
-            <li><a href='https://nickgmvp.github.io/dfv1/Database%20Fundamentals/lesson_plan_v2.html' target='_blank'>Lesson Plan</a> </li>
-            <li><a href='https://nickgmvp.github.io/dfv1/Database%20Fundamentals/session_resources_v2.html' target='_blank'> Session Resources </a></li>
+            <li><a href='https://nickgmv.github.io/dfv1/Database%20Fundamentals/lesson_plan_v2.html' target='_blank'>Lesson Plan</a> </li>
+            <li><a href='https://nickgmv.github.io/dfv1/Database%20Fundamentals/session_resources_v2.html' target='_blank'> Session Resources </a></li>
           </ul>
         </td>
       </tr>
