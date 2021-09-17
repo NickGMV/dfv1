@@ -35,7 +35,7 @@
     <br>
     <p> Coaches support apprentice understanding through 1:1's, progress reviews and objective setting. Use these opportunities to tailor the experience for each apprentice and help them build a portfolio and projects which demonstrate the <a href='https://docs.google.com/spreadsheets/d/1xhgQKgHvFOrQhnI1Moyvl-wh6_11JdTIeUegzFjarWY/edit?usp=sharing' target='_blank'> standards</a> and enable them to advance in their role. </p>
     <br>
-    <p> Note, for all cohorts launched <b> after June 2021 </b> will be on the revised standard. Make sure you are using the newer resources for 'Data Analytics in Industry' and 'Database Fundamentals'. Also, these cohorts will not be using either exam or the module 'Advanced Skills.' 
+    <p> Note, for all cohorts launched <b> after June 2021 </b> will be on the revised standard. Make sure you are using the newer resources for 'Data Analytics in Industry' and 'Database Fundamentals'. Also, these cohorts will not be using either exam or the module 'Advanced Skills.' </p>
   </div>
   <br>
   <img src='assets/multiverse_brand/Ultraviolet/Multiverse_Notations_RGB_Indigo-03.png' style='max-width:1000px;margin:auto;max-height:250px;text-align:center'>
