@@ -1,8 +1,4 @@
 
-</head>
-
-
-
 <body style='font-family:atlas;font-size:25px;text-align:center;background-color:#f4f4f4;max-width:1000px;margin:auto;color:#242456'>
 <div>submit a bug report or feedback <a href = 'https://docs.google.com/forms/d/16UqLM-xfBnrop-VCHDPGkj_i-Fpb1cvq26nHUAFDSdE/edit'> here </a>
   </div>
