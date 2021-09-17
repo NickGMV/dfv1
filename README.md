@@ -1,11 +1,4 @@
-<head>
-footer {
-  display: none !important;
-}
 
-.btn {
-  display: none !important;
-}
 </head>
 
 
