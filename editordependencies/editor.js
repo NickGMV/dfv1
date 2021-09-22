@@ -110,13 +110,13 @@ function engage_edit_mode(){
 	   }
 	catch(err){
 	         let domain = window.location.hostname;
-	         window.alert("Error 1 : Your browser is blocking popups, go in to your browser setttigns and allow this domain to creat pop ups copy this in to the whitelist... "+domain);
+	         window.alert("Error 1 : Your browser is blocking pop-ups, go in to your browser settings and give this domain permissions to create pop ups copy this domain in to the permitted list ... "+domain);
 	}};
 
 function setup_edit_mode(){
 		// start new window
 		// would need to enable popups for github if want this to work.add a try except loop to advise 
-		//users to whitelist repo or could use while loop to windowalert each attempt until fixed?
+		//users to enable popups for this domain or could use while loop to windowalert each attempt until fixed?
 			
 		var editorWindow = window.open("","editorWindow" + window.location.pathname ,"width=600,height=750");	
 		editorWindow.document.head.innerHTML = "<title>"+ window.location.pathname   +" editor </title>"	
@@ -164,4 +164,4 @@ function setup_edit_mode(){
 	        return true;
 		}
 
-// The whole of engage edit mode could potentially be put in a single try except loop to catch the whitelist error + any other potential errors found in testing.
+// The whole of engage edit mode could potentially be put in a single try except loop to catch the permissions error + any other potential errors found in testing.
