@@ -88,7 +88,7 @@ newPathname += "/";
       
                         //add editor mode buttons and tracker pixels to notes in speaker notes window
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<div> slide(aside number) " + i + "</div>"
+			to_tag[i]..insertAdjacentHTML('beforebegin', "<div> slide(aside number) " + i + "</div>");
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='opener.engage_edit_mode(); localStorage.position="+ i + "'>edit mode</button> </div>";	
 			to_tag[i].innerHTML +=  "<img src='" + newPathname + "editordependencies/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
 			}
@@ -138,13 +138,13 @@ function setup_edit_mode(){
 		if(edited.length!=0)	{
 		   
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button>" + editorNotes[i] + "</div>";
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +">aside.no" + i + " <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button>" + editorNotes[i] + "</div>";
 		}	
 		}
 	        // if presentation has no previous edits add edittable divs in so users can input text and buttons to generate reminders
 		else{
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div></div>";
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +">aside.no" + i + " <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div></div>";
 		}
 	        }
                 //pulling editor specific js in to the popup window.		
