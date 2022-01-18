@@ -88,7 +88,7 @@ newPathname += "/";
       
                         //add editor mode buttons and tracker pixels to notes in speaker notes window
 			for(let i = 0; i < to_tag.length; i++){
-			to_tag[i].innerHTML += "<p class='asino'>asideno. " + i + "</p>";
+			to_tag[i].innerHTML += "<p style='font-size:2vmin;border-style:solid;padding:1px;border-color:red;background-color:white;'>asideno. " + i + "</p>";
 			to_tag[i].innerHTML += "<div id = edit_button" + i + "> <button onclick='opener.engage_edit_mode(); localStorage.position="+ i + "'>edit mode</button> </div>";	
 			to_tag[i].innerHTML +=  "<img src='" + newPathname + "editordependencies/single_pixel_tracker.png'  onload='localStorage.position="+ i + "';>"
 			}aside
