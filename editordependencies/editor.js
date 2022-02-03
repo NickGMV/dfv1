@@ -138,13 +138,13 @@ function setup_edit_mode(){
 		if(edited.length!=0)	{
 		   
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"><p class='asino'>aside.no " + i + "</p> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button>" + editorNotes[i] + "</div>";
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"><p class='asino'>aside " + i + "</p> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button>" + editorNotes[i] + "</div>";
 		}	
 		}
 	        // if presentation has no previous edits add edittable divs in so users can input text and buttons to generate reminders
 		else{
 		for(let i = 0;i< editorNotes.length;i++){
-		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"><p class='asino'>aside.no " + i + "</p> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div></div>";
+		editorWindow.document.body.innerHTML+="<div class='notes' id="+ i +"><p class='asino'>aside " + i + "</p> <button class = 'reminder_button'  onclick = 'add_reminder(this)'>add reminder</button> <div class = 'editable' contenteditable = 'true'></div>" + editorNotes[i] + " <div class = 'editable' contenteditable = 'true'></div></div>";
 		}
 	        }
                 //pulling editor specific js in to the popup window.		
