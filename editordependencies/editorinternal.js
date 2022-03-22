@@ -57,11 +57,6 @@ function add_reminder(el){
 	    del[0].remove();
 	   // save();
             }
-	   //strip out aside tagging?
-  var to_strip2 = document.getElementsByClassName('asino');
-  while(to_strip2.length!=0){
-  to_strip2[0].remove();
-  }
   };
   
 // this function ensures no "add reminder buttons" are added to the presentation 
@@ -70,6 +65,11 @@ function add_reminder(el){
   var to_strip = document.getElementsByClassName('reminder_button');
   while(to_strip.length!=0){
   to_strip[0].remove();
+  }
+  //strip out aside tagging?
+  var to_strip2 = document.getElementsByClassName('asino');
+  while(to_strip2.length!=0){
+  to_strip2[0].remove();
   }
   };
 
